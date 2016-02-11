@@ -32,7 +32,7 @@ We're running two database clusters, so we need to allow ports 5432 and 5433.  L
 #### SSH Instructions
 Use PUTTY to login.
 
-Start by formatting your 400GB magnetic drive:
+Start by formatting your 400GB magnetic drive. (Use the lsblk command to identify which drive is which. YOUR MAGNETIC DRIVE MAYBE NOT BE /dev/sdb !):
 ```
 sudo mkfs.ext4 /dev/sdb
 ```
@@ -44,6 +44,7 @@ sudo mount /dev/sdb /dr/
 ```
 ##### Info about Postgis Install:  
  - http://trac.osgeo.org/postgis/wiki/UsersWikiPostGIS21UbuntuPGSQL93Apt
+ 
 The versions of PostgreSQL/PostGIS we need may not be available with the APT-GET command by default.  Add them with the following commands:
 ```
 sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt trusty-pgdg main" >> /etc/apt/sources.list'
@@ -82,7 +83,7 @@ Now restart PostgreSQL
 ```
 sudo service postgresql restart
 ```
-Now we'll want to be able to use pgadmin using standard password access.  We'll need to assign a password to the postgres user:
+Now we'll want to be able to use PgAdmin using standard password access.  We'll need to assign a password to the postgres user:
 ```
 sudo su -
 su postgres
@@ -99,26 +100,6 @@ exit
 exit
 ```
 
-##### create temp directory under /dr/
-##### change permissions of temp to everyone 
-sudo chmod 777 temp
-#####use ftp to upload .custom files to temp
-
-
-##### Use SSH to createuser at commandline:  
- - codemog is SELECT only access user
- - postgresql users are really just linux users
-```
-createuser codemog
-```
-##### use pgadmin SQL window to change user codemog password
-```
-ALTER USER codemog WITH PASSWORD 'whatever';
-```
-## Use pg_restore command to restore database from a pg_dump created file
-```
-pg_restore -h 104.197.26.248 -p 5432 -U postgres -j 2 -d acs1014 /dr/temp/acs1014.custom
-```
 ##### Install git, apache, nodejs, npm, php, php-postgres driver
 ```
 sudo apt-get install git
@@ -145,9 +126,23 @@ git clone https://github.com/royhobbstn/CensusAPI.git
 The ACS Webmap needs much more speed than the other applications.  To balance cost with performance, we create an additional PostgreSQL cluster on a SSD hard drive.
 
 
-## General Info
+##### create temp directory under /dr/
+##### change permissions of temp to everyone 
+sudo chmod 777 temp
+#####use ftp to upload .custom files to temp
 
-Instance
- - Ubuntu 14.04 "trusty"
-Apache Webserver Directory:
- - /var/www/html/
+
+##### Use SSH to createuser at commandline:  
+ - codemog is SELECT only access user
+ - postgresql users are really just linux users
+```
+createuser codemog
+```
+##### use pgadmin SQL window to change user codemog password
+```
+ALTER USER codemog WITH PASSWORD 'whatever';
+```
+## Use pg_restore command to restore database from a pg_dump created file
+```
+pg_restore -h 104.197.26.248 -p 5432 -U postgres -j 2 -d acs1014 /dr/temp/acs1014.custom
+```

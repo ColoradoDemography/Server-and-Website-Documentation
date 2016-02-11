@@ -1,21 +1,22 @@
-## Instructions
+### Instructions
 
 You'll save yourself a lot of trouble if you preload your security key during the Instance Creation Step.
 
-## Get your security key in place
+### Get your security key in place
 Use Puttygen to create a key.  For everything you could possibly need, see link below:
-https://gist.github.com/feczo/7282a6e00181fde4281b
+ - https://gist.github.com/feczo/7282a6e00181fde4281b
 
-## Create instance on the Google Cloud Platform
+### Create instance on the Google Cloud Platform
 Ubuntu 14.04 "trusty"
 
-## Reserve Static IP
+### Reserve Static IP
 
-## Networking Rules
+### Networking Rules
 
 
-#SSH Instructions
+###SSH Instructions
 
+'''
 cd /
 lsblk
 sudo mkfs.ext4 /dev/sdb
@@ -23,9 +24,12 @@ sudo mkdir dr
 sudo mount /dev/sdb /dr/
 cd dr
 sudo mkdir pgdata
+'''
 
-###info about postgis install:  http://trac.osgeo.org/postgis/wiki/UsersWikiPostGIS21UbuntuPGSQL93Apt
+##### Info about Postgis Install:  
+ - http://trac.osgeo.org/postgis/wiki/UsersWikiPostGIS21UbuntuPGSQL93Apt
 
+'''
 sudo lsb_release -a 
 sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt trusty-pgdg main" >> /etc/apt/sources.list'
 wget --quiet -O - http://apt.postgresql.org/pub/repos/apt/ACCC4CF8.asc | sudo apt-key add -
@@ -35,29 +39,34 @@ sudo pg_dropcluster 9.4 main --stop
 
 sudo chown -R postgres:postgres /dr/pgdata
 sudo chmod 700 /dr/pgdata
-
+'''
 
 cd /
 sudo pg_createcluster -d /dr/pgdata/data -l /dr/pgdata/log --start-conf auto 9.4 main
 
 
-#See https://cloud.google.com/solutions/setup-postgres
----------------------
-:set nocompatible
+##### Edit the following two files.  
+ - See https://cloud.google.com/solutions/setup-postgres
+'''
 sudo vi /etc/postgresql/9.4/main/postgresql.conf
 sudo vi /etc/postgresql/9.4/main/pg_hba.conf
----------------------
-
+'''
+'''
 sudo service postgresql restart
 sudo su -
 su postgres
 psql
-
+'''
+'''
 \password *****
 \q
+'''
 
-exit #out of postgres
-exit #out of root
+##### to exit out of postgres and root users
+'''
+exit
+exit
+'''
 
 #create temp directory under /dr/
 #change permissions of temp to everyone 

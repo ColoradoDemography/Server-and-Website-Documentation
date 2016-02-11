@@ -8,18 +8,25 @@ Use Puttygen to create a key.  For everything you could possibly need, see link 
 
 ##### Create instance on the Google Cloud Platform
 These instructions are specific to Ubuntu 14.04.  Do not use a different flavor of linux unless you know what you're doing.
+
 ![GCP Setup Image1](/img/setup1.jpg)
+
 Create a Magnetic (400GB) and a SSD (120GB) Drive
+
 ![GCP Setup Image2](/img/setup2.jpg)
+
 Enter your key here:
+
 ![GCP Setup Image3](/img/setup3.jpg)
 
 ##### Reserve Static IP
 Add a pre-existing Static IP address here - or create a new one:
+
 ![GCP Setup Image4](/img/setup4.jpg)
 
 ##### Networking Rules
 We're running two database clusters, so we need to allow ports 5432 and 5433.  Later, lock down your database (and SSH) access by identifying and restricting service to local IPs.  (Also see security settings in pg\_hba and postgresql.conf files).  
+
 ![GCP Setup Image5](/img/setup5.jpg)
 
 #### SSH Instructions

@@ -168,30 +168,40 @@ In PSQL:
 **whatever**
 \q
 ```
-Now exit out of postgres and root users and back to our default user.
+Okay, now exit out of postgres and root users and back to our default user.
 ```
 exit
 exit
 ```
 ##### A couple more things before you can load your database files
-
-##### create temp directory under /dr/
-##### change permissions of temp to everyone 
+We'll create a temporary directory in which to stage our database dump files.
+```
+cd /dr
+sudo mkdir temp
 sudo chmod 777 temp
-#####use ftp to upload .custom files to temp
+```
+Most everything is set up now.  You can log in to an FTP client like Filezilla (don't forget to load your key).  And you can also log in to PgAdmin (the credentials for both database clusters are the same with the exception of the port numbers; 5432 for magnetic, 5433 for fast).
 
+Before loading data, you will need to log in to BOTH clusters via PgAdmin, and do the following steps for each:
 
-##### Use SSH to createuser at commandline:  
- - codemog is SELECT only access user
- - postgresql users are really just linux users
+Create a 'codemog' user, and set the codemog password in the SQL window as follows:
 ```
-createuser codemog
-```
-##### use pgadmin SQL window to change user codemog password
-```
+CREATE ROLE codemog;
 ALTER USER codemog WITH PASSWORD 'whatever';
 ```
-## Use pg_restore command to restore database from a pg_dump created file
+(The codemog user is a SELECT-only level user.)
+
+Then, create the databases that you will need: acs1014, acs0913, etc.  Lastly, add the 'postgis' extension using the PgAdmin interface.
+
+##### Upload .custom files via FTP
+Use the FTP client to stage your .custom files on  the newly created '/dr/temp' folder.
+(The .custom files were created with pg\_dump using a command such as the one below)
+```
+# pg_dump -Fc -h 104.197.26.248 -U postgres -p 5432 db.sql > db.custom
+```
+##### Last Steps
+Use pg\_restore command to restore database from a pg\_dump created file
 ```
 pg_restore -h 104.197.26.248 -p 5432 -U postgres -j 2 -d acs1014 /dr/temp/acs1014.custom
 ```
+Remember to use the correct port depending on which database cluster you would like to use.

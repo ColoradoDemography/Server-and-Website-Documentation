@@ -11,7 +11,7 @@ These instructions are specific to Ubuntu 14.04.  Do not use a different flavor 
 Ubuntu 14.04 "trusty"
 
 ##### Reserve Static IP
-
+![GCP Setup Image1](/img/setup1.jpg)
 ##### Networking Rules
 
 

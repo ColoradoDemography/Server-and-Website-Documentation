@@ -91,7 +91,8 @@ psql
 ```
 In PSQL:
 ```
-\password **whatever**
+\password 
+**whatever**
 \q
 ```
 Now exit out of postgres and root users and back to our default user.
@@ -120,11 +121,59 @@ sudo ln -s /usr/bin/nodejs /usr/bin/node
 ##### Git Clone Repos in Apache Webserver Directory
 ```
 cd /var/www/html
-git clone https://github.com/royhobbstn/CensusAPI.git
+sudo git clone https://github.com/royhobbstn/CensusAPI.git
 ```
+Now would be a good time to test that your setup is working.  Test to make sure your APIQueryPage loads (you'll have to adjust your connection settings for the dynamic pieces to load - however, the page should show up):
+ - http://104.197.26.248/CensusAPI/queryapi.html
+
 ##### Add New PostgreSQL Cluster on a SSD drive
 The ACS Webmap needs much more speed than the other applications.  To balance cost with performance, we create an additional PostgreSQL cluster on a SSD hard drive.
 
+You'll have to duplicate the process you did earlier to format and mount your magnetic drive.  This time, you'll be using your 120GB SSD drive.
+```
+sudo mkfs.ext4 /dev/sdc
+cd /
+sudo mkdir ssd
+sudo mount /dev/sdc /ssd/
+```
+Then we'll create a new directory on our ssd drive in which to store the data:
+```
+cd /ssd
+sudo mkdir fastdata
+sudo chown -R postgres:postgres /ssd/fastdata
+sudo chmod 700 /ssd/fastdata
+```
+Now we'll initialize our new ssd cluster there.  Instead of being labeled 'main', our new cluster will be labeled 'fast'.  It will automatically be set up on port 5433:
+```
+sudo pg_createcluster -d /ssd/fastdata/data -l /ssd/fastdata/log --start-conf auto 9.4 fast
+```
+You'll need to edit the additional config files that this new cluster will generate.  Note they will be under a slightly different directory name:
+```
+sudo vi /etc/postgresql/9.4/fast/postgresql.conf
+sudo vi /etc/postgresql/9.4/fast/pg_hba.conf
+```
+Now restart PostgreSQL
+```
+sudo service postgresql restart
+```
+Guess what?  You'll have to set up a postgres user password for this cluster too.  Note that you will now specify your postgres port when logging into PSQL:
+```
+sudo su -
+su postgres
+psql -p 5433
+```
+In PSQL:
+```
+\password 
+**whatever**
+\q
+```
+Now exit out of postgres and root users and back to our default user.
+```
+exit
+exit
+```
+##### A couple more things before you can load your database files
 
 ##### create temp directory under /dr/
 ##### change permissions of temp to everyone 

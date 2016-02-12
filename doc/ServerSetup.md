@@ -32,7 +32,7 @@ We're running two database clusters, so we need to allow ports 5432 and 5433.  L
 #### SSH Instructions
 Use PUTTY to login.
 
-Start by formatting your 400GB magnetic drive. (Use the lsblk command to identify which drive is which. YOUR MAGNETIC DRIVE MAYBE NOT BE /dev/sdb !):
+Start by formatting your 400GB magnetic drive. (Use the lsblk command to identify which drive is which. YOUR MAGNETIC DRIVE MAY NOT BE /dev/sdb !):
 ```
 sudo mkfs.ext4 /dev/sdb
 ```

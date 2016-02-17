@@ -9,7 +9,7 @@ For bevity this document will only show the configuration of the instance, not i
 
 The instance used for this tutorial is shown below.
 
-![GCP_Instance_Specs](/img/docker1.jpg)
+![GCP_Instance_Specs](/img/docker1.JPG)
 
 
 I also attached a previously used static IP.

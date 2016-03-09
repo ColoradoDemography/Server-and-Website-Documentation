@@ -7,13 +7,13 @@ Use Puttygen to create a key.  For everything you could possibly need, see link 
  - https://gist.github.com/feczo/7282a6e00181fde4281b
 
 ##### Create instance on the Google Cloud Platform
-These instructions are specific to Ubuntu 14.04.  Do not use a different flavor of linux unless you know what you're doing.
+These instructions are specific to CoreOS, a minimal Linux installation specifically suited to serving docker containers.  Do not use a different flavor of linux unless you know what you're doing.
 
-![GCP Setup Image1](/img/setup1.jpg)
+![GCP Setup Image1](/img/setup1a.jpg)
 
-Create a Magnetic (400GB) and a SSD (120GB) Drive
+Create a Slow (Magnetic 360GB) and a Fast (SSD 120GB) Disk
 
-![GCP Setup Image2](/img/setup2.jpg)
+![GCP Setup Image2](/img/setup2a.jpg)
 
 Enter your key here:
 
@@ -25,14 +25,14 @@ Add a pre-existing Static IP address here - or create a new one:
 ![GCP Setup Image4](/img/setup4.jpg)
 
 ##### Networking Rules
-We're running two database clusters, so we need to allow ports 5432 and 5433.  Later, lock down your database (and SSH) access by identifying and restricting service to local IPs.  (Also see security settings in pg\_hba and postgresql.conf files).  
+We're running two database clusters, so we need to allow ports 5432 and 5433.  Our NodeJS microservices are running on ports 4001, 4002, and 4003.  Specific additional rules may apply based on which specific applications you want to serve.  After testing, lock down your database (and SSH) access by identifying and restricting service to local IPs.  
 
 ![GCP Setup Image5](/img/setup5.jpg)
 
 #### SSH Instructions
 Use PUTTY to login.
 
-Start by formatting your 400GB magnetic drive. (Use the lsblk command to identify which drive is which. YOUR MAGNETIC DRIVE MAY NOT BE /dev/sdb !):
+Start by formatting your 360GB magnetic drive. (Use the lsblk command to identify which drive is which. YOUR MAGNETIC DRIVE MAY NOT BE /dev/sdb !):
 ```
 sudo mkfs.ext4 /dev/sdb
 ```

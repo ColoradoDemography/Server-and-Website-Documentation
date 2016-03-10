@@ -63,8 +63,8 @@ sudo mkdir pgdata
 
 CREATE DATA CONTAINERS
 ```
-sudo docker create -v /slow/pgdata --name slowdata busybox
-sudo docker create -v /fast/pgdata --name fastdata busybox
+sudo docker create -v /slow/pgdata:/var/lib/postgresql/data --name slowdata busybox
+sudo docker create -v /fast/pgdata:/var/lib/postgresql/data --name fastdata busybox
 ```
 
 CREATE POSTGRES / POSTGIS CONTAINERS

@@ -78,22 +78,32 @@ Most everything is set up now.  You can log in to an FTP client like Filezilla (
 
 Before loading data, you will need to log in to BOTH containers via PgAdmin, and do the following steps for each:
 
-Create a 'codemog' user, and set the codemog password in the SQL window as follows:
+ - Create the relevant databases for each cluster (dola, acs0812, acs0913, etc).
+ - Add the postgis extension to each individual database.
+ - Create a 'codemog' user, and set the codemog password in the SQL window as follows:
+
 ```
 CREATE ROLE codemog;
 ALTER USER codemog WITH PASSWORD 'whatever';
 ```
 (The codemog user is a SELECT-only level user.)
 
-Then, create the databases that you will need: acs1014, acs0913, etc.  Lastly, add the 'postgis' extension using the PgAdmin interface.
+### Now you are ready to upload data from the databases.
 
-##### Upload .custom files to Databases
-(The .custom files were created with pg\_dump using a command such as the one below)
+The data is stored in a google storage bucket called census-database.  Since CoreOS Linux does not contain pg\_restore and pg\_admin (it comes packaged with PgAdmin), you could:
+ - install pgadmin3 on coreos (eh)
+ - create a temporary postgis docker container from which to run these commands
+ - use an intermediate cloud machine
+ - use the (windows equivalent) commands on desktop
+
+#### Don't type this:
+Note, The .custom files were created with pg\_dump using a command such as the one below:
 ```
 # pg_dump -Fc -h 104.197.26.248 -U postgres -p 5432 -d dola > dola.custom
 ```
 
-Use pg\_restore command to restore database from a pg\_dump created file
+#### Type this:
+Use pg\_restore to restore database from a pg\_dump created file
 ```
 pg_restore -h 104.196.8.243 -p 5433 -U postgres -j 2 -d dola /tmp/dola.custom
 ```

@@ -85,6 +85,7 @@ Before loading data, you will need to log in to BOTH containers via PgAdmin, and
 ```
 CREATE ROLE codemog;
 ALTER USER codemog WITH PASSWORD 'whatever';
+ALTER ROLE codemog LOGIN;
 ```
 (The codemog user is a SELECT-only level user.)
 

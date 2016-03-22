@@ -29,7 +29,7 @@ We're running two database containers, so we need to allow ports 5432 and 5433. 
 
 ![GCP Setup Image5](/img/setup5.jpg)
 
-#### Don't forget to enable access to all Google Cloud APIs
+##### Don't forget to enable access to all Google Cloud APIs
 This will come in handy.  Trust me.
 
 ![GCP Setup Image6](/img/setup6.jpg)
@@ -75,7 +75,7 @@ sudo mkdir gcp
 Add the following keys to /gcp/:
 - .pgpass for working with Postgres Databases (using pg_dump or pgsql2shp)
 - Google Cloud Platform API Key (for uploading to Google Storage Buckets)
-- - Menu: API Manager -> Credentials -> Create credentials (to aquire this key)
+   - Menu: API Manager -> Credentials -> Create credentials (to aquire this key)
 
 
 CREATE DATA CONTAINERS

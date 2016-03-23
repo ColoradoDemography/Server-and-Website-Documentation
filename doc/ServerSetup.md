@@ -78,6 +78,13 @@ Add the following keys to /gcp/:
    - Menu: API Manager -> Credentials -> Create credentials (to aquire this key)
 
 
+After loading the keyfiles, change the permissions:
+```
+sudo chmod 600 .pgpass
+sudo chmod 600 whateverkeyfilename.json
+```
+
+
 CREATE DATA CONTAINERS
 ```
 sudo docker create -v /slow/pgdata:/var/lib/postgresql/data --name slowdata busybox

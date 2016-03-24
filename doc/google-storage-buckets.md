@@ -23,6 +23,6 @@ Any new file placed here is automatically set to be publicly available.
 
 #### maps-static
 
-This bucket holds maps (PDF's, JPEG's or PNG's) that will be available as downloads throughout the site.  I could alternately have used Google Drive, but it's nice to have the maps available in a one clean container that I can look after.
+This bucket holds maps (PDF's, JPEG's or PNG's) that will be available as downloads throughout the site.  I could alternately have used Google Drive, but it's nice to have the maps available in one clean container that I can look after.
 
 Any new file placed here is automatically set to be publicly available.

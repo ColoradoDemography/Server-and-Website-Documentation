@@ -79,6 +79,8 @@ A microservice can be thought of as a relatively small program that does just on
 So Jekyll can access it by using AJAX! (client-side Javascript requests)  In this way, even though Jekyll cannot run any server scripts on it's own, it can still access all the data it needs through these URL's.  When you visit a data lookup, application, or a visualization, behind the scenes the Javascript on these Jekyll pages is calling these URLs, gathering the data, and turning ordinary HTML pages into something much more exciting!
 
 
+## More Information
+
 This was just a general overview.  To get into more detail on how everything works, click the links below for a deeper dive.  (This is also a note from present me to future me, so that you can quickly reconstruct or repair something if things go awry.)
 
 - [Compute Engine CoreOS Instance Startup Guide](doc/server-setup.md)
@@ -99,8 +101,7 @@ This was just a general overview.  To get into more detail on how everything wor
 	- Writing Markdown, Markdown Gotchas: Spacing in Markdown, Escape Apostrophe, email addresses: [linktext](mailto:name@state.co.us)  
 	- Style Guide:  All outside links in parenthesis, Tagging outside links with source, How to: Anchor Tags Link to Achor Tags  
 	- Our custom yaml front matter
-- Applications
-  - app specific documentation
+- [Applications](application-directory.md)
 - Database Documentation
   - where is everything?
   - updating database (adding new data and adjusting old)

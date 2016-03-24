@@ -21,14 +21,14 @@ The website should be easy to update - by anyone.  Nobody should have to open up
 
 ##### Modularity
 
-To the extent possible, everything should be separate from everything else.  One bug or one failing application should not effect the entire system.  Applications should be able to come and go without leaving artifacts on the server.  Static files (HTML, CSS, Client-Javascript) should be separate from Dynamically generated content (Server-side code).
+To the extent possible, everything should be separate from everything else.  One bug or one failing application should not affect the entire system.  Applications should be able to come and go without leaving artifacts on the server.  Static files (HTML, CSS, Client-Javascript) should be separate from dynamically generated content (Server-side code).  A server crash should not be able to bring the whole website down.
 
 ##### Recoverability
 
 In the event of a failure, it shouldn't take a week to re-create a new server and re-install all the components.  Every aspect of the system should be documented.
 
 
-**With those principles in mind, are system was set up as follows:**
+**With those principles in mind, our system was set up as follows:**
 
 
 ## Core-OS
@@ -76,45 +76,32 @@ A microservice can be thought of as a relatively small program that does just on
 
 *Why use URL endpoints to deliver data?*
 
-So Jekyll can access it by using AJAX! (client-side Javascript requests)  In this way, even though Jekyll cannot run any server scripts on it's own, it can still access all the data it needs through these URL's.
+So Jekyll can access it by using AJAX! (client-side Javascript requests)  In this way, even though Jekyll cannot run any server scripts on it's own, it can still access all the data it needs through these URL's.  When you visit a data lookup, application, or a visualization, behind the scenes the Javascript on these Jekyll pages is calling these URLs, gathering the data, and turning ordinary HTML pages into something much more exciting!
 
 
-This was just a general overview.  To get into more detail on how everything works, click the links below for a deeper dive.  (This is primarily a note to me from the future, so that you can quickly reconstruct or repair something if things go awry.)
+This was just a general overview.  To get into more detail on how everything works, click the links below for a deeper dive.  (This is also a note from present me to future me, so that you can quickly reconstruct or repair something if things go awry.)
 
 - [Compute Engine CoreOS Instance Startup Guide](doc/ServerSetup.md)
 - Docker Containers
-  - Current Inventory
+  - [Current Inventory and run instructions](doc/ContainerInventory.md)
   - Usefull commands; starting each container, stopping container, removing container, cleaning image registry, pulling container
   - Some quick notes on writing Dockerfiles
 - Google Storage Buckets
 - Jekyll Topics (in a logical order)
   - Folder structure: Un-menued items are in the 9\_Not\_in\_Menu folder and have a directory listing of /demography/
   - Data folder infobox.yml
-	- Writing Markdown, Markdown Gotchas: Spacing in Markdown, Escape Apostrophe, email addresses: [linktext](mailto:name@state.co.us)  
-	- Style Guide:  All outside links in parenthesis, Tagging outside links with source, How to: Anchor Tags Link to Achor Tags  
-	- Our custom yaml front matter
+  - The main template (the DOLA-ish style)
   - All \_includes: Facebook Tags, Twitter Tags, Embed Video, Homepage Infobox vs Infolinks, 
 	- Index pages: how they are populated automatically
   - Data Lookups: Tags: opdata, bdmdata, econdata, hhdata
-
-
-
-# Documentation Checklist
-
-Note: The list is in no particular order at the moment.
-- Prose.io
-  - Creating a new user in Prose.io
-  - Folder Structure and Logic
-  - Editing posts/Markdown basics
-- Google Cloud instructions
-  - Starting and Restarting the server instance (parameters, persistent disk, etc.0)
-  - Software set-up instructions in case of loss of machine image
-- Jekyll
-  - Editing Templates
-  - Editing Elements
-  - Static Architecture
+- Prose.io Topics
+  - General Setup and Configuration
+	- Writing Markdown, Markdown Gotchas: Spacing in Markdown, Escape Apostrophe, email addresses: [linktext](mailto:name@state.co.us)  
+	- Style Guide:  All outside links in parenthesis, Tagging outside links with source, How to: Anchor Tags Link to Achor Tags  
+	- Our custom yaml front matter
 - Applications
-  - app specific documentation and inline commenting
+  - app specific documentation
 - Database Documentation
+  - where is everything?
   - updating database (adding new data and adjusting old)
   - Schema mapping

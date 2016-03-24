@@ -81,11 +81,11 @@ So Jekyll can access it by using AJAX! (client-side Javascript requests)  In thi
 
 This was just a general overview.  To get into more detail on how everything works, click the links below for a deeper dive.  (This is also a note from present me to future me, so that you can quickly reconstruct or repair something if things go awry.)
 
-- [Compute Engine CoreOS Instance Startup Guide](doc/ServerSetup.md)
+- [Compute Engine CoreOS Instance Startup Guide](doc/server-setup.md)
 - Docker Containers
-  - [Current Inventory and run instructions](doc/ContainerInventory.md)
-  - [Usefull Docker Commands](doc/DockerCommands.md)
-  - [Writing a Dockerfile]()
+  - [Current Inventory and run instructions](doc/container-inventory.md)
+  - [Usefull Docker Commands](doc/docker-commands.md)
+  - [Writing a Dockerfile](doc/writing-a-dockerfile.md)
 - Google Storage Buckets
 - Jekyll Topics (in a logical order)
   - Folder structure: Un-menued items are in the 9\_Not\_in\_Menu folder and have a directory listing of /demography/

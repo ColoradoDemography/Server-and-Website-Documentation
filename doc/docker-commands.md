@@ -1,7 +1,7 @@
 # Useful Docker Commands
 
 
-Rather than using ```docker build ...``` all of our containers are created in Github Repo's.  They are hosted on DockerHub, taking advantage of its ability to create an 'automated builds' each time a repository is updated.
+Rather than using ```docker build ...``` all of our containers are created in Github repositories.  They are hosted on DockerHub, taking advantage of its ability to create an 'automated build' each time a repository is updated.
 
 ### The workflow
 
@@ -17,7 +17,7 @@ Rather than using ```docker build ...``` all of our containers are created in Gi
 
 ### What do these ```docker run ...```  parameters mean?
 
-```-d```  I've seen this described as 'daemon' or 'detached'.  It runs the process in the background.  The only reason (for you) not to use this is if you are testing a container on your development machine.
+```-d```  I've seen this described as 'daemon' or 'detached'.  It runs the process in the background.  The only reason (for you) not to use this is if you are testing a container on your development machine and need to see stdout (console messages) as it happens.
 
 ```--rm```  Use this if you want the container to 'clean up' after itself.  (You won't have to use ```docker rm name```)  I generally don't because if an error occurs, I like the container to stick around so I can look at the logs.
 
@@ -27,12 +27,12 @@ Rather than using ```docker build ...``` all of our containers are created in Gi
 
 ```-v /slow/pgdata:/var/lib/postgresql/data``` The -v parameter specifies a data path to mount from the host, to the container.  In the case of a database, this gives permanence to your data.  If you create a database inside a container, and that container exits, you've lost your data.  You would also use -v to mount super secret information into your docker container (you wouldn't want to commit your keyfiles in github and load them in that way!)
 
-```mdillon/postgis:9.4``` This is usually the last item in a 'docker run' command.  (sometimes the last command can be an application or a shell script, but nevermind that for now).  The structure of this is: account/project:version.  Leaving out :version defaults to :latest.  Most of our containers use our own codemog account, and are thus formatted codemog/project.
+```mdillon/postgis:9.4``` This is usually the last item in a 'docker run' command.  (sometimes the last command can be an application or a shell script, but nevermind that for now).  The structure of this is: ```account/project:version```.  Leaving out ```:version``` defaults to ```:latest```.  Most of our containers use our own codemog account, and are thus formatted ```codemog/project```.
 
 ### Common Commands
 
-**Pulling the newest version on a container**
-```docker pull ...``` (it's a good habit to do this nearly every time you load/update a container)
+**Pulling the newest version of a container**
+```docker pull ...``` (it's a good habit to do this nearly every time you load or update a container)
 
 **Starting a container**
 ```docker run ...``` (see above)
@@ -46,7 +46,7 @@ Rather than using ```docker build ...``` all of our containers are created in Gi
 **Removing a container**
 ```docker rm name```
 
-**Cleaning Image Registry**
+**Cleaning the Image Registry**
 
 Do this occasionally, it will free up a lot of space on your hard drive.
 ```

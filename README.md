@@ -84,8 +84,8 @@ This was just a general overview.  To get into more detail on how everything wor
 - [Compute Engine CoreOS Instance Startup Guide](doc/ServerSetup.md)
 - Docker Containers
   - [Current Inventory and run instructions](doc/ContainerInventory.md)
-  - Usefull commands; starting each container, stopping container, removing container, cleaning image registry, pulling container
-  - Some quick notes on writing Dockerfiles
+  - [Usefull Docker Commands](doc/DockerCommands.md)
+  - [Writing a Dockerfile]()
 - Google Storage Buckets
 - Jekyll Topics (in a logical order)
   - Folder structure: Un-menued items are in the 9\_Not\_in\_Menu folder and have a directory listing of /demography/

@@ -37,7 +37,7 @@ codemog/node-proxy
 ```
 docker run --name nodeproxy --link demoglookup --link censusapi --link censusmap --link shiny-server -p 80:3000 -d codemog/node-proxy
 ```
-*use the **--link name** command to link all your application and microservice containers (the ones with port mapping - excluding the databases) to the proxy*
+*use the <b>--link name</b> command to link by name all your application and microservice containers (the ones with port mapping - excluding the databases) to the proxy*
 
 
 #### Database & Data Volume Containers

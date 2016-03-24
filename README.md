@@ -86,7 +86,7 @@ This was just a general overview.  To get into more detail on how everything wor
   - [Current Inventory and run instructions](doc/container-inventory.md)
   - [Usefull Docker Commands](doc/docker-commands.md)
   - [Writing a Dockerfile](doc/writing-a-dockerfile.md)
-- Google Storage Buckets
+- [Google Storage Buckets](doc/google-storage-buckets.md)
 - Jekyll Topics (in a logical order)
   - Folder structure: Un-menued items are in the 9\_Not\_in\_Menu folder and have a directory listing of /demography/
   - Data folder infobox.yml

@@ -22,7 +22,9 @@ From now on, type: ```git push master``` and ```git push gh-pages``` to update b
 
 #### When using a 'forked' personal repository
 
-If you're using a personal repository, there is more setup involved in keeping everything synced.  For the purpose of this example, let' assume that our repo is named CO\_Map\_Gallery.
+If you're using a personal repository, there is more setup involved in keeping everything sync'd.  For the purpose of this example, let' assume that our repo is named CO\_Map\_Gallery.
 
+First, type ```git remote -v``` to take a look at your current remote repositories.  You'll probably be looking at something similar to this:
+![See remote branches](/img/git-remote-1.jpg)
 
-
+We're going to need to add an upstream remote to 'push' changes to.  We'll find the link for the forked repo on our organization account, and use that to establish a new remote.

@@ -4,7 +4,7 @@
 
 ### Why
 
-The out-of-the-box CMS that currently runs DOLA's website is not a good fit for the State Demography Office.  To aid in the understanding of demographic and economic trends and analysis, Demography relies upon dynamic, visual and interactive content.  A new, non-CMS setup has been created to enable Demography to deliver this rich content.
+The out-of-the-box CMS (content management system) that currently runs DOLA's website is not a good fit for the State Demography Office.  To aid in the understanding of demographic and economic trends and analysis, Demography relies upon dynamic, visual and interactive content.  A new, non-CMS setup has been created to enable Demography to deliver this rich content.
 
 
 ### Philosophy
@@ -103,7 +103,7 @@ This was just a general overview.  To get into more detail on how everything wor
 	- Our custom yaml front matter
 - Applications
   - [Application Inventory](doc/application-directory.md)
-  - How to add an Application to demography.dola.colorado.gov?
+  - [How to add an Application to demography.dola.colorado.gov?](doc/how-to-add-an-application.md)
 - Database Documentation
   - where is everything?
   - updating database (adding new data and adjusting old)

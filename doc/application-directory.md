@@ -125,3 +125,12 @@
 - Client Application
 - [Github](https://github.com/royhobbstn/D3_Unemployment)
 - [Application Link](https://coloradodemography.github.io/D3_Unemployment)
+
+
+#### Architecture Descriptions
+
+- **Client Application**s are purely static web applications with no server-side code dependancies.  Often the data is served in a CSV or JSON file along with the application code.  These applications are written in a mix of HTML, CSS, and Javascript.
+- **Client Application + Print** are like pure Client Applications, with the exception that they call a server process for print/save functionality.
+- **Client-Microservice Architecture** are web applications who are written in HTML, CSS and Javascript, but which use AJAX calls to retrieve dynamic data from the web server (gis.dola.colorado.gov)
+- **Server Application**s are applications that are served directly from gis.dola.colorado.gov rather than Github (demography.dola.colorado.gov).  They can be written in any language.
+

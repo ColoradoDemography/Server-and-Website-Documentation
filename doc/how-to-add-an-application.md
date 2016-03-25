@@ -28,11 +28,19 @@ First, type ```git remote -v``` to take a look at your current remote repositori
 
 ![See remote branches](/img/git-remote-1.jpg)
 
-We're going to need to add an upstream remote to 'push' changes to.  We'll find the link for the forked repo on our organization account, and use that to establish a new remote.
+We're going to need to add an upstream remote to 'push' changes to.  
+
+We'll find the link for the forked repo on our organization account
+
+![Find Link](/img/git-remote-7.jpg)
+
+...and use that to establish a new remote.
 
 ![Add remote branch](/img/git-remote-2.jpg)
 
 There, that will add a remote that we've called 'codemog' which will point to the forked repository in the organization directory.
+
+![Verify remote branch](/img/git-remote-6.jpg)
 
 Now, let's test this out.  We'll make a small change to our personal version of the repository and see if we can push that into our organization repository.
 
@@ -43,9 +51,13 @@ So we've made a small change by adding some text to the bottom of the extraconte
 ![Small change](/img/git-remote-4.jpg)
 
 After committing the change (in the usual way), our push step becomes a series of 3 commands:
+
 ```git push origin master``` which updates our local repository
+
 ```git push codemog master``` which updates our remote repository on our organization account
+
 ```git push codemog master:gh-pages``` which push the organization master branch to the organization gh-pages (published) branch
+
 
 And, for your verification.
 

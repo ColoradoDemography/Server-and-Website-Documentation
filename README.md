@@ -101,7 +101,9 @@ This was just a general overview.  To get into more detail on how everything wor
 	- Writing Markdown, Markdown Gotchas: Spacing in Markdown, Escape Apostrophe, email addresses: [linktext](mailto:name@state.co.us)  
 	- Style Guide:  All outside links in parenthesis, Tagging outside links with source, How to: Anchor Tags Link to Achor Tags  
 	- Our custom yaml front matter
-- [Applications](application-directory.md)
+- Applications
+  - [Application Inventory](doc/application-directory.md)
+  - How to add an Application to demography.dola.colorado.gov?
 - Database Documentation
   - where is everything?
   - updating database (adding new data and adjusting old)

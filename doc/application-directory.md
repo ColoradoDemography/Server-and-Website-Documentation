@@ -3,123 +3,117 @@
 
 ### ACS Webmap 
 - Client-Microservice Architecture
-- Github Link (Client)
-- Github Link (Microservices)
-- Application Link
+- [Github (Client)](https://github.com/royhobbstn/CensusAPI_Map)
+- [Github (Microservices)](https://github.com/royhobbstn/MS_CensusMap)
+- [Application Link](https://demography.dola.colorado.gov/CensusAPI_Map)
 
 ### Age-Animation Bars
 - Client Application
-- Github Link
-- Application Link
+- [Github](https://github.com/royhobbstn/Age-Animation-Bars)
+- [Application Link](https://demography.dola.colorado.gov/Age-Animation-Bars/agebars.html)
 
 ### Automatic Map Creator (Colorado Counties)
 - Client Application
-- Github Link
-- Application Link
+- [Github]
+- Application Links
+  - [Counties in Colorado]
+  - [States in USA]
+  - [Countries in the World]
 
-### Automatic Map Creator (USA States)
+### Base Industries Pie Chart
 - Client Application
-- Github Link
-- Application Link
-
-### Automatic Map Creator (World Countries)
-- Client Application
-- Github Link
-- Application Link
-
-### Base Analysis
-- Client Application
-- Github Link
-- Application Link
+- [Github](https://github.com/royhobbstn/CO_BaseIndustries)
+- [Application Link](https://demography.dola.colorado.gov/CO_BaseIndustries)
 
 ### Broadband Status Map
 - Client Application
-- Github Link
-- Application Link
+- [Github]
+- [Application Link]
 
 ### Census Data Query Tool
 - Client-Microservice Architecture
-- Github Link (Client)
-- Github Link (Microservices)
-- Application Link
+- [Github (Client)]
+- [Github (Microservices)]
+- [Application Link]
 
 ### Census Data Timeseries
 - Client-Microservice Architecture
-- Github Link (Client)
-- Github Link (Microservices)
-- Application Link
+- [Github (Client)]
+- [Github (Microservices)]
+- [Application Link]
 
 ### Colorado DOLA Grants
 - Client Application
-- Github Link
-- Application Link
+- [Github]
+- [Application Link]
 
 ### Colorado County Population Change (Bubbles)
 - Client Application
-- Github Link
-- Application Link
+- [Github]
+- [Application Link]
 
 ### Colorado County Population Change (Animated Pie)
 - Client Application
-- Github Link
-- Application Link
+- [Github]
+- [Application Link]
 
 ### Colorado Municipal Boundaries
 - Client-Microservice Architecture (TODO)
-- Github Link (Client)
-- Github Link (Microservices)
-- Application Link
+- [Github (Client)]
+- [Github (Microservices)]
+- [Application Link]
 
 ### Colorado Special Districts
 - Client-Microservice Architecture (TODO)
-- Github Link (Client)
-- Github Link (Microservices)
-- Application Link
+- [Github (Client)]
+- [Github (Microservices)]
+- [Application Link]
 
 ### Colorado Unemployment Map
 - Client Application
-- Github Link
-- Application Link
+- [Github]
+- [Application Link]
 
 ### Compare Cities (Likeness Tool)
 - Client Application
-- Github Link
-- Application Link
+- [Github]
+- [Application Link]
 
 ### Demography Dashboard
 - Server Application
-- Github Link
-- Application Link
-- Application Link
+- [Github]
+- [Application Link]
+- [Application Link]
 
 ### Demography Data Lookups
 - Client-Microservice Architecture
 - Jekyll Pages
-- Github Link (Client) 
-- Github Link (Microservices)
-- Application Link
+- [Github (Client)]
+- [Github (Microservices)]
+- Application Links
+  - Base Analysis
 
 ### Map Gallery
 - Client Application
-- Github Link
-- Application Link
+- [Github]
+- [Application Link]
 
 ### Migration Animation (Bubbles)
 - Client Application
-- Github Link
-- Application Link
+- [Github]
+- [Application Link]
 
 ### Quadrant Chart
 - Client Application
-- Github Link
-- Application Link
+- [Github]
+- [Application Link]
 
 ### Rural-Urban Commuting Areas (RUCA)
 - Client Application
-- Github Link
-- Application Link
+- [Github]
+- [Application Link]
 
 ### Unemployment Chart
 - Client Application
-- Github Link
-- Application Link
+- [Github]
+- [Application Link]

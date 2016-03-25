@@ -33,7 +33,7 @@ In the event of a failure, it shouldn't take a week to re-create a new server an
 
 ## Core-OS
 
-We use a Google Compute Engine instance on Google Cloud Platform to run the dynamic content and applications on the website.  To put it simply, we have a computer in the 'cloud' which runs on a Linux operating system.  The 'flavor' of Linux we chose is called [CoreOS](https://coreos.com/).  CoreOS was chosen for one main reason: it's an operating system that is built precisely for running 'containers' (more on that later).  It's a very light-weight operating system with few bells-and-whistles.  However, it comes with [Docker](https://www.docker.com/) pre-installed.  Every application and microservice is meant to run inside a container, rather than being installed on top of the operating system.
+We use a Google Compute Engine instance on Google Cloud Platform to run the dynamic content and applications on the website.  To put it simply, we have a computer in the 'cloud' which runs on a Linux operating system.  The 'flavor' of Linux we chose is called [CoreOS](https://coreos.com/).  CoreOS was elected for one main reason: it's an operating system that is built precisely for running 'containers' (more on that later).  It's a very light-weight operating system with few bells-and-whistles.  However, it comes with [Docker](https://www.docker.com/) pre-installed.  Every application and microservice is meant to run inside a container, rather than being installed on top of the operating system.
 
 
 ## PostgreSQL
@@ -48,9 +48,9 @@ Docker is the fundamental technology that drives our server-side architecture.  
 *Why is it important that these containers are separate from each other?*
 
 Say that you wanted to add a new feature to your application.  But let's also say that for this new feature to work, you have to update some software first.
-If you're running all of your applications together on one operating system, updating one piece of software can (and often does) have the side effect of 'breaking' something else that depends on an older version of that software.  However, when you run applications in isolated containers, the software update only affects that particular container.  The other containers can blissfully go on using their 'old' version of the software.
+If you're running all of your applications together on one operating system, updating one piece of software can (and often does) have the side effect of 'breaking' something else that depends on an older version of that software.  (Isn't that exactly what is happening with DOLAs Java Applications?!)  However, when you run applications in isolated containers, the software update only affects that particular container.  The other containers can blissfully go on using their 'old' version of the software.
 
-Modularity is also key in terms of employee continuity and general development flexibility.  Currently, the Demography Office has expertise in programming with Javascript and R.  If the current personnel get hit by a bus and are replaced by Java and Ruby developers, no problem!  Their applications can also be 'Dockerized' and launched into the same environment.  Additionally, the applications created by the 'departed' employees will continue to run (and can even be re-launched in the event of a server failure).
+Modularity is also key in terms of employee continuity and general development flexibility.  Currently, the Demography Office has expertise in programming with Javascript and R.  If the current personnel get hit by a bus and are replaced by Java and Ruby developers, no problem!  Their applications can also be 'Dockerized' and launched into the same environment.  Additionally, the applications created by the 'departed' employees will still continue to run (and can easily be re-launched in the event of a server failure).
 
 
 ## Jekyll
@@ -62,7 +62,7 @@ General content (text, images, links, etc) for the site is written in a format c
 This content can be written and committed directly to the [coloradodemography.github.io](https://github.com/ColoradoDemography/coloradodemography.github.io) repository without ever leaving Github.
 However, one of our goals was 'ease of everyday use', and there is an easier way.  For most content creation, we use [prose.io](http://prose.io/). It provides a more classical WYSIWYG (what you see is what you get) interface to editing content, while subtly and inobtrusively teaching markdown at the same time (try it - you'll see what I mean).
 
-It gets even better.  Whenever you make a change to the website (through prose.io or Github), Github will automatically re-build the changed pages for you.  Your edits are automatic and nearly instantaneous.
+It gets even better.  Whenever you make a change to the website (through prose.io or Github), Github will automatically run Jekyll (on their servers!) to re-build the changed pages for you.  Your edits will be published on your production site within seconds.
 
 Did I mention that Github hosts Jekyll sites for free?  And that you can even use your own domain name?
 
@@ -70,13 +70,13 @@ Did I mention that Github hosts Jekyll sites for free?  And that you can even us
 ## Microservices
 
 So how do we combine the static content (Jekyll) with our dynamically generated content (the CoreOS-Docker Server).  They appear to be two discrete entities (and they are).  The secret is in creating 'microservices'.
-A microservice can be thought of as a relatively small program that does just one thing (and does it well), and is accessible through a URL endpoint.  This concept perfectly fits our idea of 'modularity'.  Rather than having one monolithic server-side application that handles every possible application request, you break down this functionality into a group of jobs (or processes) that need to be done.  In the instance of my Census Map Application, there is a process the retrieves GeoJson data for map display, a process that generates data for charts, a process that exports a csv table to a file - and it is all done by calling URL endpoints.
+A microservice can be thought of as a relatively small program that does just one thing (and does it well), and is accessible through a URL endpoint.  This concept perfectly fits our idea of 'modularity'.  Rather than having one monolithic server-side application that handles every possible application request, you break down this functionality into a group of jobs (or processes) that need to be done.  Using my Census Map Application as an example; there is a process that retrieves GeoJson data for map display, a process that generates data for charts, a process that exports a csv table to a file - and it is all done by calling URL endpoints.
 
-[See... clicking this link gives you data.](http://104.197.26.248:4001/profile?county=1&year=2011,2012&vars=births,deaths)
+[See... clicking this link gives you data.](http://104.197.26.248:4001/profile?county=1&year=2011,2012&vars=births,deaths) This cryptic text may not mean much to you, but computers love to read it!
 
 *Why use URL endpoints to deliver data?*
 
-So Jekyll can access it by using AJAX! (client-side Javascript requests)  In this way, even though Jekyll cannot run any server scripts on it's own, it can still access all the data it needs through these URL's.  When you visit a data lookup, application, or a visualization, behind the scenes the Javascript on these Jekyll pages is calling these URLs, gathering the data, and turning ordinary HTML pages into something much more exciting!
+So that our Jekyll pages can access it by using [AJAX!](http://awaxman11.github.io/blog/2013/07/21/checking-out-js/) (client-side Javascript requests)  In this way, even though the static Jekyll pages cannot run any server scripts on their own, they can still access all the data they need through these URL's.  When you visit a data lookup, application, or a visualization, behind the scenes the Javascript on these Jekyll pages is calling a URL, processing the data, and turning ordinary HTML pages into something much more exciting!
 
 
 ## More Information

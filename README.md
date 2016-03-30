@@ -105,6 +105,6 @@ This was just a general overview.  To get into more detail on how everything wor
   - [Application Inventory](doc/application-directory.md)
   - [How to add an Application to demography.dola.colorado.gov?](doc/how-to-add-an-application.md)
 - Database Documentation
-  - where is everything?
-  - updating database (adding new data and adjusting old)
-  - Schema mapping
+  - [Overview (or, Why are there two database clusters?)](doc/database-overview.md)
+  - Census Databases schema
+  - (An easy guide to) updating the Census Database

@@ -56,7 +56,7 @@ After committing the change (in the usual way), our push step becomes a series o
 
 ```git push codemog master``` which updates our remote repository on our organization account
 
-```git push codemog master:gh-pages``` which push the organization master branch to the organization gh-pages (published) branch
+```git push codemog master:gh-pages``` which will push the organization master branch to the organization gh-pages (published) branch
 
 
 And, for your verification.

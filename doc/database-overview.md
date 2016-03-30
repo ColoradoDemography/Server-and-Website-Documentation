@@ -1,7 +1,7 @@
 # Database Overview
 
 
-** or ... Why are there two database clusters? **
+**or ... Why are there two database clusters?**
 
 Demography's data is split into two separate database clusters (split between two PostGIS Docker Instance / Data Container pairs).  There are a couple of obvious (and unfortunate) reasons for this division.
 - Some data needs to be served as fast as possible

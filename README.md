@@ -106,5 +106,5 @@ This was just a general overview.  To get into more detail on how everything wor
   - [How to add an Application to demography.dola.colorado.gov?](doc/how-to-add-an-application.md)
 - Database Documentation
   - [Overview (or, Why are there two database clusters?)](doc/database-overview.md)
-  - Census Databases schema
+  - [Census Databases schema](doc/census-db-schema.md)
   - (An easy guide to) updating the Census Database

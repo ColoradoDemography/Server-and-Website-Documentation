@@ -107,4 +107,4 @@ This was just a general overview.  To get into more detail on how everything wor
 - Database Documentation
   - [Overview (or, Why are there two database clusters?)](doc/database-overview.md)
   - [Census Databases schema](doc/census-db-schema.md)
-  - (An easy guide to) updating the Census Database
+  - [(An easy guide to) updating the Census Database](doc/update-database.md)

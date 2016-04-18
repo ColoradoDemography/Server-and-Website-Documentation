@@ -86,21 +86,22 @@ This was just a general overview.  To get into more detail on how everything wor
 - [Compute Engine CoreOS Instance Startup Guide](doc/server-setup.md)
 - Docker Containers
   - [Current Inventory and run instructions](doc/container-inventory.md)
-  - [Usefull Docker Commands](doc/docker-commands.md)
+  - [Useful Docker Commands](doc/docker-commands.md)
   - [Writing a Dockerfile](doc/writing-a-dockerfile.md)
 - [Google Storage Buckets](doc/google-storage-buckets.md)
-- Jekyll Topics (in a logical order)
+- Jekyll Topics
+	- [YAML & Why it is Important](doc/yaml-musings.md)
   - Folder structure: Un-menued items are in the 9\_Not\_in\_Menu folder and have a directory listing of /demography/
   - Data folder infobox.yml
   - The main template (the DOLA-ish style)
   - All \_includes: Facebook Tags, Twitter Tags, Embed Video, Homepage Infobox vs Infolinks, 
 	- Index pages: how they are populated automatically
   - Data Lookups: Tags: opdata, bdmdata, econdata, hhdata
-- Prose.io Topics
+- Prose.io and Style Topics
   - General Setup and Configuration
 	- Writing Markdown, Markdown Gotchas: Spacing in Markdown, Escape Apostrophe, email addresses: [linktext](mailto:name@state.co.us)  
-	- Style Guide:  All outside links in parenthesis, Tagging outside links with source, How to: Anchor Tags Link to Achor Tags  
-	- Our custom yaml front matter
+	- Style Guide:  All outside links in parenthesis, Tagging outside links with source, How to: Anchor Tags Link to Anchor Tags  
+  - Linking to anchor tags: https://gist.github.com/asabaylus/3071099#gistcomment-1593627
 - Applications
   - [Application Inventory](doc/application-directory.md)
   - [How to add an Application to demography.dola.colorado.gov?](doc/how-to-add-an-application.md)

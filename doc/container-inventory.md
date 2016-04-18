@@ -31,6 +31,10 @@ codemog/co\_cron
 ```
 docker run --name nodecron -d -v /gcp:/root codemog/co_cron
 ```
+Optional (for logging):
+
+- --log-opt max-size=[0-9+][k|m|g]
+- --log-opt max-file=[0-9+]
 
 
 codemog/node-proxy

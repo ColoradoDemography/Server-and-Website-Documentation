@@ -5,12 +5,12 @@
 - Client-Microservice Architecture
 - [Github (Client)](https://github.com/royhobbstn/CensusAPI_Map)
 - [Github (Microservices)](https://github.com/royhobbstn/MS_CensusMap)
-- [Application Link](https://coloradodemography.github.io/CensusAPI_Map)
+- [Application Link](https://demography.dola.colorado.gov/CensusAPI_Map)
 
 ### Age-Animation Bars
 - Client Application
 - [Github](https://github.com/royhobbstn/Age-Animation-Bars)
-- [Application Link](https://coloradodemography.github.io/Age-Animation-Bars/agebars.html)
+- [Application Link](https://demography.dola.colorado.gov/Age-Animation-Bars)
 
 ### Automatic Map Creator
 - Client Application
@@ -23,7 +23,7 @@
 ### Base Industries Pie Chart
 - Client Application
 - [Github](https://github.com/royhobbstn/CO_BaseIndustries)
-- [Application Link](https://coloradodemography.github.io/CO_BaseIndustries)
+- [Application Link](https://demography.dola.colorado.gov/CO_BaseIndustries)
 
 ### Broadband Status Map
 - Client Application
@@ -34,7 +34,7 @@
 - Client-Microservice Architecture
 - [Github (Client)](https://github.com/royhobbstn/CensusAPI)
 - [Github (Microservices)](https://github.com/royhobbstn/MS_CensusAPI)
-- [Application Link](https://coloradodemography.github.io/CensusAPI/queryapi.html)
+- [Application Link](https://demography.dola.colorado.gov/CensusAPI)
 
 ### Census Data Timeseries
 - Client-Microservice Architecture (TODO)
@@ -50,34 +50,34 @@
 ### Colorado County Population Change (Bubbles)
 - Client Application
 - [Github](https://github.com/royhobbstn/Population-Bubbles)
-- [Application Link](https://coloradodemography.github.io/Population-Bubbles/allpop2.html)
+- [Application Link](https://demography.dola.colorado.gov/Population-Bubbles)
 
 ### Colorado County Population Change (Animated Pie)
 - Client Application
 - [Github](https://github.com/royhobbstn/Animated-Pie)
-- [Application Link](https://coloradodemography.github.io/Animated-Pie/pop_pie.html)
+- [Application Link](https://demography.dola.colorado.gov/Animated-Pie)
 
 ### Colorado Municipal Boundaries
 - Client-Microservice Architecture (TODO)
 - [Github (Client)](https://github.com/royhobbstn/CO_Muni)
 - [Github (Microservices)] (TODO)
-- [Application Link](https://coloradodemography.github.io/CO_Muni)
+- [Application Link](https://demography.dola.colorado.gov/CO_Muni)
 
 ### Colorado Special Districts
 - Client-Microservice Architecture (TODO)
 - [Github (Client)](https://github.com/royhobbstn/CO_SpecialDistrict)
 - [Github (Microservices)]
-- [Application Link](https://coloradodemography.github.io/CO_SpecialDistrict)
+- [Application Link](https://demography.dola.colorado.gov/CO_SpecialDistrict)
 
 ### Colorado Unemployment Map
 - Client Application
 - [Github](https://github.com/royhobbstn/CO_BLS_Unemployment)
-- [Application Link](https://coloradodemography.github.io/CO_BLS_Unemployment)
+- [Application Link](https://demography.dola.colorado.gov/CO_BLS_Unemployment)
 
 ### Compare Cities (Likeness Tool)
 - Client Application
 - [Github](https://github.com/royhobbstn/CompareCities)
-- [Application Link](https://coloradodemography.github.io/CompareCities)
+- [Application Link](https://demography.dola.colorado.gov/CompareCities)
 
 ### Demography Dashboard
 - Server Application
@@ -90,41 +90,41 @@
 - [Github (Client)](https://github.com/royhobbstn/Demog-Lookup-Clients)
 - [Github (Microservices)](https://github.com/royhobbstn/MS_Demog_Lookups)
 - Application Links
-  - [Base Analysis](http://coloradodemography.github.io/economy-labor-force/data/base-analysis.html)
-  - [Components of Change](http://coloradodemography.github.io/births-deaths-migration/data/components-change.html)
-  - [County Demographic Profiles](http://coloradodemography.github.io/population/data/county-profile.html)
-  - [County Race by Age Forecast](http://coloradodemography.github.io/population/data/race-forecast.html)
-  - [County Single Year of Age](http://coloradodemography.github.io/population/data/county-sya.html)
-  - [County Single Year of Age Race Estimates](http://coloradodemography.github.io/population/data/race-estimate.html)
-  - [Household Projections](http://coloradodemography.github.io/housing-and-households/data/household-projections.html)
-  - [Jobs by Sector](http://coloradodemography.github.io/economy-labor-force/data/jobs-by-sector.html)
-  - [Labor Force Participation](http://coloradodemography.github.io/economy-labor-force/data/labor-force.html)
-  - [Municipal Population and Housing Estimates](http://coloradodemography.github.io/population/data/muni-pop-housing.html)
+  - [Base Analysis](https://demography.dola.colorado.gov/economy-labor-force/data/base-analysis.html)
+  - [Components of Change](https://demography.dola.colorado.gov/births-deaths-migration/data/components-change.html)
+  - [County Demographic Profiles](https://demography.dola.colorado.gov/population/data/county-profile.html)
+  - [County Race by Age Forecast](https://demography.dola.colorado.gov/population/data/race-forecast.html)
+  - [County Single Year of Age](https://demography.dola.colorado.gov/population/data/county-sya.html)
+  - [County Single Year of Age Race Estimates](https://demography.dola.colorado.gov/population/data/race-estimate.html)
+  - [Household Projections](https://demography.dola.colorado.gov/housing-and-households/data/household-projections.html)
+  - [Jobs by Sector](https://demography.dola.colorado.gov/economy-labor-force/data/jobs-by-sector.html)
+  - [Labor Force Participation](https://demography.dola.colorado.gov/economy-labor-force/data/labor-force.html)
+  - [Municipal Population and Housing Estimates](https://demography.dola.colorado.gov/population/data/muni-pop-housing.html)
 
 ### Map Gallery
 - Client Application
 - [Github](https://github.com/royhobbstn/CO_Map_Gallery)
-- [Application Link](https://coloradodemography.github.io/CO_Map_Gallery)
+- [Application Link](https://demography.dola.colorado.gov/CO_Map_Gallery)
 
 ### Migration Animation (Bubbles)
 - Client Application
 - [Github](https://github.com/royhobbstn/Migration-Bubbles)
-- [Application Link](https://coloradodemography.github.io/Migration-Bubbles/ptmigration.html)
+- [Application Link](https://demography.dola.colorado.gov/Migration-Bubbles)
 
 ### Quadrant Chart
 - Client Application
 - [Github](https://github.com/royhobbstn/D3_Quadrant)
-- [Application Link](https://coloradodemography.github.io/D3_Quadrant)
+- [Application Link](https://demography.dola.colorado.gov/D3_Quadrant)
 
 ### Rural-Urban Commuting Areas (RUCA)
 - Client Application
 - [Github](https://github.com/royhobbstn/CO_RUCA)
-- [Application Link](https://coloradodemography.github.io/CO_RUCA)
+- [Application Link](https://demography.dola.colorado.gov/CO_RUCA)
 
 ### Unemployment Chart
 - Client Application
 - [Github](https://github.com/royhobbstn/D3_Unemployment)
-- [Application Link](https://coloradodemography.github.io/D3_Unemployment)
+- [Application Link](https://demography.dola.colorado.gov/D3_Unemployment)
 
 
 #### Architecture Descriptions

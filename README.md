@@ -84,6 +84,7 @@ So that our Jekyll pages can access it by using [AJAX!](http://awaxman11.github.
 This was just a general overview.  To get into more detail on how everything works, click the links below for a deeper dive.  (This is also a note from present me to future me, so that you can quickly reconstruct or repair something if things go awry.)
 
 - [Compute Engine CoreOS Instance Startup Guide](doc/server-setup.md)
+  - [CoreOS Tips](doc/coreos-tips.md)
 - Docker Containers
   - [Current Inventory and run instructions](doc/container-inventory.md)
   - [Useful Docker Commands](doc/docker-commands.md)

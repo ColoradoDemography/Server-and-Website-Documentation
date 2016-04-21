@@ -92,7 +92,8 @@ This was just a general overview.  To get into more detail on how everything wor
 - [Google Storage Buckets](doc/google-storage-buckets.md)
 - Jekyll Topics
 	- [YAML & Why it is Important](doc/yaml-musings.md)
-  - Folder structure: Un-menued items are in the 9\_Not\_in\_Menu folder and have a directory listing of /demography/
+  - [Folder structure](doc/folder-structure.md)
+  - [Layouts](doc/layouts.md)
   - Data folder infobox.yml
   - The main template (the DOLA-ish style)
   - All \_includes: Facebook Tags, Twitter Tags, Embed Video, Homepage Infobox vs Infolinks, 
@@ -100,8 +101,9 @@ This was just a general overview.  To get into more detail on how everything wor
   - Data Lookups: Tags: opdata, bdmdata, econdata, hhdata
 - Prose.io and Style Topics
   - General Setup and Configuration
+  - Guide to Creating a New Page  
 	- Writing Markdown, Markdown Gotchas: Spacing in Markdown, Escape Apostrophe, email addresses: [linktext](mailto:name@state.co.us)  
-	- Style Guide:  All outside links in parenthesis, Tagging outside links with source, How to: Anchor Tags Link to Anchor Tags  
+	- SDO Style Guide:  All outside links in parenthesis, Tagging outside links with source, How to: Anchor Tags Link to Anchor Tags  - nested links (for icons)
   - Linking to anchor tags: https://gist.github.com/asabaylus/3071099#gistcomment-1593627
 - Applications
   - [Application Inventory](doc/application-directory.md)

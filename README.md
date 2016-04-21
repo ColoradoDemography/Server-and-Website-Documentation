@@ -89,14 +89,16 @@ This was just a general overview.  To get into more detail on how everything wor
   - [Current Inventory and run instructions](doc/container-inventory.md)
   - [Useful Docker Commands](doc/docker-commands.md)
   - [Writing a Dockerfile](doc/writing-a-dockerfile.md)
+  - Schedule Container
+  - Proxy Container
 - [Google Storage Buckets](doc/google-storage-buckets.md)
 - Jekyll Topics
-	- [YAML & Why it is Important](doc/yaml-musings.md)
-  - [Folder structure](doc/folder-structure.md)
+	- [YAML](doc/yaml-musings.md)
+  - [Folder Structure](doc/folder-structure.md)
   - [Layouts](doc/layouts.md)
-  - All \_includes: Facebook Tags, Twitter Tags, Embed Video, Homepage Infobox vs Infolinks
-  - Index pages: how they are populated automatically
-  - Data Lookups: Tags: opdata, bdmdata, econdata, hhdata
+  - [Includes](doc/includes.md) All \_includes: Facebook Tags, Twitter Tags, Embed Video, Homepage Infobox vs Infolinks
+  - [Data Lookups]() Tags: opdata, bdmdata, econdata, hhdata  
+  - [Index Pages]() how they are populated automatically
 - Prose.io and Style Topics
   - General Setup and Configuration
   - Guide to Creating a New Page

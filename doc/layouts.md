@@ -1,6 +1,8 @@
 ## About the Current Design
 
-Our current design is a clone of the former [DOLA](https://www.colorado.gov/pacific/dola) (organization) style.  We recognize that many of our users identify with us strongly with DOLA, and to be taken to a website with a completely different look and feel would be jarring.  Within our current layout there is plenty of room for customization and optimization.  Thus far we have made minor style adjustments, and will continue to do so.
+Our current design is a clone of the former [DOLA](https://www.colorado.gov/pacific/dola) (organization) style.  We recognize that many of our users identify with us strongly with DOLA, and to be taken to a website with a completely different look and feel would be jarring.  
+
+Thankfully, within our current layout there is plenty of room for customization and optimization.  Thus far we have made minor style adjustments, and will continue to do so.
 
 
 ## Layouts

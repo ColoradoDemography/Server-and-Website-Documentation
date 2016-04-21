@@ -45,7 +45,7 @@ GeoJSON files used to make maps are in this directory.
 
 ## images
 
-The site's inline images are should be uploaded here.
+The site's inline images should be placed here.
 
 ## pages
 

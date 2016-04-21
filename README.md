@@ -4,7 +4,7 @@
 
 ### Why
 
-The out-of-the-box CMS (content management system) that currently runs DOLA's website is not a good fit for the State Demography Office.  To aid in the understanding of demographic and economic trends and analysis, Demography relies upon dynamic, visual and interactive content.  A new, non-CMS setup has been created to enable Demography to deliver this rich content.
+The out-of-the-box CMS (content management system) that currently runs DOLA's website is not a good fit for the State Demography Office.  To aid in the understanding of demographic and economic trends and analysis, Demography relies upon dynamic visual and interactive content.  A new, non-CMS setup has been created to enable Demography to deliver this rich content.
 
 
 ### Philosophy
@@ -31,7 +31,7 @@ In the event of a failure, it shouldn't take a week to re-create a new server an
 **With those principles in mind, our system was set up as follows:**
 
 
-## Core-OS
+## CoreOS
 
 We use a Google Compute Engine instance on Google Cloud Platform to run the dynamic content and applications on the website.  To put it simply, we have a computer in the 'cloud' which runs on a Linux operating system.  The 'flavor' of Linux we chose is called [CoreOS](https://coreos.com/).  CoreOS was elected for one main reason: it's an operating system that is built precisely for running 'containers' (more on that later).  It's a very light-weight operating system with few bells-and-whistles.  However, it comes with [Docker](https://www.docker.com/) pre-installed.  Every application and microservice is meant to run inside a container, rather than being installed on top of the operating system.
 
@@ -94,8 +94,6 @@ This was just a general overview.  To get into more detail on how everything wor
 	- [YAML & Why it is Important](doc/yaml-musings.md)
   - [Folder structure](doc/folder-structure.md)
   - [Layouts](doc/layouts.md)
-  - Data folder infobox.yml
-  - The main template (the DOLA-ish style)
   - All \_includes: Facebook Tags, Twitter Tags, Embed Video, Homepage Infobox vs Infolinks, 
 	- Index pages: how they are populated automatically
   - Data Lookups: Tags: opdata, bdmdata, econdata, hhdata
@@ -103,8 +101,7 @@ This was just a general overview.  To get into more detail on how everything wor
   - General Setup and Configuration
   - Guide to Creating a New Page  
 	- Writing Markdown, Markdown Gotchas: Spacing in Markdown, Escape Apostrophe, email addresses: [linktext](mailto:name@state.co.us)  
-	- SDO Style Guide:  All outside links in parenthesis, Tagging outside links with source, How to: Anchor Tags Link to Anchor Tags  - nested links (for icons)
-  - Linking to anchor tags: https://gist.github.com/asabaylus/3071099#gistcomment-1593627
+	- SDO Style Guide:  All outside links in parenthesis, Tagging outside links with source, How to: Anchor Tags Link to Anchor Tags  - nested links (for icons) & Linking to anchor tags: https://gist.github.com/asabaylus/3071099#gistcomment-1593627
 - Applications
   - [Application Inventory](doc/application-directory.md)
   - [How to add an Application to demography.dola.colorado.gov?](doc/how-to-add-an-application.md)

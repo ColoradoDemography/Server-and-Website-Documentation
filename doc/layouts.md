@@ -1,0 +1,1 @@
+  - The main template (the DOLA-ish style)

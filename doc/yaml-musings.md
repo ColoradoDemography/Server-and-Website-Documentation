@@ -91,4 +91,5 @@ For instance, you could use Liquid to Look through all of your pages to find onl
 ```
 
 At a very basic level (PLEASE see documentation), Liquid performs subsitutions.
+
 For instance, Liquid would substitute the value {{page.years}} with whatever is specified in the YAML *years* tag for that particular page.

@@ -33,8 +33,11 @@ layout: page
 permalink: "/population/"
 ```
 *What are they?*
+
 **layout**: determines the layout used for the page.  Currently, the only options for this are 'page' and 'homepage'.  See the [layout](doc/layouts.md) page for more information.
+
 **permalink**: determines the relative web page address (URL) for the page.  permalink: "/population/" would result in a URL of https://demography.dola.colorado.gov/population/ (The result of adding the base URL, https://demography.dola.colorado.gov + the permalink tag value.)
+
 Layout and Permalink MUST Always be Included in YAML
 
 **SDO-Specific YAML** (Mandatory)
@@ -43,7 +46,9 @@ title: "Population Data"
 description: "Population subject directory for the Colorado State Demography Office"
 ```
 *What are they?*
+
 **title**: Creates the Title for the page, which is the text shown on individual browser tabs.  Additionally, this is a key tag for Search Engine Optimization.
+
 **description**: A description of the contents of the page, also a key tag for Search Engine Optimization.  
 Title and Description SHOULD Always be Included in YAML
 
@@ -58,16 +63,24 @@ datalink: "/population/data"
 subheadline: "HTTP 404"
 teaser: "Maybe the webpage was moved or deleted; or did you maybe mistype the link?"
 sitemap: false
-fips: 
+fips: 08031
 ```
 *What are they?*
-custom\_js: Additional Javascript Script files can be loaded with this tag (in a list format - see above for example)
-file: For Lookup pages. Specifies an associated data file and creates a hyperlink. 
-years: Specifies the Year Range of the Dataset
-tag: Allows a [Liquid Templating Language](https://shopify.github.io/liquid/) Script to locate this page (and include its data).  Used for data directory pages.
-datalink: Specifies where the Data button link leads to.  If you don't want a data button, don't include this tag.
-sitemap: Indicates the file should not be included in the sitemap. 
-fips: The fips code of the geographic area that will be featured in the page (for community profile pages)
+
+**custom\_js**: Additional Javascript Script files can be loaded with this tag (in a list format - see above for example)
+
+**file**: For Lookup pages. Specifies an associated data file and creates a hyperlink. 
+
+**years**: Specifies the Year Range of the Dataset
+
+**tag**: Allows a [Liquid Templating Language](https://shopify.github.io/liquid/) Script to locate this page (and include its data).  Used for data directory pages.
+
+**datalink**: Specifies where the Data button link leads to.  If you don't want a data button, don't include this tag.
+
+**sitemap**: Indicates the file should not be included in the sitemap. 
+
+**fips**: The fips code of the geographic area that will be featured in the page (for community profile pages)
+
 
 ## Using YAML with Liquid
 

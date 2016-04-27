@@ -24,7 +24,7 @@ docker run --name censusmap -d -p 4003:4003 codemog/ms_census_api
 
 codemog/codemog-shiny-server
 ```
-docker run --name shiny-server -d -p 3838:3838 codemog/codemog-shiny-server
+docker run --name shiny-server -d -p 3838:3838 codemog/shinydockerfile
 ```
 
 codemog/co\_cron

@@ -29,7 +29,7 @@ docker run --name cogrants -d -p 4004:4004 codemog/co-fs-grants
 
 codemog/codemog-shiny-server
 ```
-docker run --name shiny-server -d -p 3838:3838 codemog/codemog-shiny-server
+docker run --name shiny-server -d -p 3838:3838 codemog/shinydockerfile
 ```
 
 codemog/co\_cron

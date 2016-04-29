@@ -130,6 +130,6 @@ Note, The .custom files were created with pg\_dump using a command such as the o
 #### Type this:
 Use pg\_restore to restore database from a pg\_dump created file
 ```
-pg_restore -h 104.196.8.243 -p 5433 -U postgres -j 2 -d dola /tmp/dola.custom
+pg_restore -h 100.150.10.200 -p 5433 -U postgres -j 2 -d dola /tmp/dola.custom
 ```
 Remember to use the correct port depending on which database cluster you would like to use.

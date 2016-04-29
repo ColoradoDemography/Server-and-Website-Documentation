@@ -4,7 +4,7 @@
 
 This is where the bulk of the State Demography Office census data is backed up.  It is in the 'Nearline' storage class, which Google classifies as 'data that you do not expect to access frequently'.  If anything disastrous happens, data from these databases can be restored using pg\_restore (like so...):
 ```
-pg_restore -h 104.196.8.243 -p 5433 -U postgres -j 2 -d dola /tmp/dola.custom
+pg_restore -h 100.150.10.200 -p 5433 -U postgres -j 2 -d dola /tmp/dola.custom
 ```
 
 #### co-publicdata

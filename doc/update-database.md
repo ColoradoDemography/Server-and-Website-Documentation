@@ -26,6 +26,6 @@ It has also been published as a command-line NPM package here:  [https://www.npm
 ```pg_dump -Fc -h gis.dola.colorado.gov -U postgres -p 5432 -d acs1115 > acs1115.custom```
 
 - Then run pg\_restore on the production database (make sure the database exists first!) 
-```pg_restore -h 104.196.8.243 -p 5433 -U postgres -j 2 -d acs1115 /tmp/acs1115.custom```
+```pg_restore -h 100.150.10.200 -p 5433 -U postgres -j 2 -d acs1115 /tmp/acs1115.custom```
 
 - Don't delete the ```.custom``` file when you're done.  Save it in the ```census-database``` google storage bucket!

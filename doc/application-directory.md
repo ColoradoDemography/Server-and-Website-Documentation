@@ -90,16 +90,16 @@
 - [Github (Client)](https://github.com/royhobbstn/Demog-Lookup-Clients)
 - [Github (Microservices)](https://github.com/royhobbstn/MS_Demog_Lookups)
 - Application Links
-  - [Base Analysis](https://demography.dola.colorado.gov/economy-labor-force/data/base-analysis.html)
-  - [Components of Change](https://demography.dola.colorado.gov/births-deaths-migration/data/components-change.html)
-  - [County Demographic Profiles](https://demography.dola.colorado.gov/population/data/county-profile.html)
-  - [County Race by Age Forecast](https://demography.dola.colorado.gov/population/data/race-forecast.html)
-  - [County Single Year of Age](https://demography.dola.colorado.gov/population/data/county-sya.html)
-  - [County Single Year of Age Race Estimates](https://demography.dola.colorado.gov/population/data/race-estimate.html)
-  - [Household Projections](https://demography.dola.colorado.gov/housing-and-households/data/household-projections.html)
-  - [Jobs by Sector](https://demography.dola.colorado.gov/economy-labor-force/data/jobs-by-sector.html)
-  - [Labor Force Participation](https://demography.dola.colorado.gov/economy-labor-force/data/labor-force.html)
-  - [Municipal Population and Housing Estimates](https://demography.dola.colorado.gov/population/data/muni-pop-housing.html)
+  - [Base Analysis](https://demography.dola.colorado.gov/economy-labor-force/data/base-analysis/)
+  - [Components of Change](https://demography.dola.colorado.gov/births-deaths-migration/data/components-change/)
+  - [County Demographic Profiles](https://demography.dola.colorado.gov/population/data/county-profile/)
+  - [County Race by Age Forecast](https://demography.dola.colorado.gov/population/data/race-forecast/)
+  - [County Single Year of Age](https://demography.dola.colorado.gov/population/data/county-sya/)
+  - [County Single Year of Age Race Estimates](https://demography.dola.colorado.gov/population/data/race-estimate/)
+  - [Household Projections](https://demography.dola.colorado.gov/housing-and-households/data/household-projections/)
+  - [Jobs by Sector](https://demography.dola.colorado.gov/economy-labor-force/data/jobs-by-sector/)
+  - [Labor Force Participation](https://demography.dola.colorado.gov/economy-labor-force/data/labor-force/)
+  - [Municipal Population and Housing Estimates](https://demography.dola.colorado.gov/population/data/muni-pop-housing/)
 
 ### Map Gallery
 - Client Application

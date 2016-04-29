@@ -5,11 +5,11 @@
 
 YAML (also known as "Front Matter") are data elements that live at the top of every page that Jekyll processes.  (
 
-**No YAML, No processing by Jekyll**  YAML can be included
+**No YAML, No processing by Jekyll.**  YAML can be included in markdown or HTML pages (and more) to signify to Jekyll to process the file.
 
 YAML currently stands for ("YAML Ain't Markup Language"). [Yes, really](https://en.wikipedia.org/wiki/YAML).  But in the past stood for ("Yet Another Markup Language").
 
-YAML takes the form of a list of tags and values like so:
+YAML consists of a list of tags and values enclosed within a pair of triple-dash lines (---) like so:
 
 ```
 ---

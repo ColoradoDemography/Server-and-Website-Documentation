@@ -22,6 +22,11 @@ codemog/ms\_censusmap
 docker run --name censusmap -d -p 4003:4003 codemog/ms_census_api
 ```
 
+codemog/co-fs-grants
+```
+docker run --name cogrants -d -p 4004:4004 codemog/co-fs-grants
+```
+
 codemog/codemog-shiny-server
 ```
 docker run --name shiny-server -d -p 3838:3838 codemog/codemog-shiny-server

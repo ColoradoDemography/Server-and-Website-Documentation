@@ -72,7 +72,7 @@ Did I mention that Github hosts Jekyll sites for free?  And that you can even us
 So how do we combine the static content (Jekyll) with our dynamically generated content (the CoreOS-Docker Server).  They appear to be two discrete entities (and they are).  The secret is in creating 'microservices'.
 A microservice can be thought of as a relatively small program that does just one thing (and does it well), and is accessible through a URL endpoint.  This concept perfectly fits our idea of 'modularity'.  Rather than having one monolithic server-side application that handles every possible application request, you break down this functionality into a group of jobs (or processes) that need to be done.  Using my Census Map Application as an example; there is a process that retrieves GeoJson data for map display, a process that generates data for charts, a process that exports a csv table to a file - and it is all done by calling URL endpoints.
 
-[See... clicking this link gives you data.](http://104.197.26.248:4001/profile?county=1&year=2011,2012&vars=births,deaths) This cryptic text may not mean much to you, but computers love to read it!
+[See... clicking this link gives you data.](https://gis.dola.colorado.gov/lookups/profile?county=1&year=2011,2012&vars=births,deaths) This cryptic text may not mean much to you, but computers love to read it!
 
 *Why use URL endpoints to deliver data?*
 

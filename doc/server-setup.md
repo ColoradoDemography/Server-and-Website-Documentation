@@ -124,7 +124,7 @@ The data is stored in a google storage bucket called census-database.  Since Cor
 #### Don't type this:
 Note, The .custom files were created with pg\_dump using a command such as the one below:
 ```
-# pg_dump -Fc -h 104.197.26.248 -U postgres -p 5432 -d dola > dola.custom
+# pg_dump -Fc -h gis.dola.colorado.gov -U postgres -p 5432 -d dola > dola.custom
 ```
 
 #### Type this:

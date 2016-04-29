@@ -23,7 +23,7 @@ It has also been published as a command-line NPM package here:  [https://www.npm
 - This will take HOURS.  Make sure it will run correctly with one state or several small states before running it on the entire USA.
 - Use the 'forever' module from npm to launch the task, or else you'll likely end up with timeout errors (or the agony of a timeout or fail on the very last state!)
 - When completed, run pg\_dump, (use this format) 
-```pg_dump -Fc -h 104.197.26.248 -U postgres -p 5432 -d acs1115 > acs1115.custom```
+```pg_dump -Fc -h gis.dola.colorado.gov -U postgres -p 5432 -d acs1115 > acs1115.custom```
 
 - Then run pg\_restore on the production database (make sure the database exists first!) 
 ```pg_restore -h 104.196.8.243 -p 5433 -U postgres -j 2 -d acs1115 /tmp/acs1115.custom```

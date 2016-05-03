@@ -89,21 +89,19 @@ This was just a general overview.  To get into more detail on how everything wor
   - [Current Inventory and run instructions](doc/container-inventory.md)
   - [Useful Docker Commands](doc/docker-commands.md)
   - [Writing a Dockerfile](doc/writing-a-dockerfile.md)
-  - Schedule Container
-  - Proxy Container
+  - [Schedule Container](doc/cron-container.md)
+  - [Proxy Container](doc/proxy-container.md)
 - [Google Storage Buckets](doc/google-storage-buckets.md)
 - Jekyll Topics
 	- [YAML](doc/yaml-musings.md)
   - [Folder Structure](doc/folder-structure.md)
   - [Layouts](doc/layouts.md)
-  - [Includes](doc/includes.md) All \_includes: Facebook Tags, Twitter Tags, Embed Video, Homepage Infobox vs Infolinks
-  - [Data Lookups]() Tags: opdata, bdmdata, econdata, hhdata  
-  - [Index Pages]() how they are populated automatically
-- Prose.io and Style Topics
-  - General Setup and Configuration
-  - Guide to Creating a New Page
-  - Writing Markdown, Markdown Gotchas: Spacing in Markdown, Escape Apostrophe, email addresses: [linktext](mailto:name@state.co.us)
-  - SDO Style Guide:  All outside links in parenthesis, Tagging outside links with source, How to: Anchor Tags Link to Anchor Tags  - nested links (for icons) & Linking to anchor tags: https://gist.github.com/asabaylus/3071099#gistcomment-1593627
+  - [Includes](doc/includes.md)
+  - [Data Lookup Applications](doc/lookups.md) 
+  - [Index Pages](doc/index-pages.md)
+- Prose.io
+  - [Guide to Creating a New Page](doc/create-a-page-proseio.md)
+- [Style Guide](doc/style-guide.md)
 - Applications
   - [Application Inventory](doc/application-directory.md)
   - [How to add an Application to demography.dola.colorado.gov?](doc/how-to-add-an-application.md)

@@ -23,6 +23,23 @@ sudo systemctl restart update-engine
 
 Don't think that simply setting your containers to restart automatically will solve the problem - you'll still have the issue of your data storage drives being detached.
 
+If you ever need to reboot, it's very easy to get back up and running.  Attach the external drives and restart each of the containers.  Done!
+
+```
+sudo mount /dev/sdb /slow/
+sudo mount /dev/sdc /fast/
+
+docker start slowpostgres
+docker start fastpostgres
+docker start nodecron
+docker start censusmap
+docker start censusapi
+docker start demoglookup
+docker start shiny-server
+docker start cogrants
+docker start nodeproxy
+```
+
 ### Attack logging
 
 When logging into CoreOS, you may be 'lucky' enough to notice a series of entries documenting login attempts.  The most likely assumption is that you were attacked.  The system logs data such as the IP the login attempt came from, and the port that it tried to access.

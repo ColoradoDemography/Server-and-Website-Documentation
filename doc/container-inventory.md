@@ -44,7 +44,7 @@ Optional (for logging):
 
 codemog/node-proxy
 ```
-docker run --name nodeproxy --link demoglookup --link censusapi --link censusmap --link shiny-server -p 80:3000 -d codemog/node-proxy
+docker run --name nodeproxy -v /path/to/ssl:/ssl/docker --link demoglookup:demoglookup --link shiny-server:shiny-server --link censusmap:censusmap --link censusapi:censusapi --link cogrants:cogrants -p 443:443 -d codemog/node-proxy
 ```
 *use the <b>--link name</b> command to link by name all your application and microservice containers (the ones with port mapping - excluding the databases) to the proxy*
 

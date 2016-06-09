@@ -32,10 +32,16 @@ codemog/codemog-shiny-server
 docker run --name shiny-server -d -p 3838:3838 codemog/shinydockerfile
 ```
 
+codemog/point2placeapi
+```
+docker run --name pt2pl -d -p 4005:4005 codemog/point2placeapi
+```
+
 codemog/co\_cron
 ```
 docker run --name nodecron -d -v /gcp:/root codemog/co_cron
 ```
+
 Optional (for logging):
 
 - --log-opt max-size=[0-9+][k|m|g]

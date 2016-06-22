@@ -99,7 +99,7 @@ This was just a general overview.  To get into more detail on how everything wor
   - [Includes](doc/includes.md)
   - [Data Lookup Applications](doc/lookups.md) 
   - [Index Pages](doc/index-pages.md)
-- Prose.io
+- [Prose.io](doc/intro-to-prose-io.md)
   - [Guide to Creating a New Page](doc/create-a-page-proseio.md)
 - [Style Guide](doc/style-guide.md)
 - Applications

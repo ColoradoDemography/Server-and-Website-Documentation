@@ -1,5 +1,5 @@
 
-# Adding a Page to the State Demography Office Website
+# Intro to Prose.IO
 
 While you certainly can use Github for adding content, most of the day to day operations of the website  can be easily operable by all staff members.  Enter http://prose.io .
 

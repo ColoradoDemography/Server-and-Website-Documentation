@@ -37,6 +37,8 @@ docker start censusapi
 docker start demoglookup
 docker start shiny-server
 docker start cogrants
+docker start sdapi
+docker start pt2pl
 docker start nodeproxy
 ```
 

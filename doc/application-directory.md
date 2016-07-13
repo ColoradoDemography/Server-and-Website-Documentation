@@ -80,9 +80,13 @@
 - [Application Link](https://demography.dola.colorado.gov/CompareCities)
 
 ### Demography Dashboard
-- Server Application
-- [Github]
-- [Application Link]
+- [Github (Shiny Application)](https://github.com/ColoradoDemography/demographic_dashboard)
+- [Application Link](https://gis.dola.colorado.gov/apps/demographic_dashboard/)
+
+### Net Migration Dashboard
+- [Github (Shiny Application)](https://github.com/ColoradoDemography/netmigration_dashboard)
+- [Application Link](https://gis.dola.colorado.gov/apps/netmigration_dashboard/)
+
 
 ### Demography Data Lookups
 - Client-Microservice Architecture

@@ -35,10 +35,6 @@ Jekyll will crunch all of your markdown and html and YAML and Liquid, and the fi
 
 Miscellaneous javascript, font, css files and more.
 
-## dola\_assets
-
-More miscellaneous javascript, css, and image files.  Probably should be combined with the folder above.
-
 ## geojson
 
 GeoJSON files used to make maps are in this directory.

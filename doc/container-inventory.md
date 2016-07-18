@@ -19,7 +19,7 @@ docker run --name censusapi -d -p 4002:4002 codemog/ms_censusapi
 
 codemog/ms\_censusmap
 ```
-docker run --name censusmap -d -p 4003:4003 codemog/ms_census_api
+docker run --name censusmap -d -p 4003:4003 codemog/ms_censusmap
 ```
 
 codemog/co-fs-grants

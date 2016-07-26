@@ -56,7 +56,7 @@ Title and Description SHOULD Always be Included in YAML
 ```
 custom_js:
 - /assets/js/FileSaver.min.js
-file: "https://console.cloud.google.com/m/cloudstorage/b/co-publicdata/o/county_profiles.csv"
+file: "https://storage.googleapis.com/co-publicdata/county_profiles.csv"
 years: "1985-2014"
 tag: "popdata"
 datalink: "/population/data"

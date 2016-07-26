@@ -5,7 +5,8 @@
 Run ```docker pull codemog/imagename``` to get the latest version of a container.
 
 
-#### Application & Microservice Containers
+**gis.dola.colorado.gov**
+
 
 codemog/ms\_demog\_lookups
 ```
@@ -52,12 +53,6 @@ codemog/co\_cron
 docker run --name nodecron -d -v /gcp:/root codemog/co_cron
 ```
 
-Optional (for logging):
-
-- --log-opt max-size=[0-9+][k|m|g]
-- --log-opt max-file=[0-9+]
-
-
 codemog/node-proxy
 ```
 docker run --name nodeproxy -v /home/dola_gcp:/ssl/docker --link demoglookup:demoglookup --link shiny-server:shiny-server --link censusmap:censusmap --link censusapi:censusapi --link phantom:phantom --link cogrants:cogrants --link sdapi:sdapi --link pt2pl:pt2pl -p 443:443 -d codemog/node-proxy
@@ -65,7 +60,33 @@ docker run --name nodeproxy -v /home/dola_gcp:/ssl/docker --link demoglookup:dem
 *use the <b>--link name</b> command to link by name all your application and microservice containers (the ones with port mapping - excluding the databases) to the proxy*
 
 
+
+
+**demography.dola.colorado.gov**
+
+codemog/jekyll-website-build
+```
+docker run --name website -d -p 80:80 -p 443:443 codemog/jekyll-website-build
+```
+
+codemog/demog-proxy
+```
+docker run --name demogproxy -v /home/dola_gcp:/ssl/docker --link website:website -p 443:443 -p 80:80 -d codemog/demog-proxy
+
+```
+
+
+
+Optional (for logging):
+
+- --log-opt max-size=[0-9+][k|m|g]
+- --log-opt max-file=[0-9+]
+
+
+
 #### Database & Data Volume Containers
+(gis.dola.colorado.gov)
+
 
 *Do these in order, and note the password parameter*
 

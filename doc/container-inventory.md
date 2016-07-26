@@ -66,7 +66,7 @@ docker run --name nodeproxy -v /home/dola_gcp:/ssl/docker --link demoglookup:dem
 
 codemog/jekyll-website-build
 ```
-docker run --name website -d -p 80:80 -p 443:443 codemog/jekyll-website-build
+docker run --name website -d -p 4008:4008 codemog/jekyll-website-build
 ```
 
 codemog/demog-proxy

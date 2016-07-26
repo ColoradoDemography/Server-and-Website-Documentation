@@ -11,7 +11,7 @@ pg_restore -h 100.150.10.200 -p 5433 -U postgres -j 2 -d dola /tmp/dola.custom
 
 Data is regularly dumped here by the ```nodecron``` container based on the ```codemog/co_cron``` image.  Special District gis files are dumped using ```pgsql2shp```, as well as BLS data files from the weekly polling of their API.
 
-This is also the default place to store any GIS file referenced by the [GIS Data Page](https://demography.dola.colorado.gov/gis/gis-data.html).
+This is also the default place to store any GIS file referenced by the [GIS Data Page](https://demography.dola.colorado.gov/gis/gis-data/#gis-data).
 
 Any new file placed here is automatically set to be publicly available.
 

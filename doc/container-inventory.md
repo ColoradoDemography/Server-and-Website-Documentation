@@ -15,12 +15,12 @@ docker run --name demoglookup -d -p 4001:4001 codemog/ms_demog_lookups
 
 codemog/ms\_censusapi
 ```
-docker run --name censusapi -d -p 4002:4002 codemog/ms_census_api
+docker run --name censusapi -d -p 4002:4002 codemog/ms_censusapi
 ```
 
 codemog/ms\_censusmap
 ```
-docker run --name censusmap -d -p 4003:4003 codemog/ms_census_api
+docker run --name censusmap -d -p 4003:4003 codemog/ms_censusmap
 ```
 
 codemog/co-fs-grants

@@ -5,7 +5,7 @@
 Run ```docker pull codemog/imagename``` to get the latest version of a container.
 
 
-**gis.dola.colorado.gov**
+##gis.dola.colorado.gov
 
 
 codemog/ms\_demog\_lookups
@@ -62,7 +62,7 @@ docker run --name nodeproxy -v /home/dola_gcp:/ssl/docker --link demoglookup:dem
 
 
 
-**demography.dola.colorado.gov**
+##demography.dola.colorado.gov
 
 codemog/jekyll-website-build
 ```

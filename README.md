@@ -62,11 +62,11 @@ General content (text, images, links, etc) for the site is written in a format c
 This content can be written and committed directly to the [coloradodemography.github.io](https://github.com/ColoradoDemography/coloradodemography.github.io) repository without ever leaving Github.
 However, one of our goals was 'ease of everyday use', and there is an easier way.  For most content creation, we use [prose.io](http://prose.io/). It provides a more classical WYSIWYG (what you see is what you get) interface to editing content, while subtly and inobtrusively teaching markdown at the same time (try it - you'll see what I mean).
 
-Because Github doesn't currently support the combination of HTTPS and custom domains (as of 08/2016), it is necessary to self-host our Jekyll site rather than relying on Github pages (as was our original plan).  We're still hoping that Github will be able to support our configuration in the future, so we have structured our website (including static content from other ColoradoDemography repositories) identically to how they would be if Github hosted them.
+Because Github doesn't currently support the combination of HTTPS and custom domains (as of 08/2016), it is necessary to self-host our Jekyll site rather than relying on Github pages (as was our original plan).  We're still hoping that Github will be able to support our configuration in the future, so we have structured our website (including static content from other [ColoradoDemography](https://github.com/ColoradoDemography) repositories) identically to how they would be if Github hosted them.
 
 The server that hosts our website is set up nearly identically to that which hosts our microservices; it is a CoreOS server which consumes Docker containers.
 
-The Docker container which servers our Jekyll site is a NodeJS / Ruby environment that is able to run the Jekyll build step, but can also serve the resulting static content using the ExpressJS framework.
+The Docker container which servers our Jekyll site is a NodeJS / Ruby environment that is able to run the Jekyll build step, but can also serve the resulting static content using the [ExpressJS](https://expressjs.com/) framework.
 
 
 ## Microservices

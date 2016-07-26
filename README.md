@@ -66,7 +66,7 @@ Because Github doesn't currently support the combination of HTTPS and custom dom
 
 The server that hosts our website is set up nearly identically to that which hosts our microservices; it is a CoreOS server which consumes Docker containers.
 
-The Docker container which servers our Jekyll site is a NodeJS / Ruby environment that is able to run the Jekyll build step, but can also serve the resulting static content using the [ExpressJS](https://expressjs.com/) framework.
+The Docker container which servers our Jekyll site is a NodeJS & Ruby environment that is able to run the Jekyll build step, but can also serve the resulting static content using the [ExpressJS](https://expressjs.com/) framework.
 
 
 ## Microservices

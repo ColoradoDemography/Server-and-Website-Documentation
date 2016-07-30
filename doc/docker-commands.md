@@ -63,10 +63,3 @@ Hey, look!  It really is a computer within a computer!
 sudo docker exec -it containername bash
 ```
 
-**What's this about failed units?**
-Believe it or not, people try to hack you all the time.  Most of these represent failed attempts at that. (For example; failed SSH logins).  Make sure all your non-80 and 443 ports are closed.  Clear the failed attempts with:
-```
-sudo systemctl reset-failed
-```
-
-

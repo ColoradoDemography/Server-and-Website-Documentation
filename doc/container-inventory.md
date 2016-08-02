@@ -53,7 +53,7 @@ codemog/co\_cron
 docker run --restart unless-stopped --name nodecron -d -v /gcp:/root codemog/co_cron
 ```
 
-codemog/node-proxy
+codemog/node-proxy - If not using State SSL, set up using Let's Encrypt and mirror demog-proxy file and folder mapping
 ```
 docker run --restart unless-stopped  --name nodeproxy -v /home/dola_gcp:/ssl/docker --link demoglookup:demoglookup --link shiny-server:shiny-server --link censusmap:censusmap --link censusapi:censusapi --link phantom:phantom --link cogrants:cogrants --link sdapi:sdapi --link pt2pl:pt2pl -p 443:443 -p 80:80 -d codemog/node-proxy
 ```

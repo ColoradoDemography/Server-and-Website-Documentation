@@ -91,12 +91,12 @@ Optional (for logging):
 
 **Data Containers**
 ```
-sudo docker create -v /slow/pgdata:/var/lib/postgresql/data --name slowdata busybox
-sudo docker create -v /fast/pgdata:/var/lib/postgresql/data --name fastdata busybox
+docker create -v /slow/pgdata:/var/lib/postgresql/data --name slowdata busybox
+docker create -v /fast/pgdata:/var/lib/postgresql/data --name fastdata busybox
 ```
 
 **Postgres/PostGIS Containers**
 ```
-sudo docker run --name slowpostgres -p 5432:5432 -e POSTGRES_PASSWORD=whatever -d --volumes-from slowdata mdillon/postgis:9.4
-sudo docker run --name fastpostgres -p 5433:5432 -e POSTGRES_PASSWORD=whatever -d --volumes-from fastdata mdillon/postgis:9.4
+docker run --name slowpostgres -p 5432:5432 -e POSTGRES_PASSWORD=whatever -d --volumes-from slowdata mdillon/postgis:9.4
+docker run --name fastpostgres -p 5433:5432 -e POSTGRES_PASSWORD=whatever -d --volumes-from fastdata mdillon/postgis:9.4
 ```

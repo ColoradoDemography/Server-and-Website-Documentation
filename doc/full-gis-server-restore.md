@@ -134,8 +134,8 @@ CREATE POSTGRES / POSTGIS CONTAINERS
 
 Changing the password here is helpful.  You will need to create the 'codemog' user I think.  Check in PG Admin
 ```
-docker run --name slowpostgres -p 5432:5432 -e POSTGRES_PASSWORD=whatever -d --volumes-from slowdata mdillon/postgis:9.4
-docker run --name fastpostgres -p 5433:5432 -e POSTGRES_PASSWORD=whatever -d --volumes-from fastdata mdillon/postgis:9.4
+docker run --restart unless-stopped --name slowpostgres -p 5432:5432 -e POSTGRES_PASSWORD=whatever -d --volumes-from slowdata mdillon/postgis:9.4
+docker run --restart unless-stopped --name fastpostgres -p 5433:5432 -e POSTGRES_PASSWORD=whatever -d --volumes-from fastdata mdillon/postgis:9.4
 ```
 
 

@@ -105,3 +105,10 @@ Change `DBBEINGRESTORED` to the name of the database being restored and `PATHTO.
 After you load each database, you'll need to add the `codemog` role to the database using PGAdmin.
 Then you'll need to add access to the schema and then making sure that select permissions are added to each table.
 
+To add codemog to the Schema and tables open up a SQL window in PGAdmin then use this command, substituting the relevant schema.
+
+```
+GRANT USAGE ON SCHEMA schema TO codemog;
+GRANT SELECT ON ALL TABLES IN SCHEMA schema TO codemog;
+
+```

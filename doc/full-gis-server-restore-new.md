@@ -153,7 +153,7 @@ Free SSL is provided by [Let's Encrypt](https://letsencrypt.org/).  In the 'Spir
 docker run -it --rm -p 443:443 -p 80:80 --name certbot -v "/etc/letsencrypt:/etc/letsencrypt" -v "/var/lib/letsencrypt:/var/lib/letsencrypt" quay.io/letsencrypt/letsencrypt:latest certonly
 
 ```
-
+Choose standalone option, give it gis.dola.colorado.gov or a domain.
 ##### Connect the proxy to the certificates
 
 1) Ensure that the digits in the sslobj variable in the index.js file of the node-proxy container are the same as the ones created by letsencrupt (i.e. cert1.pem).
@@ -169,6 +169,8 @@ docker pull codemog/node-proxy
 docker run --restart unless-stopped  --name nodeproxy -v /etc/letsencrypt/archive/gis.dola.colorado.gov:/ssl/docker --link demoglookup:demoglookup --link shiny-server:shiny-server --link censusmap:censusmap --link censusapi:censusapi --link phantom:phantom --link cogrants:cogrants --link sdapi:sdapi --link pt2pl:pt2pl -p 443:443 -p 80:80 -d codemog/node-proxy
 
 ```
+This provides a link between the pem files stored in /etc/letsencrypt/archive/gis.dola.colorado.gov and /ssl/docker, where the variables in the nodeproxy index.js file point.
+
 __USE THIS SITE IF YOU NEED A NEW CERTIFICATE__
 
 Adapted from: http://letsencrypt.readthedocs.io/en/latest/using.html#running-with-docker

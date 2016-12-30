@@ -44,7 +44,7 @@ These instructions are specific to CoreOS, a minimal Linux installation specific
 
 Create a Slow (Magnetic 360GB) and a Fast (SSD 120GB) Disk
 
-![GCP Setup Image3](/img/setup2a.jpg)
+![GCP Setup Image3](/img/setup2.jpg)
 
 Enter your key here:
 

@@ -42,7 +42,7 @@ These instructions are specific to CoreOS, a minimal Linux installation specific
 
 ![GCP Setup Image2](/img/restore-3.png)
 
-Create a 'giant' 850 GB Persistent Disk (ignore the picture for now):
+Create a 'giant' 850 GB Persistent Disk, then edit dlg-coreos and add giant as an additional disk:
 
 ![GCP Setup Image3](/img/setup2a.jpg)
 
@@ -68,26 +68,18 @@ This will come in handy.  Trust me.
 #### SSH Instructions
 Use PUTTY to login OR do as Rob does and use the web based SSH through the GCP Dashboard.
 
-DON't format your drives, they exist and have your data on them. **(Use the lsblk command to identify which drive is which. THEY MAY NOT BE /dev/sdb & /dev/sdc !)**.
+Unless you have recreated giant from scratch, don't format your drives, they exist and have your data on them. **(Use the lsblk command to identify which drive is which. THEY MAY NOT BE /dev/sdb & /dev/sdc !)**.
 
 Mount Magnetic Drive and Create a data directory for Postgres
 ```
 cd /
-mkdir slow
-mount /dev/sdb /slow/
+mkdir giant
+mount /dev/sdb /giant/
 
-cd /slow
+cd /giant
 mkdir pgdata
 ```
 
-Mount SSD Drive and Create a data directory for Postgres
-```
-cd /
-sudo mkdir fast
-sudo mount /dev/sdc /fast/
-
-cd /fast
-sudo mkdir pgdata
 ```
 
 Create Directory for Keys - (can be mounted into a docker container)

@@ -7,6 +7,10 @@ Run ```docker pull codemog/imagename``` to get the latest version of a container
 
 ##gis.dola.colorado.gov
 
+portainer/portainer
+```
+docker run --restart unless-stopped --name portainer -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer
+```
 
 codemog/ms\_demog\_lookups
 ```

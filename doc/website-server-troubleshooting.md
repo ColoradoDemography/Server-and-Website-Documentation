@@ -9,13 +9,12 @@ To check and fix this in one fell swoop, ssh into the `demography-website` insta
 This should show you container status' of less then a second or so of uptime.  This should have fixed it.  If not, remove and reload the website containers using the steps below.
 
 ```
-docker stop website
-docker rm website
-docker run --restart unless-stopped --name website -d -p 4008:4008 codemog/jekyll-website-build
+docker stop website demogproxy
+docker rm website demogproxy
 
-docker stop demogproxy
-docker rm demogproxy
+docker run --restart unless-stopped --name website -d -p 4008:4008 codemog/jekyll-website-build
 docker run --restart unless-stopped  --name demogproxy -v /etc/letsencrypt/archive/demography.dola.colorado.gov:/ssl/docker --link website:website -p 443:443 -p 80:80 -d codemog/demog-proxy
+
 ```
 
 # Last Resort(s)
@@ -23,10 +22,8 @@ docker run --restart unless-stopped  --name demogproxy -v /etc/letsencrypt/archi
 If you need to rebuild the instance, you can, but before doing that check that the SSL certificates are up to date by running the code below:
 
 ```
-docker stop website
-docker stop demogproxy
-docker rm website
-docker rm demogproxy
+docker stop website demogproxy
+docker rm website demogproxy
 
 docker run -it --rm -p 443:443 -p 80:80 --name certbot -v "/etc/letsencrypt:/etc/letsencrypt" -v "/var/lib/letsencrypt:/var/lib/letsencrypt" quay.io/letsencrypt/letsencrypt:latest renew
 
@@ -41,10 +38,8 @@ Commit these changes, then log into Docker Hub and wait for the container to reb
 Then run these commands:
 
 ``` 
-docker stop website
-docker stop demogproxy
-docker rm demogproxy
-docker rm website
+docker stop website demogproxy
+docker rm demogproxy website
 
 docker pull codemog/demog-proxy
 

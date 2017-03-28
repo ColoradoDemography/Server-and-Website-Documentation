@@ -1,6 +1,6 @@
 ## SSL Certificates seem important.  Do I need to renew them?
 
-SSL Certificates are really important. They allow us to securely connect to our clients using https.  Generally, if you're asking you need to renew them.  Plus, running the renewal process will stop you if you don't.
+SSL Certificates are really important. They allow us to securely connect to our clients using https.  Generally, if you're asking you need to renew them.  Plus, running the renewal process will stop you if you don't, but probably you need to.
 
 ## But first, dockerhub.com
 
@@ -16,7 +16,8 @@ Commit the change.
 
 Log onto dockerhub.com, change to the codemog organization, find the proper repo, find the Build Details tab, wait until the most recent build is a success.
 
-Now, move on to renewing the SSL
+Even if you don't need to renew, having this done ahead of time shortens downtime to under a minute barring complications.
+Now, move on to renewing the SSL.
 
 ## Now I need to renew the SSL certificate....
 
@@ -34,7 +35,7 @@ docker run -it --rm -p 443:443 -p 80:80 --name certbot -v "/etc/letsencrypt:/etc
 ```
 That will pull up a dialog screen and report back if it succeeded or not.  
 
-Then, run these commands (change out the proxy  and docker image based on the server)
+Then, run these commands (change out the proxy  and docker image based on the server).  This is why we run the dockerhub portion first, so we can do this immediately.
 
 ```
 docker stop nodeproxy

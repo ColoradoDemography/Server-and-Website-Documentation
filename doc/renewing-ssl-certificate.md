@@ -52,3 +52,33 @@ docker run --restart unless-stopped  --name demogproxy -v /etc/letsencrypt/archi
 ```
 
 You should be up and running.
+
+
+## Hey, docker commands aren't running
+
+Congrats!  You're in the same spot I was in.  This didn't seem to have a cause, but docker died halfway through my work.
+
+You'll need to reset the image from the Cloud Console, but FIRST, you'll need to unmount the `giant` disk that has our postgres data on it.  This is a precaution because they warn that file system corruption is a threat when resetting the image.
+
+Run these commands (sudo -i puts you into an interactive sudo to give you auper user power!):
+
+``` 
+sudo -i
+
+umount /giant
+
+exit 
+```
+
+Then go to the console, click on the instance you're resetting, and click the "Reset" button from the top, click through the warning and wait.  Once it's done, log in and run `docker ps -a` to see what's running, everything should be back up.  Your database won't work though. You need to remount the drive, then recreate the docker data volume, then re-run the postgres container.  Use the commands below:
+
+```
+lsblk
+--Check that the 800gb drive is still sdb, otherwise check what it is and change the line below.
+cd /
+mkdir giant
+mount /dev/sdb /giant/
+docker create -v /giant/pgdata:/var/lib/postgresql/data --name slowdata busybox
+docker run --name fastpostgres -p 5433:5432 -e POSTGRES_PASSWORD=whatever -d --volumes-from slowdata mdillon/postgis:9.4
+```
+it should work!

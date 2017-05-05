@@ -19,3 +19,7 @@ jekyll build
 ```
 
 That's it.  You should get a console message once it's rebuilt.
+
+## Note
+
+It's worth noting that the website container is named website, but builds off of the repo called jekyll-website-build.  This is an expressJS app that points port 4008 (unless this has changed) to the _sites folder in coloradodemography.github.io.  That means the actual website lives in this container's _sites file.

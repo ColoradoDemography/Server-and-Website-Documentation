@@ -171,6 +171,6 @@ Adapted from: http://letsencrypt.readthedocs.io/en/latest/using.html#running-wit
 
 https://certbot.eff.org/docs/using.html#renewal
 
-After you load the shiny-server docker container, you'll need to bash in and use the `gitpull` instruction [here](https://github.com/ColoradoDemography/Server-and-Website-Documentation/blob/master/doc/shiny-server-apps.md) to reload each of the apps.
+After you load the shiny-server docker container, you'll need to bash in and use the `git pull` instruction [here](https://github.com/ColoradoDemography/Server-and-Website-Documentation/blob/master/doc/shiny-server-apps.md) to reload each of the apps.
 
 Most everything is set up now.  And you can also log in to PgAdmin (the credentials for both database clusters are the same with the exception of the port numbers; 5432 for magnetic, 5433 for ssd).

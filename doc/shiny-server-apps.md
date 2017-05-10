@@ -32,7 +32,7 @@ The process here is very similar to updating, but uses a different git command.
 
 docker exec -it shiny-server bash
 cd /srv/shiny-server/
-git cloe **URL FOR GITHUB REPO WITH APP IN IT***
+git clone **URL FOR GITHUB REPO WITH APP IN IT***
 exit
 
 ```

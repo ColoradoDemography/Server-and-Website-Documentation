@@ -105,5 +105,5 @@ docker create -v /giant/pgdata:/var/lib/postgresql/data --name slowdata busybox
 
 **Postgres/PostGIS Containers**
 ```
-docker run --name fastpostgres -p 5433:5432 -e POSTGRES_PASSWORD=whatever -d --volumes-from slow mdillon/postgis:9.4
+docker run --restart unless-stopped --name postgres -p 5433:5432 -e POSTGRES_PASSWORD=whatever -d --volumes-from slowdata mdillon/postgis:9.4
 ```

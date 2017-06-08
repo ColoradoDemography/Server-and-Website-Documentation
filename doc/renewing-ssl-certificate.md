@@ -27,7 +27,7 @@ SSH into the server that needs to be updated.
 
 Then, run these commands (change out the proxy  and docker image based on the server).  This is why we run the dockerhub portion first, so we can do this immediately.
 
-The certbot command will pull up a dialog screen and report back if it succeeded or not.  
+The certbot command will pull up a dialog screen and report back if it succeeded or not. If it freezes, see below. 
 
 ```
 docker stop nodeproxy
@@ -70,11 +70,12 @@ Then go to the console, click on the instance you're resetting, and click the "R
 
 ```
 lsblk
---Check that the 800gb drive is still sdb, otherwise check what it is and change the line below.
+--Check that the 850gb drive is still sdb, otherwise check what it is and change the line below.
 cd /
 mkdir giant
+sudo -i
 mount /dev/sdb /giant/
 docker create -v /giant/pgdata:/var/lib/postgresql/data --name slowdata busybox
-docker run --name fastpostgres -p 5433:5432 -e POSTGRES_PASSWORD=whatever -d --volumes-from slowdata mdillon/postgis:9.4
+docker run --name postgres -p 5433:5432 -e POSTGRES_PASSWORD=whatever -d --volumes-from slowdata mdillon/postgis:9.4
 ```
 it should work!

@@ -6,7 +6,7 @@ The entire dataset for the US is massive.  For our purposes, we tend to only use
 
 Luckily, starting with the ACS 2010-2014, the process is no longer a manual process (it used to take a week).  However, you *will* need to make some obvious changes to the program code to enable it to access the most recent dataset. (Plus probably a few unforseen additional edits as well).
 
-The program that extracts the ACS data and loads it into a database is located in a Github repository here: [https://github.com/royhobbstn/acs-processing](https://github.com/royhobbstn/acs-processing)
+The program that extracts the ACS data and loads it into a database is located in a Github repository here: [https://github.com/royhobbstn/acs-postgres-11-15](https://github.com/royhobbstn/acs-postgres-11-15)
 
 It has also been published as a command-line NPM package here:  [https://www.npmjs.com/package/acs1014](https://www.npmjs.com/package/acs1014)
 (you may want to consider publishing a current version to the public after you get it working for yourself)

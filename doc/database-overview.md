@@ -1,25 +1,12 @@
 # Database Overview
 
-
-**or ... Why are there two database clusters?**
-
-Demography's data is split into two separate database clusters (split between two PostGIS Docker Instance / Data Container pairs).  There are a couple of obvious (and unfortunate) reasons for this division.
+Demography's data was formerlyer split into two separate database clusters (split between two PostGIS Docker Instance / Data Container pairs) with the thought that:
 - Some data needs to be served as fast as possible
 - SSD (Solid State Drive) storage, the fastest currently available, is expensive
 
-So essentially, the data is split into a 'fast' cluster, and a 'slow' cluster. 
+So essentially, the data was split into a 'fast' cluster, and a 'slow' cluster. 
 
-In the fast cluster (SSD) there are only 2 databases:
-- The 'DOLA' database, with all of Demography's most current data
-- The latest 5-year American Community Survey database (currently 2010-2014)
-
-The 'DOLA' content is the most frequently data on the site, and is reached through many data lookups and applications throughout the site.  The most recent 5-Year American Community Survey data is served through the ACS webmap, and is one of the most accessed (and resource-heavy) applications that we serve.
-
-Other data is considered 'less critical' and is served on a much cheaper magnetic hard drive.  This includes:
-- 1980 through 2010 Decennial Census Data
-- Older 5-year American Community Survey datasets
-
-This data is less frequently accessed (but still necessary) and can be served via a slower means.
+Subsequent testing found that the speed difference between the two types was neglible for our database needs so now all databases are stored using standard persistent disks. This allows significantly more disk space for the same price.
 
 ### What's in the DOLA Database?
 

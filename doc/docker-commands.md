@@ -60,6 +60,11 @@ docker rmi $(docker images --filter "dangling=true" -q --no-trunc)
 **Shell into your container**
 Hey, look!  It really is a computer within a computer!
 ```
-sudo docker exec -it containername bash
+docker exec -it containername bash
 ```
 
+**Move into admin mode**
+Some commands require admin privileges
+```
+sudo -i
+```

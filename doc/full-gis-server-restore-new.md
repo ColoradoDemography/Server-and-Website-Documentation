@@ -91,6 +91,7 @@ sudo mkdir gcp
 
 Set up filezilla using your key and add the following keys to /gcp/:
 - .pgpass for working with Postgres Databases (using pg_dump or pgsql2shp) - See Postgres documentation but follows this structure: ```hostname:port:database:username:password```
+ Use vi to manually create the text file named .pgpass
 - Google Cloud Platform API Key (for uploading to Google Storage Buckets)
    - Menu: API Manager -> Credentials -> Create credentials (to aquire this key)
      - You need to do this each time. It is a .json file you download then you'll filezilla them in.

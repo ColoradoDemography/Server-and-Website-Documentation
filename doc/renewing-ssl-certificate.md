@@ -78,4 +78,4 @@ mount /dev/sdb /giant/
 docker create -v /giant/pgdata:/var/lib/postgresql/data --name slowdata busybox
 docker run --name postgres -p 5433:5432 -e POSTGRES_PASSWORD=whatever -d --volumes-from slowdata mdillon/postgis:9.4
 ```
-it should work!
+it should work! You may need to remove slowdata and postgres before running the run and create above.

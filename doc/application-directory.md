@@ -27,6 +27,9 @@
 - [Github](https://github.com/ColoradoDemography/CO_BaseIndustries)
 - [Application Link](https://demography.dola.colorado.gov/CO_BaseIndustries)
 
+### BGU Viewer
+- [Application Link](http://dola-online.maps.arcgis.com/apps/Solutions/s2.html?appid=2a869a4217ca40de891660504c0a3591)
+
 ### Broadband Status Map
 - Client Application
 - [Github](https://github.com/ColoradoDemography/D3_BroadbandStatus)
@@ -47,7 +50,7 @@
 ### Colorado DOLA Grants
 - Client Application
 - [Github](https://github.com/ColoradoDemography/CO_Grants)
-- [Application Link]
+- [Application Link](https://demography.dola.colorado.gov/CO_Grants)
 
 ### Colorado County Population Change (Bubbles)
 - Client Application
@@ -126,6 +129,10 @@
 - Client Application
 - [Github](https://github.com/ColoradoDemography/CO_RUCA)
 - [Application Link](https://demography.dola.colorado.gov/CO_RUCA)
+
+### SRF Disavantaged
+- [Github](https://github.com/ColoradoDemography/disadvantaged_communities)
+- Application Link(https://coloradodemography.github.io/disadvantaged_communities/)
 
 ### Unemployment Chart
 - Client Application

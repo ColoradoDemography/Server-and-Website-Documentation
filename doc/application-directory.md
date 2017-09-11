@@ -68,6 +68,10 @@
 - [Github (Microservices)] (TODO)
 - [Application Link](https://demography.dola.colorado.gov/CO_Muni)
 
+### Colorado Municipal Data Map
+- [Github](https://github.com/ColoradoDemography/Municipal_Data)
+- [Application Link](https://coloradodemography.github.io/Municipal_Data/)
+
 ### Colorado Special Districts
 - Client-Microservice Architecture (TODO)
 - [Github (Client)](https://github.com/ColoradoDemography/CO_SpecialDistrict)
@@ -115,6 +119,9 @@
 - [Github](https://github.com/ColoradoDemography/CO_Map_Gallery)
 - [Application Link](https://demography.dola.colorado.gov/CO_Map_Gallery)
 
+### Marijuana Grant Eligibility Map
+- [Application Link](http://dola-online.maps.arcgis.com/apps/Viewer/index.html?appid=60c1688254fd4054bf5df1af8e7bc09f)
+
 ### Migration Animation (Bubbles)
 - Client Application
 - [Github](https://github.com/ColoradoDemography/Migration-Bubbles)
@@ -130,9 +137,12 @@
 - [Github](https://github.com/ColoradoDemography/CO_RUCA)
 - [Application Link](https://demography.dola.colorado.gov/CO_RUCA)
 
+### Senior Centers
+- [Application Link](https://dola.colorado.gov/gis-php/files/projects/seniorctr/senior_ctr.html)
+
 ### SRF Disavantaged
 - [Github](https://github.com/ColoradoDemography/disadvantaged_communities)
-- Application Link(https://coloradodemography.github.io/disadvantaged_communities/)
+- [Application Link](https://coloradodemography.github.io/disadvantaged_communities/)
 
 ### Unemployment Chart
 - Client Application

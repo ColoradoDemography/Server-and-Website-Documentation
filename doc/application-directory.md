@@ -30,7 +30,7 @@
 ### Broadband Status Map
 - Client Application
 - [Github](https://github.com/ColoradoDemography/D3_BroadbandStatus)
-- [Application Link](https://dola.colorado.gov/gis-cms/content/interactive-broadband-map)
+- [Application Link](https://demography.dola.colorado.gov/D3_BroadbandStatus/)
 
 ### Census Data Query Tool
 - Client-Microservice Architecture

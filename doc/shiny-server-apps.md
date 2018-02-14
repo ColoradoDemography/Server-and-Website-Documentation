@@ -39,3 +39,8 @@ exit
 
 Then the app will be avaiable here: https://gis.dola.colorado.gov/apps/**FOLDER NAME**
 The app uses that url based on how the node-proxy container is set up.
+
+## Hints and tricks
+
+When adding a new app, all of its dependencies and libraries have to be included in the docker container.
+The main app script needs to use either the app.R or ui.R and server.R convention.

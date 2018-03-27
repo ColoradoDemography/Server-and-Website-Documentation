@@ -40,6 +40,15 @@ exit
 Then the app will be avaiable here: https://gis.dola.colorado.gov/apps/**FOLDER NAME**
 The app uses that url based on how the node-proxy container is set up.
 
+## Repulling Shiny Server Docker Container
+Eventually automate this.
+First some dependencies need to be loaded. Within the container run:
+sudo apt-get install -y libxml2-dev libcurl4-openssl-dev libssl-dev (for tidyverse and kableExtra)
+sudo apt-get install aptitude
+sudo aptitude install libgdal-dev (for RPostgreSQL and rgdal)
+Then go into R and run:
+install.packages(c("dplyr","tidyr","plotly","readxl","scales","knitr","rmarkdown","shinydashboard","shinyjs","VennDiagram","gridExtra","tidyverse","kableExtra"))
+devtools::install_github(c("ColoradoDemography/codemog","ColoradoDemography/codemogAPI","ColoradoDemography/codemogProfile","ColoradoDemography/codemogLib"))
 ## Hints and tricks
 
 When adding a new app, all of its dependencies and libraries have to be included in the docker container.

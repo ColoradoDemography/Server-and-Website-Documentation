@@ -2,14 +2,10 @@
 
 ## About the Colorado State Demography Office's Census Databases
 
-**About**: This is a PostgreSQL/PostGIS Database Cluster with information at the State, County, Place, Tract, and Block Group Levels of Geography (and more) for the entire United States.  Currently, it includes data from the 1980, 1990, 2000 and 2010 Census, as well as the 2008-2012 5Y, and 2009-2013 5Y American Community Surveys.
+**About**: This is a PostgreSQL/PostGIS Database Cluster with information at the State, County, Place, Tract, and Block Group Levels of Geography (and more) for the entire United States.  Currently, it includes data from the 1980, 1990, 2000 and 2010 Census, as well as the 5Y ACS from 2006-2010 to present.
 
 
 The construction of each of the Census Databases was done with performance in mind.  It is designed specifically for mapping applications, where retrieving large volumes of spatial data quickly is a necessity.
-
-
-Each Census Dataset is located in a separate database in the cluster.  Currently available are the 1980 Census (sf1 &amp; sf3), 1990 Census (sf1 &amp; sf3), 2000 Census (sf1 &amp; sf3), 2010 Census, 2008-2012 ACS, 2009-2013 ACS.
-
 
 Because speed and data storage costs were a major concern, the data has been reduced down to only the most common geography levels.
 
@@ -17,9 +13,14 @@ Because speed and data storage costs were a major concern, the data has been red
 - **1990**: State, County, Place, Tract, Block Group
 - **2000**: State, County, Place, Tract, Block Group
 - **2010**: State, County, Place, Tract, Block Group, ZCTA, SDUNI, SDELM, SDSEC, COUSUB
+- **ACS 06-10**: State, County, Place, Tract, Block Group (Colorado only)
+- **ACS 07-11**: State, County, Place, Tract, Block Group (Colorado only)
+- **ACS 08-12**: State, County, Place, Tract, Block Group, ZCTA, SDUNI, SDELM, SDSEC, COUSUB
 - **ACS 08-12**: State, County, Place, Tract, Block Group, ZCTA, SDUNI, SDELM, SDSEC, COUSUB
 - **ACS 09-13**: State, County, Place, Tract, Block Group, ZCTA, SDUNI, SDELM, SDSEC, COUSUB
 - **ACS 10-14**: State, County, Place, Tract, Block Group, ZCTA, SDUNI, SDELM, SDSEC, COUSUB
+- **ACS 11-15**: State, County, Place, Tract, Block Group (Colorado only)
+- **ACS 12-16**: State, County, Place, Tract, Block Group (Colorado only)
 
 
 Geography sources available for each dataset:
@@ -28,9 +29,13 @@ Geography sources available for each dataset:
 - **1990**: [NHGIS](https://www.nhgis.org/), [Tiger Cartographic Boundaries](https://www.census.gov/geo/maps-data/data/tiger-cart-boundary.html)
 - **2000**: [Tiger Cartographic Boundaries](https://www.census.gov/geo/maps-data/data/tiger-cart-boundary.html), [Tiger Shapefiles](https://www.census.gov/geo/maps-data/data/tiger-line.html)
 - **2010**: [Tiger Cartographic Boundaries](https://www.census.gov/geo/maps-data/data/tiger-cart-boundary.html), [Tiger Shapefiles](https://www.census.gov/geo/maps-data/data/tiger-line.html)
+- **ACS 06-10**: [Tiger Cartographic Boundaries](https://www.census.gov/geo/maps-data/data/tiger-cart-boundary.html), [Tiger Shapefiles](https://www.census.gov/geo/maps-data/data/tiger-line.html)
+- **ACS 07-11**: [Tiger Cartographic Boundaries](https://www.census.gov/geo/maps-data/data/tiger-cart-boundary.html), [Tiger Shapefiles](https://www.census.gov/geo/maps-data/data/tiger-line.html)
 - **ACS 08-12**: [Tiger Cartographic Boundaries](https://www.census.gov/geo/maps-data/data/tiger-cart-boundary.html), [Tiger Shapefiles](https://www.census.gov/geo/maps-data/data/tiger-line.html)
 - **ACS 09-13**: [Tiger Cartographic Boundaries](https://www.census.gov/geo/maps-data/data/tiger-cart-boundary.html), [Tiger Shapefiles](https://www.census.gov/geo/maps-data/data/tiger-line.html)
 - **ACS 10-14**: [Tiger Cartographic Boundaries](https://www.census.gov/geo/maps-data/data/tiger-cart-boundary.html), [Tiger Shapefiles](https://www.census.gov/geo/maps-data/data/tiger-line.html)
+- **ACS 11-15**: [Tiger Cartographic Boundaries](https://www.census.gov/geo/maps-data/data/tiger-cart-boundary.html), [Tiger Shapefiles](https://www.census.gov/geo/maps-data/data/tiger-line.html)
+- **ACS 12-162**: [Tiger Cartographic Boundaries](https://www.census.gov/geo/maps-data/data/tiger-cart-boundary.html), [Tiger Shapefiles](https://www.census.gov/geo/maps-data/data/tiger-line.html)
 
 
 ### Database Structure

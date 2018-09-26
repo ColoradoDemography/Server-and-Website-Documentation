@@ -9,9 +9,8 @@ Use find and replace to change all variables with a year to the year desired.
 Run the vars variables, removing columns that are not in a B#### or C#### format (BLKGRP for example)
 Run acs500 function to store it.
 Run acs500("us") to get the variables for data for the entire United States
-Rename acstab to acstabus
 Run acs500("state") to get variables for each state
-Join acstab to acstabus
+Rbind the us table to the state table
 
 Write the data to states.csv
   nam <- "states"

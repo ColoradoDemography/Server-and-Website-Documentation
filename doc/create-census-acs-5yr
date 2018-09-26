@@ -1,0 +1,4 @@
+Create database in postgres (ie acs0711)
+Add postgis extension to database
+Create carto, data, search and tiger schemas within database
+Download and load geographies (HOLD)

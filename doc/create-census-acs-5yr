@@ -11,11 +11,10 @@ Run acs500 function to store it.
 Run acs500("us") to get the variables for data for the entire United States
 Run acs500("state") to get variables for each state
 Rbind the us table to the state table
-
-Write the data to states.csv
-  nam <- "states"
-  assign(nam, acstabus)
-  write.csv(get(nam), file = paste0(nam,".csv"))
   
 Use the table manipulation functions to prepare the data, then write to postgres
+Save the data schema.
  
+Run acs500("county") and acs500("place") to get the data for those geographies and run the table manipulation loop (getdata)
+to append those geographies to the data in postgres.
+Save the data schema again with a new name.

@@ -10,12 +10,16 @@ Run the vars variables, removing columns that are not in a B#### or C#### format
 Run acs500 function to store it.
 Run acs500("us") to get the variables for data for the entire United States
 Run acs500("state") to get variables for each state
-Run acs500("county") and acs500("place") to get the data for those geographies
-Write these tables to csv for a backup so you don't have to write them again
-Cbind the 4 tables together
+Run acs500("county") to get the variables for each county 
+Rbind the 4 tables together
+
   
 Use the table manipulation functions to prepare the data, then write to postgres
-Save the data schema.
+Backup the data schema.
+
+Run acs500("place") overnight and save it to a csv. Use csv splitter to split it into ~10 files of 3000 lines each.
+
+Load each csv and run the loop to append these files to the tables.
  
 *hopefully delete what is below
 Run acs500("county") and acs500("place") to get the data for those geographies and run the table manipulation loop (getdata)

@@ -25,3 +25,12 @@ Load each csv and run the loop to append these files to the tables.
 Run acs500("county") and acs500("place") to get the data for those geographies and run the table manipulation loop (getdata)
 to append those geographies to the data in postgres.
 Save the data schema again with a new name.
+
+For tracts, run the acs500tract function.  Then run the following loop to start writing tract csvs. This will have to be restarted a few
+times with the state_codes variable adjusted according to the states remaining.
+
+Once the csvs are written, those that are over 500 mb will need to be split with the csv splitter.
+
+Now make sure the only csvs in the working directory are the tracts and split tracts (make sure the full csvs for tracts that had to be split
+are removed. Now run the final large loop at the end to append the csv data into the database. This will take all day but should run without
+crashing. Save the database again.

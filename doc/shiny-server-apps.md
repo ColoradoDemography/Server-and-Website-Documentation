@@ -1,4 +1,4 @@
-# Update or Add Shiny-Aerver apps
+# Update or Add Shiny-Server apps
 
 We run two Shiny applications in production, the Demographic Dashboard and the Net Migration by Age Charts, both linked to on the homepage.  These two apps run differently than the rest of our applications in that they both run out of one Docker container, instead of each having their own.  This is in part because of how we developed it, but also due to the weight of the Shiny Docker container, we didn't want to have too many.  We also have used the survey to host apps that we need for a period of time, but don't need to be up all the time.
 

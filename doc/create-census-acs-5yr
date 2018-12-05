@@ -1,7 +1,10 @@
 Create database in postgres (ie acs0711)
 Add postgis extension to database
 Create carto, data, search and tiger schemas within database
-Download and load geographies (HOLD)
+Download and load geographies 
+*TIGER geographies can be downloaded here: https://www2.census.gov/geo/tiger/TIGER<year>
+*CARTO geographies can be downloaded here: https://www2.census.gov/geo/tiger/GENZ<year>
+State and county boundaries can be reused barring change
 
 Pull data using the ACS_Download R Project. Run Get_ACS_Tables.R in pieces.
 Use find and replace to change all variables with a year to the year desired.

@@ -53,3 +53,4 @@ devtools::install_github(c("ColoradoDemography/codemog","ColoradoDemography/code
 
 When adding a new app, all of its dependencies and libraries have to be included in the docker container.
 The main app script needs to use either the app.R or ui.R and server.R convention.
+Add '01 01 * * * find /tmp/* -delete' to etc/crontab to cleanout them tmp file 

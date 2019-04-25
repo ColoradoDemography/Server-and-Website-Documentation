@@ -66,7 +66,7 @@ This will come in handy.  Trust me.
 ![GCP Setup Image6](/img/setup6.jpg)
 
 #### SSH Instructions
-Use PUTTY to login OR do as Rob does and use the web based SSH through the GCP Dashboard.
+Use PUTTY to login OR do as Rob does and use the web based SSH through the GCP Dashboard. (alternate SSH through the command line, ssh dlg-coreos.us-central1-f.dola-gis-server)
 
 Unless you have recreated giant from scratch, don't format your drives, they exist and have your data on them. **(Use the lsblk command to identify which drive is which. THEY MAY NOT BE /dev/sdb & /dev/sdc !)**.
 

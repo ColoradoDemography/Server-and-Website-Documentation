@@ -7,6 +7,11 @@ Run ```docker pull codemog/imagename``` to get the latest version of a container
 
 ##gis.dola.colorado.gov
 
+theiaide/theia
+```
+docker run -it --name theia -p 3000:3000 -v "$(pwd):/home/project:cached" theiaide/theia
+```
+
 portainer/portainer
 ```
 docker run --restart unless-stopped --name portainer -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer
@@ -107,3 +112,4 @@ docker create -v /giant/pgdata:/var/lib/postgresql/data --name slowdata busybox
 ```
 docker run --restart unless-stopped --name postgres -p 5433:5432 -e POSTGRES_PASSWORD=whatever -d --volumes-from slowdata mdillon/postgis:9.4
 ```
+When pulling new postgres, it may be necessary to install or upgrade postgis in the geography databases

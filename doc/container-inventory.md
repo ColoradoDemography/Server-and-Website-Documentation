@@ -7,11 +7,6 @@ Run ```docker pull codemog/imagename``` to get the latest version of a container
 
 ##gis.dola.colorado.gov
 
-theiaide/theia
-```
-docker run -it --name theia -p 3000:3000 -v "$(pwd):/home/project:cached" theiaide/theia
-```
-
 portainer/portainer
 ```
 docker run --restart unless-stopped --name portainer -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer

@@ -14,7 +14,7 @@ It's a bit scary to have the whole server down, but just breath and take it one 
 3. Re-load all Docker containers.  
 4. Generate and load SSL.
 
-### Remove old insstance
+### Remove old instance
 
 Scary as this may be, you just need to go into the Google Cloud Platform: Compute Instance section,
 highlight the instance that is being replaced, and then click delete.  The other steps won't work if you don't.

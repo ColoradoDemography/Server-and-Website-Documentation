@@ -53,3 +53,6 @@ Second, to clear this list so that you do not see it every time you Putty in to 
 ```
 sudo systemctl reset-failed
 ```
+### Asking for password in SSH
+
+Try to View gcloud command (to the right of SSH button)

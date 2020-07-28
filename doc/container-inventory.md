@@ -80,7 +80,7 @@ docker run --restart unless-stopped --name website -d -p 4008:4008 codemog/jekyl
 
 codemog/demog-proxy
 ```
-docker run --restart unless-stopped  --name demogproxy -v /etc/letsencrypt/archive/demography.dola.colorado.gov:/ssl/docker --link website:website -p 443:443 -p 80:80 -d codemog/demog-proxy
+docker run --restart unless-stopped  --name demogproxy -v /etc/letsencrypt/archive/demography.dola.colorado.gov:/ssl/docker --link website:website --link shiny-server:shiny-server -p 443:443 -p 80:80 -d codemog/demog-proxy
 ```
 
 

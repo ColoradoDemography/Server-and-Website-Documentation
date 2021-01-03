@@ -21,7 +21,7 @@ Both the *page* and *homepage* layout feeds into the *default* layout.  The *def
 
 - compress
 
-The *default* template feeds into the *compress* template.  This template is a brilliant creation of [Anatol Broder](http://anatol.penibelst.de/), check out the [documentation](https://github.com/penibelst/jekyll-compress-html)!  It minifies (removes whitespace) from your page so that you can serve a much leaner file to your user (and increase page speed)!
+The *default* template feeds into the *compress* template.  This template is a brilliant creation of [Anatol Broder](https://bro.doktorbro.net/), check out the [documentation](https://github.com/penibelst/jekyll-compress-html)!  It minifies (removes whitespace) from your page so that you can serve a much leaner file to your user (and increase page speed)!
 
 
 

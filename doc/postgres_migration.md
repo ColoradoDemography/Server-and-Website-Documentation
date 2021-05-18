@@ -8,3 +8,5 @@ We are looking to update to a newer postgres container. The current container da
 4. Import backed up data into new data container (start with just dola)
 5. Test that the data can be reached and used
 6. Once good to go, shut down both containers and restart huge with 5433:5432
+
+Check mounting hugedata

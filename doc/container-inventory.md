@@ -103,7 +103,7 @@ Optional (for logging):
 docker create -v /giant/pgdata:/var/lib/postgresql/data --name slowdata busybox
 ```
 
-**Postgres/PostGIS Containers**
+**Postgres/PostGIS Containers** Just letters/numbers for password, no " or '
 ```
 docker run --restart unless-stopped --name postgres -p 5433:5432 -e POSTGRES_PASSWORD=whatever -d --volumes-from slowdata mdillon/postgis:9.4
 ```

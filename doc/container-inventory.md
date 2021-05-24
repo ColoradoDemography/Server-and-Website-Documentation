@@ -64,7 +64,7 @@ docker run --restart unless-stopped --name muniapi -d -p 4010:4010 codemog/muni_
 
 codemog/node-proxy - If not using State SSL, set up using Let's Encrypt and mirror demog-proxy file and folder mapping
 ```
-docker run --restart unless-stopped  --name nodeproxy -v /etc/letsencrypt/archive/gis.dola.colorado.gov:/ssl/docker --link demoglookup:demoglookup --link shiny-server:shiny-server --link censusmap:censusmap --link censusapi:censusapi --link muniapi:muniapi --link phantom:phantom --link cogrants:cogrants --link sdapi:sdapi --link pt2pl:pt2pl --link php:php -p 443:443 -p 80:80 -d codemog/node-proxy
+docker run --restart unless-stopped  --name nodeproxy -v /etc/letsencrypt/archive/gis.dola.colorado.gov:/ssl/docker --link demoglookup:demoglookup --link shiny-server:shiny-server --link censusmap:censusmap --link censusapi:censusapi --link muniapi:muniapi --link phantom:phantom --link cogrants:cogrants --link sdapi:sdapi --link pt2pl:pt2pl -p 443:443 -p 80:80 -d codemog/node-proxy
 ```
 *use the <b>--link name</b> command to link by name all your application and microservice containers (the ones with port mapping - excluding the databases) to the proxy*
 

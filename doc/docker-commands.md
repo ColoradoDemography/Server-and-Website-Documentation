@@ -68,3 +68,9 @@ Some commands require admin privileges
 ```
 sudo -i
 ```
+
+**Copy a file from a docker container**
+Run command, then download using the command in the top right corner of SSH window
+```
+sudo docker cp nodecron:/json/08_bls.json .
+```

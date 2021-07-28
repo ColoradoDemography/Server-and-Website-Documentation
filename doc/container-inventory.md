@@ -4,6 +4,7 @@
 
 Run ```docker pull codemog/imagename``` to get the latest version of a container.
 
+Container updates are run through workflows within github. To create a workflow, go to Actions within the repository, then create a new workflow, setup a workflow yourself, then use https://github.com/ColoradoDemography/MS_Demog_Lookups/blob/master/.github/workflows/docker-image.yml as a template. Change the docker commands at the bottom to point to the proper docker hub repository (create it in docker hub if it does not already exist). You will also need to create secrets to hold the docker hub username and password.
 
 ##gis.dola.colorado.gov
 

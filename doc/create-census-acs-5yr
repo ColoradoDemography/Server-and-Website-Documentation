@@ -9,7 +9,7 @@ State and county boundaries can be reused barring change
 Pull data using the ACS_Download R Project. Run Get_ACS_Tables.R in pieces.
 Use find and replace to change all variables with a year to the year desired.
 
-Run the vars variables, removing columns that are not in a B#### or C#### format (BLKGRP for example)
+Run the vars variables, removing columns that are not in a B#### or C#### format (BLKGRP for example) (all columns seem to be valid in 2020)
 Run acs500 function to store it.
 Run acs500("us") to get the variables for data for the entire United States
 Run acs500("state") to get variables for each state

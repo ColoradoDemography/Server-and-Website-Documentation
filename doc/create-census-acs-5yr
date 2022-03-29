@@ -36,3 +36,10 @@ Once the csvs are written, those that are over 500 mb will need to be split with
 Now make sure the only csvs in the working directory are the tracts and split tracts (make sure the full csvs for tracts that had to be split
 are removed. Now run the final large loop at the end to append the csv data into the database. This will take all day but should run without
 crashing. Save the database again.
+
+For block groups, we only do Colorado. Run the acs500bg function, then run the loop to get all the block group data write it to csvs (will take a day). 
+Then run the csv loop to read all of them and load the data. Backup the database, hopefully for the last time.
+
+---Updating the API
+
+

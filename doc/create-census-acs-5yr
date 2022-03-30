@@ -44,6 +44,7 @@ Then run the csv loop to read all of them and load the data. Backup the database
 Several files in github need to be updated, usually just adding new database info
 MS_CensusMap - demogpost.js
 MS_CensusAPI - demog.js, geojson.js, meta.js
+CensusAPI - index.html
 
 
 

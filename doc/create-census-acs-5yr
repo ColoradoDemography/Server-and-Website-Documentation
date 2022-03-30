@@ -46,5 +46,12 @@ MS_CensusMap - demogpost.js
 MS_CensusAPI - demog.js, geojson.js, meta.js
 CensusAPI - index.html
 
+--New Census Map
+Clone the previous year's map. The following files will need to be updated:
+charttree.js
+colortree.js
+initialize_cMap.js
+tableflavor.js
+
 
 

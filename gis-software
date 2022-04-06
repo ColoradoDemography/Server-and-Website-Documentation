@@ -1,0 +1,13 @@
+GIS
+
+We are currently using three different pieces of software in support of our GIS work:
+
+QGIS - This is primarily used to edit spatial items in our postgres database. Most of our spatial data within postgres is kept within the bounds schema. The two most important files are for annexations and special districts. QGIS allows for easy, direct editing of these files making it our go to for editing these databases. QGIS also has a lot of specialized open sources tools and, best of all, it's free. It is also used by the Census Bureau for many of their geographic programs so the version we use is pretty much restricted by the version they are using for their most recent program.
+
+ArcMap - This is the old version of ArcGIS software that is being phased out in favor of ArcGIS Pro. Its licensing is run through a license server that OIT maintains for us. The server is running an old version of ArcMap, 2.4 and the server is on its last legs. We will likely phase out our use of ArcMap completely come this July so that the server can be shut down. You have to be connected to the office VPN to use this software. At this point ArcMap is mostly being used with older maps and as a way to give other users within DOLA access to ArcGIS until they can get full licenses in July.
+
+ArcGIS Pro - This is our main GIS software, provided by ESRI. We currently have 4 licenses for the software within DOLA and a 5th has been requested to be added in July 2022. Rather than using a license server, this software uses a login that is tied to a license, allowing it to be used on any computer and without being logged into the VPN.
+
+Spatial Data - Most of our permanent spatial data is maintained on the K drive, specifically within the DataLayers folder. Within this we have a number of geodatabases that hold Census geographies as well as various frequently used state files. We also have a Parcel folder that holds the most recent parcel data we have for each county (although if the most recent parcel data is needed, you will likely find something more current on the county GIS website).
+
+The ProjectsMain folder has the various files associated with projects we have done over the past 8+ years, broken down by categories such as population, employment, etc. This is the place to look for older maps and templates to be used for new maps. Most of the ArcGIS maps here will be in .mxd format that ArcMap used. ArcGIS Pro can convert these into a newer format.

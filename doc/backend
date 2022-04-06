@@ -1,0 +1,6 @@
+Our website and databases are run through a combination of Google Cloud and Github. The data is stored in Google Cloud and many of the applications, including the website, 
+are run through docker containers in Google Cloud. Most of the code is maintained and updated in Github.
+
+Our website is maintained within the Website_Grid repository. We also have a test version of the website in the website_new repository. The website is largely straight html 
+code with some javascript as well, especially for the homepage that displays state and county statistics.
+

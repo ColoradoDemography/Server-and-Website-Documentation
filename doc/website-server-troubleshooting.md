@@ -1,6 +1,20 @@
 # Troubleshooting the Website Server
 
-## The website is down...
+## Try this first
+
+If the front page stats are not populating, the coreas server is probably down. It can usually be brought back up quickly with these commands
+
+```
+docker ps -a
+docker stop postgres
+docker rm postgres
+docker run --restart unless-stopped --name postgres -p 5433:5432 -e POSTGRES_PASSWORD=whatever -d --volumes-from slowdata mdillon/postgis:9.4
+sudo -i
+mount /dev/sdb /giant/
+
+```
+
+## Archival, reference only
 
 If the website is down, the very first thing to check is the docker containers on the website server. There is an issue where every so often the containers break.
 

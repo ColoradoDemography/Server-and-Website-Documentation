@@ -4,3 +4,10 @@ are run through docker containers in Google Cloud. Most of the code is maintaine
 Our website is maintained within the Website_Grid repository. We also have a test version of the website in the website_new repository. The website is largely straight html 
 code with some javascript as well, especially for the homepage that displays state and county statistics.
 
+The website is run through a docker container called website2 that runs in the demography-website VM instance. The container is stored in hub.docker.com and maintained 
+in the website_docker github repository. Another docker container, demog-proxy, is used to run the security certificate for the website.
+
+To update the website, make the necessary changes in Website_Grid, then go into the VM instance, use docker exec -it website2 bash to get into the container.
+cd website
+git pull
+exit the container and docker restart website2

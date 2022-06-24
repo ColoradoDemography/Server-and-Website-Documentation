@@ -111,6 +111,10 @@
 - [Github](https://github.com/ColoradoDemography/Migration-Bubbles)
 - [Application Link](https://gis.dola.colorado.gov/Migration-Bubbles)
 
+### Poverty by Age
+- [Github](https://github.com/ColoradoDemography/PovertyComprehensive)
+- [Application Link](https://gis.dola.colorado.gov/PovertyComprehensive)
+
 ### Quadrant Chart
 - [Github](https://github.com/ColoradoDemography/D3_Quadrant)
 - [Application Link](https://gis.dola.colorado.gov/D3_Quadrant)
@@ -118,9 +122,6 @@
 ### Rural-Urban Commuting Areas (RUCA)
 - [Github](https://github.com/ColoradoDemography/CO_RUCA)
 - [Application Link](https://gis.dola.colorado.gov/CO_RUCA)
-
-### Senior Centers
-- [Application Link](https://dola.colorado.gov/gis-php/files/projects/seniorctr/senior_ctr.html)
 
 ### SRF Disavantaged
 - [Github](https://github.com/ColoradoDemography/disadvantaged_communities)

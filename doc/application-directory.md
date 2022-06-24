@@ -22,7 +22,7 @@
 
 ### Base Industries Pie Chart
 - [Github](https://github.com/ColoradoDemography/CO_BaseIndustries)
-- [Application Link]([(https://gis.dola.colorado.gov/CO_BaseIndustries_Bar)])
+- [Application Link](https://gis.dola.colorado.gov/CO_BaseIndustries_Bar)
 
 ### BGU Viewer (2010)
 - [Application Link](http://dola-online.maps.arcgis.com/apps/Solutions/s2.html?appid=2a869a4217ca40de891660504c0a3591)
@@ -32,11 +32,11 @@
 - [Application Link](http://coloradodemography.github.io/D3_BroadbandStatus/)
 
 ### Census Data Query Tool
-- [Github (Client)](https://github.com/ColoradoDemography/CensusAPI_Query_UI)
+- [Github (Client)](https://github.com/ColoradoDemography/CensusAPI)
 - [Github (Microservices)](https://github.com/ColoradoDemography/MS_CensusAPI)
-- [Application Link](https://gis.dola.colorado.gov/CensusAPI_Query_UI)
+- [Application Link](https://gis.dola.colorado.gov/CensusAPI)
 
-### Census Data Timeseries
+### Census Data Timeseries (non-functional)
 - [Github (Client)](https://github.com/ColoradoDemography/CensusAPI_Timeseries)
 - [Github (Microservices)]
 - [Application Link]
@@ -75,11 +75,12 @@
 - [Application Link](https://gis.dola.colorado.gov/CompareCities)
 
 ### Demography Dashboard
-- [Github (Shiny Application)](https://github.com/ColoradoDemography/demographic_dashboard)
-- [Application Link](https://gis.dola.colorado.gov/apps/demographic_dashboard/)
+- [Github (Shiny Application - old version)](https://github.com/ColoradoDemography/demographic_dashboard)
+- [Application Link](https://demography.dola.colorado.gov/assets/html/demodashboard.html)
 
 ### Density Map
-- [Application Link](https://dola.colorado.gov/gis-php/files/projects/density/density_v1.html)
+- [Github](https://github.com/ColoradoDemography/Density_2020)
+- [Application Link](https://gis.dola.colorado.gov/Density_2020/)
 
 ### Net Migration Dashboard
 - [Github (Shiny Application)](https://github.com/ColoradoDemography/netmigration_dashboard)

@@ -13,8 +13,8 @@
 - [Application Link - 2014](https://gis.dola.colorado.gov/CensusAPI_Map)
 - [Application Link - 2013](https://gis.dola.colorado.gov/CensusAPI_Map_2013)
 - [Application Link - 2012](https://gis.dola.colorado.gov/CensusAPI_Map_2012)
-- [Application Link - 2015](https://gis.dola.colorado.gov/CensusAPI_Map_2011)
-- [Application Link - 2015](https://gis.dola.colorado.gov/CensusAPI_Map_2010)
+- [Application Link - 2011](https://gis.dola.colorado.gov/CensusAPI_Map_2011)
+- [Application Link - 2010](https://gis.dola.colorado.gov/CensusAPI_Map_2010)
 
 ### Age-Animation Bars
 - [Github](https://github.com/ColoradoDemography/Age-Animation-Bars)
@@ -83,12 +83,10 @@
 - [Application Link](https://gis.dola.colorado.gov/Density_2020/)
 
 ### Net Migration Dashboard
-- [Github (Shiny Application)](https://github.com/ColoradoDemography/netmigration_dashboard)
-- [Application Link](https://gis.dola.colorado.gov/apps/netmigration_dashboard/)
-
+- [Github (Shiny Application - old version)](https://github.com/ColoradoDemography/netmigration_dashboard)
+- [Application Link](https://demography.dola.colorado.gov/assets/html/netmigcomp.html)
 
 ### Demography Data Lookups
-- [Github (Client)](https://github.com/ColoradoDemography/Demog-Lookup-Clients)
 - [Github (Microservices)](https://github.com/ColoradoDemography/MS_Demog_Lookups)
 - Application Links
   - [Base Analysis](https://gis.dola.colorado.gov/economy-labor-force/data/base-analysis/)
@@ -103,8 +101,8 @@
   - [Municipal Population and Housing Estimates](https://gis.dola.colorado.gov/population/data/muni-pop-housing/)
 
 ### Map Gallery
-- [Github](https://github.com/ColoradoDemography/CO_Map_Gallery)
-- [Application Link](https://gis.dola.colorado.gov/CO_Map_Gallery)
+- [Github](https://github.com/ColoradoDemography/WebsiteGrid/blob/main/assets/html/gis_applications.html)
+- [Application Link](https://demography.dola.colorado.gov/assets/html/gis.html)
 
 ### Marijuana Grant Eligibility Map
 - [Application Link](http://dola-online.maps.arcgis.com/apps/Viewer/index.html?appid=60c1688254fd4054bf5df1af8e7bc09f)

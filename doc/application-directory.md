@@ -22,14 +22,14 @@
 
 ### Base Industries Pie Chart
 - [Github](https://github.com/ColoradoDemography/CO_BaseIndustries)
-- [Application Link](https://gis.dola.colorado.gov/CO_BaseIndustries)
+- [Application Link]([(https://gis.dola.colorado.gov/CO_BaseIndustries_Bar)])
 
-### BGU Viewer
+### BGU Viewer (2010)
 - [Application Link](http://dola-online.maps.arcgis.com/apps/Solutions/s2.html?appid=2a869a4217ca40de891660504c0a3591)
 
 ### Broadband Status Map
 - [Github](https://github.com/ColoradoDemography/D3_BroadbandStatus)
-- [Application Link](https://demography.dola.colorado.gov/D3_BroadbandStatus/)
+- [Application Link](http://coloradodemography.github.io/D3_BroadbandStatus/)
 
 ### Census Data Query Tool
 - [Github (Client)](https://github.com/ColoradoDemography/CensusAPI_Query_UI)

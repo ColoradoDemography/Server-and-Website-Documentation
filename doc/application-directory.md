@@ -4,11 +4,11 @@
 ### ACS Webmap 
 - [Github (Client)](https://github.com/ColoradoDemography/CensusAPI_Map)
 - [Github (Microservices)](https://github.com/ColoradoDemography/MS_CensusMap)
-- [Application Link - 2015](https://gis.dola.colorado.gov/CensusAPI_Map_2020)
-- [Application Link - 2015](https://gis.dola.colorado.gov/CensusAPI_Map_2019)
-- [Application Link - 2015](https://gis.dola.colorado.gov/CensusAPI_Map_2018)
-- [Application Link - 2015](https://gis.dola.colorado.gov/CensusAPI_Map_2017)
-- [Application Link - 2015](https://gis.dola.colorado.gov/CensusAPI_Map_2016)
+- [Application Link - 2020](https://gis.dola.colorado.gov/CensusAPI_Map_2020)
+- [Application Link - 2019](https://gis.dola.colorado.gov/CensusAPI_Map_2019)
+- [Application Link - 2018](https://gis.dola.colorado.gov/CensusAPI_Map_2018)
+- [Application Link - 2017](https://gis.dola.colorado.gov/CensusAPI_Map_2017)
+- [Application Link - 2016](https://gis.dola.colorado.gov/CensusAPI_Map_2016)
 - [Application Link - 2015](https://gis.dola.colorado.gov/CensusAPI_Map_2015)
 - [Application Link - 2014](https://gis.dola.colorado.gov/CensusAPI_Map)
 - [Application Link - 2013](https://gis.dola.colorado.gov/CensusAPI_Map_2013)
@@ -135,7 +135,7 @@
 - [Application](https://dola.colorado.gov/gis-php/files/projects/USDA_Webmap/usda.html)
 
 
-#### Architecture Descriptions
+#### Architecture Descriptions (archive reference only)
 
 - **Client Application**s are purely static web applications with no server-side code dependancies.  Often the data is served in a CSV or JSON file along with the application code.  These applications are written in a mix of HTML, CSS, and Javascript.  These applications are served via Github Project Pages from their repository.
 - **Client Application + Print** are like pure Client Applications, with the exception that they call a server process for print/save functionality.  In the event of server failure, these applications would still function without issue (aside from inabilty to save/print).  These applications are served via Github Project Pages from their repository.

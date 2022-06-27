@@ -122,6 +122,14 @@
 ### Historical Residence of Colorado Born
 - [Application Link](https://public.flourish.studio/visualisation/3832584/)
 
+### Job Change Map
+- [Github](https://github.com/ColoradoDemography/Job_Change)
+- [Application Link](https://gis.dola.colorado.gov/Job_Change/)
+
+### Job Sector County Map
+- [Github](https://github.com/ColoradoDemography/Job_Sector_County)
+- [Application Link](https://gis.dola.colorado.gov/Job_Sector_County)
+
 ### Map Gallery
 - [Github](https://github.com/ColoradoDemography/WebsiteGrid/blob/main/assets/html/gis_applications.html)
 - [Application Link](https://demography.dola.colorado.gov/assets/html/gis.html)

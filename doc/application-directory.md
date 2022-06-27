@@ -63,6 +63,9 @@
 - [Github](https://github.com/ColoradoDemography/Animated-Pie)
 - [Application Link](https://gis.dola.colorado.gov/Animated-Pie)
 
+### Colorado Demographic Profiles
+- [Application Link](https://gis.dola.colorado.gov/colorado-demographic-profiles/)
+
 ### Colorado Municipal Boundaries
 - [Github (Client)](https://github.com/ColoradoDemography/CO_Muni)
 - [Application Link](https://gis.dola.colorado.gov/CO_Muni)
@@ -126,6 +129,14 @@
 - [Github](https://github.com/ColoradoDemography/Job_Change)
 - [Application Link](https://gis.dola.colorado.gov/Job_Change/)
 
+### Jobs and Migration
+- [Github](https://github.com/ColoradoDemography/Jobs_Migration)
+- [Application Link](https://gis.dola.colorado.gov/Jobs_Migration/)
+
+### Job Sector Chart
+- [Github](https://github.com/ColoradoDemography/Jobs_by_sector_chart)
+- [Application Link](https://gis.dola.colorado.gov/Jobs_by_sector_chart)
+
 ### Job Sector County Map
 - [Github](https://github.com/ColoradoDemography/Job_Sector_County)
 - [Application Link](https://gis.dola.colorado.gov/Job_Sector_County)
@@ -168,6 +179,9 @@
 ### Unemployment Chart
 - [Github](https://github.com/ColoradoDemography/D3_Unemployment)
 - [Application Link](https://gis.dola.colorado.gov/D3_Unemployment)
+
+### Unemployment Ribbon
+- [Application Link](https://gis.dola.colorado.gov/apps/unemployment_ribbon/)
 
 ### USDA Webmap
 - [Application](https://dola.colorado.gov/gis-php/files/projects/USDA_Webmap/usda.html)

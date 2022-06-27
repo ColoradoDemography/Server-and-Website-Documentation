@@ -20,12 +20,19 @@
 - [Github](https://github.com/ColoradoDemography/Age-Animation-Bars)
 - [Application Link](https://gis.dola.colorado.gov/Age-Animation-Bars)
 
+### Age Distribution by County
+- [Application Link](https://dola-online.maps.arcgis.com/apps/dashboards/713f5b5ecc4c4a7d85c6c266bba9131d)
+
 ### Base Industries Pie Chart
 - [Github](https://github.com/ColoradoDemography/CO_BaseIndustries)
 - [Application Link](https://gis.dola.colorado.gov/CO_BaseIndustries_Bar)
 
 ### BGU Viewer (2010)
 - [Application Link](http://dola-online.maps.arcgis.com/apps/Solutions/s2.html?appid=2a869a4217ca40de891660504c0a3591)
+
+### Bracketology
+- [Github](https://github.com/ColoradoDemography/Bracketology)
+- [Application Link](https://gis.dola.colorado.gov/Bracketology/)
 
 ### Broadband Status Map
 - [Github](https://github.com/ColoradoDemography/D3_BroadbandStatus)
@@ -40,6 +47,9 @@
 - [Github (Client)](https://github.com/ColoradoDemography/CensusAPI_Timeseries)
 - [Github (Microservices)]
 - [Application Link]
+
+### Census 2020 Interactive Map
+- [Application Link](https://coloradodemography.github.io/Census_Data_2020/)
 
 ### Colorado DOLA Grants
 - [Github](https://github.com/ColoradoDemography/CO_Grants)
@@ -74,6 +84,13 @@
 - [Github](https://github.com/ColoradoDemography/CompareCities)
 - [Application Link](https://gis.dola.colorado.gov/CompareCities)
 
+### Components of Change Map
+- [Github](https://github.com/ColoradoDemography/ComponentsOfChange)
+- [Application Link](https://gis.colorado.gov/ComponentsOfChange)
+
+### COVID Map Series
+- [Application Link](https://arcg.is/mGPSK)
+
 ### Demography Dashboard
 - [Github (Shiny Application - old version)](https://github.com/ColoradoDemography/demographic_dashboard)
 - [Application Link](https://demography.dola.colorado.gov/assets/html/demodashboard.html)
@@ -81,10 +98,6 @@
 ### Density Map
 - [Github](https://github.com/ColoradoDemography/Density_2020)
 - [Application Link](https://gis.dola.colorado.gov/Density_2020/)
-
-### Net Migration Dashboard
-- [Github (Shiny Application - old version)](https://github.com/ColoradoDemography/netmigration_dashboard)
-- [Application Link](https://demography.dola.colorado.gov/assets/html/netmigcomp.html)
 
 ### Demography Data Lookups
 - [Github (Microservices)](https://github.com/ColoradoDemography/MS_Demog_Lookups)
@@ -100,6 +113,15 @@
   - [Labor Force Participation](https://gis.dola.colorado.gov/economy-labor-force/data/labor-force/)
   - [Municipal Population and Housing Estimates](https://gis.dola.colorado.gov/population/data/muni-pop-housing/)
 
+### Historical County Populations
+- [Application Link](https://arcg.is/1KXX05)
+
+### Historical Birthplaces of Colorado Residents
+- [Application Link](https://public.flourish.studio/visualisation/3775693/)
+
+### Historical Residence of Colorado Born
+- [Application Link](https://public.flourish.studio/visualisation/3832584/)
+
 ### Map Gallery
 - [Github](https://github.com/ColoradoDemography/WebsiteGrid/blob/main/assets/html/gis_applications.html)
 - [Application Link](https://demography.dola.colorado.gov/assets/html/gis.html)
@@ -110,6 +132,14 @@
 ### Migration Animation (Bubbles)
 - [Github](https://github.com/ColoradoDemography/Migration-Bubbles)
 - [Application Link](https://gis.dola.colorado.gov/Migration-Bubbles)
+
+### Net Migration Dashboard
+- [Github (Shiny Application - old version)](https://github.com/ColoradoDemography/netmigration_dashboard)
+- [Application Link](https://demography.dola.colorado.gov/assets/html/netmigcomp.html)
+
+### Population Change by Age
+-[Github](https://github.com/ColoradoDemography/AgeMap/)
+-[Application Link](https://gis.dola.colorado.gov/AgeMap/)
 
 ### Poverty by Age
 - [Github](https://github.com/ColoradoDemography/PovertyComprehensive)

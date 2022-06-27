@@ -13,6 +13,7 @@ sudo -i
 mount /dev/sdb /giant/
 
 ```
+Give it a few minutes for postgres to get going again.
 
 ## Archival, reference only
 

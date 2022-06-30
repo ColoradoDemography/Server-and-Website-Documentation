@@ -32,8 +32,6 @@ docker run --restart unless-stopped  --name demogproxy -v /etc/letsencrypt/archi
 
 ```
 
-# Last Resort(s)
-
 If you need to rebuild the instance, you can, but before doing that check that the SSL certificates are up to date by running the code below:
 
 ```

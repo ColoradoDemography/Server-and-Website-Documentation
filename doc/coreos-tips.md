@@ -56,3 +56,10 @@ sudo systemctl reset-failed
 ### Asking for password in SSH
 
 Try to View gcloud command (to the right of SSH button)
+
+### Growing the storage disk (giant)
+```
+Increase the size of the disk in the dashboard
+SSH Into the VM
+df -h to see the size of partitions
+sudo resize2fs /dev/sdb to increase giant to use the new size

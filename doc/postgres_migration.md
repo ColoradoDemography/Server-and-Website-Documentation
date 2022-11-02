@@ -6,7 +6,7 @@ We are looking to update to a newer postgres container. The current container da
 1. Create new disk called in google cloud called fast. This will store data for the new postgres.
 2. Create data container (docker create -v /fast/pgdata:/var/lib/postgresql/data --name fastdata busybox)
 ## Steps
-1. Create postgres container (docker run --restart unless-stopped --name postgres -p 5433:5432 -e POSTGRES_PASSWORD="egcdcatbhcab" -d --volumes-from fastdata postgis/postgis:14-3.2)
+1. Create postgres container (docker run --restart unless-stopped --name postgres -p 5433:5432 -e POSTGRES_PASSWORD="egcdcatbhcab" -d --volumes-from fastdata -itd --shm-size=1g postgis/postgis:14-3.2)
 2. sudo -i
 3. mount /dev/sdb /fast/      (same as giant but should be able to remove giant eventually)
 4. Import backed up data into new data container (start with just dola and newest acs)

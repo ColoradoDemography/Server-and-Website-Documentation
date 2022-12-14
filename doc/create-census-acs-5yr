@@ -2,7 +2,7 @@ Create database in postgres (ie acs0711)
 Add postgis extension to database
 Create carto, data, search and tiger schemas within database
 Download and load geographies 
-*TIGER geographies can be downloaded here: https://www2.census.gov/geo/tiger/TIGER<year>
+*TIGER geographies can be downloaded here: https://www2.census.gov/geo/tiger/TIGER<year> (don't load tiger unless necessary)
 *CARTO geographies can be downloaded here: https://www2.census.gov/geo/tiger/GENZ<year>
 State and county boundaries can be reused barring change
 

@@ -24,7 +24,7 @@ Run acs500("place") overnight and save it to a csv. Use csv splitter to split it
 Load each csv and run the loop to append these files to the tables.
  
 *hopefully delete what is below
-Run acs500("county") and acs500("place") to get the data for those geographies and run the table manipulation loop (getdata)
+Run acs500("place") to get the data for those geographies and run the table manipulation loop (getdata)
 to append those geographies to the data in postgres.
 Save the data schema again with a new name.
 

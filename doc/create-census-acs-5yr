@@ -40,6 +40,9 @@ crashing. Save the database again.
 For block groups, we only do Colorado. Run the acs500bg function, then run the loop to get all the block group data write it to csvs (will take a day). 
 Then run the csv loop to read all of them and load the data. Backup the database, hopefully for the last time.
 
+The CheckData script then needs to be run to find errors in the tables. There will be some mistakes given the way the data has to be split up when loaded.
+SQL scripts have to be run to remove the bad data and then individual tables loaded up with the correct data (append script around line 223)
+
 ---Updating the API
 Several files in github need to be updated, usually just adding new database info
 MS_CensusMap - demogpost.js

@@ -43,6 +43,10 @@ Then run the csv loop to read all of them and load the data. Backup the database
 The CheckData script then needs to be run to find errors in the tables. There will be some mistakes given the way the data has to be split up when loaded.
 SQL scripts have to be run to remove the bad data and then individual tables loaded up with the correct data (append script around line 223)
 
+Other tables to update are data.census_table_metadata, data.census_column_metadata, data.geo, search.data, search.data_exp and search.key. The first two will have
+slight changes as the Census Bureau adds and removes tables and columns. This data can be found in the ACS Table Shells. The other tables can be copied from the 
+previous year except after the decennial.
+
 ---Updating the API
 Several files in github need to be updated, usually just adding new database info
 MS_CensusMap - demogpost.js
@@ -56,5 +60,5 @@ colortree.js
 initialize_cMap.js
 tableflavor.js
 
-
+In 2023, try using the AddTable script to add the tables one at a time without the splits. Loop through the table list (census_table_metadata)
 

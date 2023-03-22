@@ -1,13 +1,23 @@
 Our website and databases are run through a combination of Google Cloud and Github. The data is stored in Google Cloud and many of the applications, including the website, 
 are run through docker containers in Google Cloud. Most of the code is maintained and updated in Github.
 
+We use two domain names that are assigned to IP addresses GC. The IP addresses are viewable by looking at the VM instances in GC.
+- demography.dola.colorado.gov (reached through the demography-website VM)
+= gis.dola.colorado.gov (reached through the dlg-coreos VM)
+
 Our website is maintained within the Website_Grid repository. We also have a test version of the website in the website_new repository. The website is largely straight html 
 code with some javascript as well, especially for the homepage that displays state and county statistics.
 
 The website is run through a docker container called website2 that runs in the demography-website VM instance. The container is stored in hub.docker.com and maintained 
 in the website_docker github repository. Another docker container, demog-proxy, is used to run the security certificate for the website.
 
-To update the website, make the necessary changes in Website_Grid, then go into the VM instance, use docker exec -it website2 bash to get into the container.
-cd website
+To update the website, make the necessary changes in Website_Grid, then go into the demography-website VM instance, use docker exec -it website2 bash to get into the container.
+cd WebsiteGrid
 git pull
 exit the container and docker restart website2
+
+Many of the applications on our website run through the gis.dola.colorado.gov domain. These are updated in a similar manner to the website. Make the changes in github, then go
+into the dlg-coreos VM instance, use docker exec -it website2 bash to get into the container.
+cd coloradodemography.github.io
+cd _site
+the github repository you are pulling from will have a directory of the same name here. cd into it and then git pull

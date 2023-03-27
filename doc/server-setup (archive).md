@@ -1,3 +1,5 @@
+Need a trimmed down version of this
+
 ### Instructions
 
 You'll save yourself a lot of trouble if you preload your security key during the Instance Creation Step.

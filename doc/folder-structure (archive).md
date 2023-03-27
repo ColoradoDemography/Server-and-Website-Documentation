@@ -1,4 +1,4 @@
-# Folder Structure
+# Folder Structure (for the old website)
 
 FYI, if you use Prose.io as your primary means of editing the site, you may not see many of these folders.  Rest assured, they are there, and you can edit them via Github.
 ( See the main repository here: https://github.com/ColoradoDemography )

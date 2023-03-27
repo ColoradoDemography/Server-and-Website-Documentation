@@ -1,5 +1,7 @@
 ## What if the Whole Server Dies?
 
+Old info, should never have to do anything like this again but good to have available for reference
+
 ...or needs to be completely re-built.  This process proved to be somewhat distinct frombuilding the server from scratch
 and deserved it's own documentation.
 

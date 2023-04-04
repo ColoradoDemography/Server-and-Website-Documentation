@@ -62,6 +62,8 @@ Was an application to show the status of broadband plans implemented in rural Co
 - [Github (Microservices)](https://github.com/ColoradoDemography/MS_CensusAPI)
 - [Application Link](https://gis.dola.colorado.gov/CensusAPI)
 
+Tool using the SDO Census API to allow users to obtain CSVs, jsons and geojson files for ACS tables. Once the new ACS database is loaded, a couple things need to be updated in the index.html in the repository. Add the option for the new ACS, make it selected and change $('$datasetl').val and loadtables to the new acs
+
 ### Census Data Timeseries (non-functional)
 - [Github (Client)](https://github.com/ColoradoDemography/CensusAPI_Timeseries)
 - [Github (Microservices)]

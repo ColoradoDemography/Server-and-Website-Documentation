@@ -4,6 +4,7 @@
 ### ACS Webmap 
 - [Github (Client)](https://github.com/ColoradoDemography/CensusAPI_Map)
 - [Github (Microservices)](https://github.com/ColoradoDemography/MS_CensusMap)
+- [Application Link - 2020](https://gis.dola.colorado.gov/CensusAPI_Map_2021)
 - [Application Link - 2020](https://gis.dola.colorado.gov/CensusAPI_Map_2020)
 - [Application Link - 2019](https://gis.dola.colorado.gov/CensusAPI_Map_2019)
 - [Application Link - 2018](https://gis.dola.colorado.gov/CensusAPI_Map_2018)
@@ -15,6 +16,12 @@
 - [Application Link - 2012](https://gis.dola.colorado.gov/CensusAPI_Map_2012)
 - [Application Link - 2011](https://gis.dola.colorado.gov/CensusAPI_Map_2011)
 - [Application Link - 2010](https://gis.dola.colorado.gov/CensusAPI_Map_2010)
+
+The ACS map is updated each year after the new ACS data is loaded into postgres, generally in January. Previously we created a new map for each year but starting with the 2017-2021 ACS we are making all years available within the application as a menu item in the 2nd button in the top left corner of the map.
+
+To update this map to the newest year you will need to pull the github repository into your development environment. From there, add the new year into the index.html and change the initialize_cMap.js file to reflect the new acs database in the cMap.db variable. Then update webpack and push it back to github.
+
+Adding more variables is pretty easy, those are done in the datatree.js and tableflavor.js, basically you add a json type item for each variable category. Look at other variables to get a sense of the proper format. The hardest part is finding the database table and column to draw the correct value.
 
 ### Age-Animation Bars
 - [Github](https://github.com/ColoradoDemography/Age-Animation-Bars)

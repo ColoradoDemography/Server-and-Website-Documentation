@@ -23,6 +23,8 @@ To update this map to the newest year you will need to pull the github repositor
 
 Adding more variables is pretty easy, those are done in the datatree.js and tableflavor.js, basically you add a json type item for each variable category. Look at other variables to get a sense of the proper format. The hardest part is finding the database table and column to draw the correct value.
 
+The data is drawn from the data schema in the ACS database through the SDO Census API, the geography is drawn from the carto schema.
+
 ### Age-Animation Bars
 - [Github](https://github.com/ColoradoDemography/Age-Animation-Bars)
 - [Application Link](https://gis.dola.colorado.gov/Age-Animation-Bars)
@@ -30,9 +32,15 @@ Adding more variables is pretty easy, those are done in the datatree.js and tabl
 ### Age Distribution by County
 - [Application Link](https://dola-online.maps.arcgis.com/apps/dashboards/713f5b5ecc4c4a7d85c6c266bba9131d)
 
-### Base Industries Pie Chart
+Pretty simple line chart drawing from a table stored in ArcGIS Online. Just have to replicate the table with new data.
+
+### Base Industries Bar Chart
 - [Github](https://github.com/ColoradoDemography/CO_BaseIndustries)
 - [Application Link](https://gis.dola.colorado.gov/CO_BaseIndustries_Bar)
+
+Pulls data from the base analysis table via the demog lookup. For a new year, update the dates in the chart and update the startdata variable in app2.js to reflect the current year's data in Alamosa.
+
+Bar chart that draws data from the 
 
 ### BGU Viewer (2010)
 - [Application Link](http://dola-online.maps.arcgis.com/apps/Solutions/s2.html?appid=2a869a4217ca40de891660504c0a3591)

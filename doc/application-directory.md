@@ -40,18 +40,22 @@ Pretty simple line chart drawing from a table stored in ArcGIS Online. Just have
 
 Pulls data from the base analysis table via the demog lookup. For a new year, update the dates in the chart and update the startdata variable in app2.js to reflect the current year's data in Alamosa.
 
-Bar chart that draws data from the 
-
 ### BGU Viewer (2010)
 - [Application Link](http://dola-online.maps.arcgis.com/apps/Solutions/s2.html?appid=2a869a4217ca40de891660504c0a3591)
+
+Old application, haven't seen the need to update for 2020
 
 ### Bracketology
 - [Github](https://github.com/ColoradoDemography/Bracketology)
 - [Application Link](https://gis.dola.colorado.gov/Bracketology/)
 
+Update as desired, March is a good time. To update, just go into the repository and update the population data in main.js
+
 ### Broadband Status Map
 - [Github](https://github.com/ColoradoDemography/D3_BroadbandStatus)
 - [Application Link](http://coloradodemography.github.io/D3_BroadbandStatus/)
+
+Was an application to show the status of broadband plans implemented in rural Colorado. Likely obsolete at this point. Updates were made by changing the geojson files to show which maps each community should show up on.
 
 ### Census Data Query Tool
 - [Github (Client)](https://github.com/ColoradoDemography/CensusAPI)

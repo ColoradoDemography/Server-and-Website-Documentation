@@ -4,7 +4,7 @@
 ### ACS Webmap 
 - [Github (Client)](https://github.com/ColoradoDemography/CensusAPI_Map)
 - [Github (Microservices)](https://github.com/ColoradoDemography/MS_CensusMap)
-- [Application Link - 2020](https://gis.dola.colorado.gov/CensusAPI_Map_2021)
+- [Application Link - 2021](https://gis.dola.colorado.gov/CensusAPI_Map_2021) *Current
 - [Application Link - 2020](https://gis.dola.colorado.gov/CensusAPI_Map_2020)
 - [Application Link - 2019](https://gis.dola.colorado.gov/CensusAPI_Map_2019)
 - [Application Link - 2018](https://gis.dola.colorado.gov/CensusAPI_Map_2018)
@@ -70,19 +70,27 @@ Tool using the SDO Census API to allow users to obtain CSVs, jsons and geojson f
 - [Application Link]
 
 ### Census 2020 Interactive Map
-- [Application Link](https://coloradodemography.github.io/Census_Data_2020/)
+- [Application Link](https://gis.dola.colorado.gov/Census_Data_2020/)
+
+Javascript map created using the ArcGIS Javascript API and pulling from data in ArcGIS Online. Will be adding more data categories as more 2020 Census data is released.
 
 ### Colorado DOLA Grants
 - [Github](https://github.com/ColoradoDemography/CO_Grants)
 - [Application Link](https://gis.dola.colorado.gov/CO_Grants)
 
+Data is pulled from the grants.csv file in google cloud storage. That file is created from an R script that pulls the data from the Oracle database. I run this script at the beginning of every month. (need to put the script in github. The application itself is a webpack application and needs to be pushed to a developmental environment, updated, webpacked and pushed back to webpack. 
+
 ### Colorado County Population Change (Bubbles)
 - [Github](https://github.com/ColoradoDemography/Population-Bubbles)
 - [Application Link](https://gis.dola.colorado.gov/Population-Bubbles)
 
+Simple D3 animation of the change of population among Colorado counties over the decades. To update, just add to the json file stored in datasets.js
+
 ### Colorado County Population Change (Animated Pie)
 - [Github](https://github.com/ColoradoDemography/Animated-Pie)
 - [Application Link](https://gis.dola.colorado.gov/Animated-Pie)
+
+Simple D3 animation of the change of population among Colorado counties over the decades. To update, just add to the json file stored in flare.json
 
 ### Colorado Demographic Profiles
 - [Application Link](https://gis.dola.colorado.gov/colorado-demographic-profiles/)
@@ -90,6 +98,8 @@ Tool using the SDO Census API to allow users to obtain CSVs, jsons and geojson f
 ### Colorado Municipal Boundaries
 - [Github (Client)](https://github.com/ColoradoDemography/CO_Muni)
 - [Application Link](https://gis.dola.colorado.gov/CO_Muni)
+
+Map to show the annexation data stored in postgres. The map itself pretty much never needs updating but the data is updated directly in postgres using QGIS. Will generally update a batch of annexations and then it is necessary to run postgis-transform.sql in pgadmin to update the muni boundary layer from the annexation changes. There are also shapefiles available to download from the application, these are created manually after running the sql program and then uploaded into google cloud.
 
 ### Colorado Municipal Data Map
 - [Github](https://github.com/ColoradoDemography/Municipal_Data)

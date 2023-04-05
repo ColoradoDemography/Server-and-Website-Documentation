@@ -103,11 +103,15 @@ Map to show the annexation data stored in postgres. The map itself pretty much n
 
 ### Colorado Municipal Data Map
 - [Github](https://github.com/ColoradoDemography/Municipal_Data)
-- [Application Link](https://coloradodemography.github.io/Municipal_Data/)
+- [Application Link](https://gis.dola.colorado.gov/Municipal_Data/)
+
+Application that we host for the Colorado Municipal League. Data is a geojson of the municipal boundaries with data on each municipality attached. CML will send new data yearly if there are any changes. Data is kept in K:\ProjectsMain\WebMaps\MuniInfoMap. Can make a new file with updated municipal boundaries if desired but it's not really necessary.
 
 ### Colorado Special Districts
 - [Github (Client)](https://github.com/ColoradoDemography/CO_SpecialDistrict)
 - [Application Link](https://gis.dola.colorado.gov/CO_SpecialDistrict)
+
+Map showing the special districts in Colorado. Only those covered by Title 32 are included. All districts are maintained in postgres and updated using QGIS. We are limited by what the districts submit, so we do not have boundaries or current boundaries for all districts. New shapefiles for the different district types should also be created after major updates.
 
 ### Colorado Unemployment Map
 - Client Application

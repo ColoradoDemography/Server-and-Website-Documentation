@@ -194,6 +194,8 @@ Map showing the change in the number of jobs in counties between desired years. 
 - [Github](https://github.com/ColoradoDemography/Jobs_Migration)
 - [Application Link](https://gis.dola.colorado.gov/Jobs_Migration/)
 
+Bar and line chart showing job change and migration by year for all counties. Both pieces of data are pulled from our estimates database using the demog lookup. Nnew years have to be added within the repository in app.js
+
 ### Job Sector Chart
 - [Github](https://github.com/ColoradoDemography/Jobs_by_sector_chart)
 - [Application Link](https://gis.dola.colorado.gov/Jobs_by_sector_chart)
@@ -201,6 +203,8 @@ Map showing the change in the number of jobs in counties between desired years. 
 ### Job Sector County Map
 - [Github](https://github.com/ColoradoDemography/Job_Sector_County)
 - [Application Link](https://gis.dola.colorado.gov/Job_Sector_County)
+
+Map to show job sectors by county, both total and percent. Pulls data from a version of the jobs table that is specifically created for this chart by taking the original jobs table in the postgres estimates database and replacing all nulls with 0 and creating the new table called jobs0. This application has to be updated in a development environment due to using webpack. The queried years variable in workers/load_data.js has to be updated each yearas well as variables in three of the other javascript files (add_title_control.js, get_from_dom.js and init_object.js).
 
 ### Map Gallery
 - [Github](https://github.com/ColoradoDemography/WebsiteGrid/blob/main/assets/html/gis_applications.html)
@@ -243,7 +247,7 @@ This is where we maintain the list of publically released visualizations
 - [Github](https://github.com/ColoradoDemography/D3_Unemployment)
 - [Application Link](https://gis.dola.colorado.gov/D3_Unemployment)
 
-Chart showing unemployment statistics by county from the Bureau of Labor and Statistics. BLS updates this data roughly monthly. Currently doing the pull using an R script that can be found at (https://github.com/ColoradoDemography/BLS_Unemployment_R). This creates a json file that then needs to be modified slightly. Found it easiest to do this in notepad, could probably modify the script to do it though. the [] at the ends and the / have to be deleted. Once ready, put this file in google cloud.
+Chart showing unemployment statistics by county from the Bureau of Labor and Statistics. BLS updates this data roughly monthly. Currently doing the pull using an R script that can be found at (https://github.com/ColoradoDemography/BLS_Unemployment_R). This creates a json file that then needs to be modified slightly. Found it easiest to do this in notepad, could probably modify the script to do it though. the [] at the ends and the / have to be deleted. Once ready, put this file in google cloud. The length of the chart needs to be extended in the program with each new year.
 
 ### Unemployment Ribbon
 - [Application Link](https://gis.dola.colorado.gov/apps/unemployment_ribbon/)

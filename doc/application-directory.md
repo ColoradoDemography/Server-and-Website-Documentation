@@ -130,20 +130,28 @@ Not being maintained at this time, a way to show a comparison of municipalities 
 - [Github](https://github.com/ColoradoDemography/ComponentsOfChange)
 - [Application Link](https://gis.dola.colorado.gov/ComponentsOfChange)
 
-Nap showing the number and rates of births, deaths and migration in counties between desired years. The data is drawn from our estimates database using the demog lookup. Changes have to be made in a development environment so that webpack can be applied. Changes to the data will be made automatically when new data is loaded into the database but the default year has to be changed within the program. This map also serves as the base architecture for the age and job change maps.
+Map showing the number and rates of births, deaths and migration in counties between desired years. The data is drawn from our estimates database using the demog lookup. Changes have to be made in a development environment so that webpack can be applied. Changes to the data will be made automatically when new data is loaded into the database but the default year has to be changed within the program. This map also serves as the base architecture for the age and job change maps.
 
 ### COVID Map Series
 - [Application Link](https://arcg.is/mGPSK)
 
 Series of maps and charts in ArcGIS Online showing a variety of statistics about COVID and its impacts. Modifying this going into the future to be a more general dashboard.
 
-### Demography Dashboard
+### Demography Dashboard (old version)
 - [Github (Shiny Application - old version)](https://github.com/ColoradoDemography/demographic_dashboard)
 - [Application Link](https://demography.dola.colorado.gov/assets/html/demodashboard.html)
+
+### Demography Dashboard (new version)
+- [Github](https://github.com/ColoradoDemography/WebsiteGrid/blob/main/assets/html/demodashboard.html)
+- [Application Link](https://demography.dola.colorado.gov/assets/html/demodashboard.html)
+
+This is maintained inside the website repository now as a javascript application.
 
 ### Density Map
 - [Github](https://github.com/ColoradoDemography/Density_2020)
 - [Application Link](https://gis.dola.colorado.gov/Density_2020/)
+
+ESRI Javascript API application showing the density of population and census block from the 2020 Census, also includes a swipe to compare against 2010. Blocks are generalized into categories by density so that the individual blocks don't have to be stored in ArcGIS Online.
 
 ### Demography Data Lookups
 - [Github (Microservices)](https://github.com/ColoradoDemography/MS_Demog_Lookups)
@@ -159,18 +167,28 @@ Series of maps and charts in ArcGIS Online showing a variety of statistics about
   - [Labor Force Participation](https://gis.dola.colorado.gov/economy-labor-force/data/labor-force/)
   - [Municipal Population and Housing Estimates](https://gis.dola.colorado.gov/population/data/muni-pop-housing/)
 
+These all pull data from the estimates database in postgres via the demog lookup. Slowly replacing with new lookups within the website.
+
 ### Historical County Populations
 - [Application Link](https://arcg.is/1KXX05)
+
+Series of maps showing Colorado's counties and their populations through history.
 
 ### Historical Birthplaces of Colorado Residents
 - [Application Link](https://public.flourish.studio/visualisation/3775693/)
 
+Application hosted in Flourish to show what states Colorado residents were born in through history. Need the Flourish login to access
+
 ### Historical Residence of Colorado Born
 - [Application Link](https://public.flourish.studio/visualisation/3832584/)
+
+Application hosted in Flourish to show where people born in Colorado have lived through history. Need the Flourish login to access
 
 ### Job Change Map
 - [Github](https://github.com/ColoradoDemography/Job_Change)
 - [Application Link](https://gis.dola.colorado.gov/Job_Change/)
+
+Map showing the change in the number of jobs in counties between desired years. The data is drawn from our estimates database using the demog lookup. Changes have to be made in a development environment so that webpack can be applied. Changes to the data will be made automatically when new data is loaded into the database but the default year has to be changed within the program.
 
 ### Jobs and Migration
 - [Github](https://github.com/ColoradoDemography/Jobs_Migration)
@@ -187,6 +205,8 @@ Series of maps and charts in ArcGIS Online showing a variety of statistics about
 ### Map Gallery
 - [Github](https://github.com/ColoradoDemography/WebsiteGrid/blob/main/assets/html/gis_applications.html)
 - [Application Link](https://demography.dola.colorado.gov/assets/html/gis.html)
+
+This is where we maintain the list of publically released visualizations
 
 ### Marijuana Grant Eligibility Map
 - [Application Link](http://dola-online.maps.arcgis.com/apps/Viewer/index.html?appid=60c1688254fd4054bf5df1af8e7bc09f)

@@ -115,22 +115,27 @@ Application that we host for the Colorado Municipal League. Data is a geojson of
 Map showing the special districts in Colorado. Only those covered by Title 32 are included. All districts are maintained in postgres and updated using QGIS. We are limited by what the districts submit, so we do not have boundaries or current boundaries for all districts. New shapefiles for the different district types should also be created after major updates. The Special Districts API feeds the districts to the application.
 
 ### Colorado Unemployment Map
-- Client Application
 - [Github](https://github.com/ColoradoDemographyCO_BLS_Unemployment)
 - [Application Link](https://gis.dola.colorado.gov/CO_BLS_Unemployment)
 
-Map showing unemployment statistics by county from the Bureau of Labor and Statistics. BLS updates this data roughly monthly. Currently doing the pull using an R script that can be found at (https://github.com/ColoradoDemography/BLS_Unemployment_R). This creates a json file that then needs to be modified slightly. Found it easiest to do this in notepad, could probably modify the script to do it though. the [] at the ends and the / have to be deleted
+Map showing unemployment statistics by county from the Bureau of Labor and Statistics. BLS updates this data roughly monthly. Currently doing the pull using an R script that can be found at (https://github.com/ColoradoDemography/BLS_Unemployment_R). This creates a json file that then needs to be modified slightly. Found it easiest to do this in notepad, could probably modify the script to do it though. the [] at the ends and the / have to be deleted. Once ready, put this file in google cloud.
 
 ### Compare Cities (Likeness Tool)
 - [Github](https://github.com/ColoradoDemography/CompareCities)
-- [Application Link](https://gis.dola.colorado.gov/CompareCities)
+- [Application Link](https://coloradodemography.github.io/CompareCities)
+
+Not being maintained at this time, a way to show a comparison of municipalities and CDPs in Colorado by 15 different factors.
 
 ### Components of Change Map
 - [Github](https://github.com/ColoradoDemography/ComponentsOfChange)
-- [Application Link](https://gis.colorado.gov/ComponentsOfChange)
+- [Application Link](https://gis.dola.colorado.gov/ComponentsOfChange)
+
+Nap showing the number and rates of births, deaths and migration in counties between desired years. The data is drawn from our estimates database using the demog lookup. Changes have to be made in a development environment so that webpack can be applied. Changes to the data will be made automatically when new data is loaded into the database but the default year has to be changed within the program. This map also serves as the base architecture for the age and job change maps.
 
 ### COVID Map Series
 - [Application Link](https://arcg.is/mGPSK)
+
+Series of maps and charts in ArcGIS Online showing a variety of statistics about COVID and its impacts. Modifying this going into the future to be a more general dashboard.
 
 ### Demography Dashboard
 - [Github (Shiny Application - old version)](https://github.com/ColoradoDemography/demographic_dashboard)
@@ -217,6 +222,8 @@ Map showing unemployment statistics by county from the Bureau of Labor and Stati
 ### Unemployment Chart
 - [Github](https://github.com/ColoradoDemography/D3_Unemployment)
 - [Application Link](https://gis.dola.colorado.gov/D3_Unemployment)
+
+Chart showing unemployment statistics by county from the Bureau of Labor and Statistics. BLS updates this data roughly monthly. Currently doing the pull using an R script that can be found at (https://github.com/ColoradoDemography/BLS_Unemployment_R). This creates a json file that then needs to be modified slightly. Found it easiest to do this in notepad, could probably modify the script to do it though. the [] at the ends and the / have to be deleted. Once ready, put this file in google cloud.
 
 ### Unemployment Ribbon
 - [Application Link](https://gis.dola.colorado.gov/apps/unemployment_ribbon/)

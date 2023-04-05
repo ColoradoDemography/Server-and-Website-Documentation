@@ -108,15 +108,18 @@ Map to show the annexation data stored in postgres. The map itself pretty much n
 Application that we host for the Colorado Municipal League. Data is a geojson of the municipal boundaries with data on each municipality attached. CML will send new data yearly if there are any changes. Data is kept in K:\ProjectsMain\WebMaps\MuniInfoMap. Can make a new file with updated municipal boundaries if desired but it's not really necessary.
 
 ### Colorado Special Districts
+- [Github (Client)](https://github.com/ColoradoDemography/Special_Districts_API)
 - [Github (Client)](https://github.com/ColoradoDemography/CO_SpecialDistrict)
 - [Application Link](https://gis.dola.colorado.gov/CO_SpecialDistrict)
 
-Map showing the special districts in Colorado. Only those covered by Title 32 are included. All districts are maintained in postgres and updated using QGIS. We are limited by what the districts submit, so we do not have boundaries or current boundaries for all districts. New shapefiles for the different district types should also be created after major updates.
+Map showing the special districts in Colorado. Only those covered by Title 32 are included. All districts are maintained in postgres and updated using QGIS. We are limited by what the districts submit, so we do not have boundaries or current boundaries for all districts. New shapefiles for the different district types should also be created after major updates. The Special Districts API feeds the districts to the application.
 
 ### Colorado Unemployment Map
 - Client Application
 - [Github](https://github.com/ColoradoDemographyCO_BLS_Unemployment)
 - [Application Link](https://gis.dola.colorado.gov/CO_BLS_Unemployment)
+
+Map showing unemployment statistics by county from the Bureau of Labor and Statistics. BLS updates this data roughly monthly. Currently doing the pull using an R script that can be found at (https://github.com/ColoradoDemography/BLS_Unemployment_R). This creates a json file that then needs to be modified slightly. Found it easiest to do this in notepad, could probably modify the script to do it though. the [] at the ends and the / have to be deleted
 
 ### Compare Cities (Likeness Tool)
 - [Github](https://github.com/ColoradoDemography/CompareCities)

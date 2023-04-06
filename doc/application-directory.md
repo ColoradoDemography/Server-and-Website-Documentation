@@ -215,9 +215,13 @@ This is where we maintain the list of publically released visualizations
 ### Marijuana Grant Eligibility Map
 - [Application Link](http://dola-online.maps.arcgis.com/apps/Viewer/index.html?appid=60c1688254fd4054bf5df1af8e7bc09f)
 
+Map of counties eligible for marijuana grants. Hasn't been updated in quite awhile, based upon the needs of https://cdola.colorado.gov/funding-programs/marijuana-enforcement-grant
+
 ### Migration Animation (Bubbles)
 - [Github](https://github.com/ColoradoDemography/Migration-Bubbles)
-- [Application Link](https://gis.dola.colorado.gov/Migration-Bubbles)
+- [Application Link](https://coloradodemography.github.io/Migration-Bubbles)
+
+Old visualization of migration to and from Colorado based upon 2006-2010 ACS data. Hasn't been updated as it's not particularly useful, need a better version at some point. Migration data is rather lacking currently due to survey issues around the pandemic.
 
 ### Net Migration Dashboard
 - [Github (Shiny Application - old version)](https://github.com/ColoradoDemography/netmigration_dashboard)
@@ -227,13 +231,19 @@ This is where we maintain the list of publically released visualizations
 -[Github](https://github.com/ColoradoDemography/AgeMap/)
 -[Application Link](https://gis.dola.colorado.gov/AgeMap/)
 
+Map showing the change in population by age in Colorado counties between the selected years. Draws from the county_sya table in the estimates database through the demog lookup. Large data pull, thus the long initialization time. This application has to be updated in a development environment due to using webpack. The load_data.js and add_custom_control.js have to be updated each year.
+
 ### Poverty by Age
 - [Github](https://github.com/ColoradoDemography/PovertyComprehensive)
 - [Application Link](https://gis.dola.colorado.gov/PovertyComprehensive)
 
+Map showing poverty levels for different age groups based upon ACS 5 year data. Built using ArcGIS Javascript API version 3. The data is stored in ArcGIS Online
+
 ### Quadrant Chart
 - [Github](https://github.com/ColoradoDemography/D3_Quadrant)
-- [Application Link](https://gis.dola.colorado.gov/D3_Quadrant)
+- [Application Link](https://coloradodemography.github.io/D3_Quadrant)
+
+Not being used currently but an interesting application that compares counties or states on up to 3 variables at once from the ACS. May be worth reviving?
 
 ### Rural-Urban Commuting Areas (RUCA)
 - [Github](https://github.com/ColoradoDemography/CO_RUCA)

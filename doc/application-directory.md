@@ -237,7 +237,7 @@ Map showing the change in population by age in Colorado counties between the sel
 - [Github](https://github.com/ColoradoDemography/PovertyComprehensive)
 - [Application Link](https://gis.dola.colorado.gov/PovertyComprehensive)
 
-Map showing poverty levels for different age groups based upon ACS 5 year data. Built using ArcGIS Javascript API version 3. The data is stored in ArcGIS Online. Uses data from ACS table B17024, probably easiest to download all census tract data from our API, then change the column headings to match what was used the previous year.
+Map showing poverty levels for different age groups based upon ACS 5 year data. Built using ArcGIS Javascript API version 3. The data is stored in ArcGIS Online. Uses data from ACS table B17024, probably easiest to download all census tract data from our API, then change the column headings to match what was used the previous year. Join to the census tract geography and delete all rows except geoid and the data columns. Load into ArcGIS Online as a shapefile and adjust indiv.js to point at the new feature class.
 
 ### Quadrant Chart
 - [Github](https://github.com/ColoradoDemography/D3_Quadrant)
@@ -248,6 +248,8 @@ Not being used currently but an interesting application that compares counties o
 ### Rural-Urban Commuting Areas (RUCA)
 - [Github](https://github.com/ColoradoDemography/CO_RUCA)
 - [Application Link](https://gis.dola.colorado.gov/CO_RUCA)
+
+Uses data from the [US Department of Agriculture](https://www.ers.usda.gov/data-products/rural-urban-commuting-area-codes/), released after each census. May be worth reconstructing this map when the new data is released in 2024.
 
 ### SRF Disavantaged
 - [Github](https://github.com/ColoradoDemography/disadvantaged_communities)

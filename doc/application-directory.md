@@ -237,7 +237,7 @@ Map showing the change in population by age in Colorado counties between the sel
 - [Github](https://github.com/ColoradoDemography/PovertyComprehensive)
 - [Application Link](https://gis.dola.colorado.gov/PovertyComprehensive)
 
-Map showing poverty levels for different age groups based upon ACS 5 year data. Built using ArcGIS Javascript API version 3. The data is stored in ArcGIS Online
+Map showing poverty levels for different age groups based upon ACS 5 year data. Built using ArcGIS Javascript API version 3. The data is stored in ArcGIS Online. Uses data from ACS table B17024, probably easiest to download all census tract data from our API, then change the column headings to match what was used the previous year.
 
 ### Quadrant Chart
 - [Github](https://github.com/ColoradoDemography/D3_Quadrant)

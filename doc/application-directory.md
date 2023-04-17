@@ -267,6 +267,14 @@ Chart showing unemployment statistics by county from the Bureau of Labor and Sta
 ### USDA Webmap
 - [Application](https://dola.colorado.gov/gis-php/files/projects/USDA_Webmap/usda.html)
 
+### Pushing applications live
+Applications that live in Github repositories Need to be pulled from within the dlg-coreos VM. 
+- SSH into the VM
+- docker exec -it website2 bash
+- cd coloradodemography.github.io
+- cd _site
+- cd into the directory with the name of the application
+- git pull
 
 #### Architecture Descriptions (archive reference only)
 

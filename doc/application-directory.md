@@ -169,6 +169,9 @@ ESRI Javascript API application showing the density of population and census blo
 
 These all pull data from the estimates database in postgres via the demog lookup. Slowly replacing with new lookups within the website.
 
+### Grants by County (2012-2021)
+- [Application Link](https://coloradodemography.github.io/Grants_By_County/)
+
 ### Historical County Populations
 - [Application Link](https://arcg.is/1KXX05)
 

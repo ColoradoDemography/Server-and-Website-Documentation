@@ -2,24 +2,22 @@
 
 ## Try this first
 
-If the front page stats are not populating, the coreas server is probably down. It can usually be brought back up quickly with these commands
+If the front page stats are not populating, the coreas server is probably down. First stop and then start the dlg-coreos VM from the VM instances page in Google Cloud. Then SSH into the VM. It can usually be brought back up quickly with these commands
 
 ```
 docker ps -a
-docker stop postgres
-docker rm postgres
-docker run --restart unless-stopped --name postgres -p 5433:5432 -e POSTGRES_PASSWORD=whatever -d --volumes-from slowdata mdillon/postgis:9.4
+docker restart postgres2
 sudo -i
 mount /dev/sdb /giant/
 
 ```
-Give it a few minutes for postgres to get going again.
+Give it a few minutes for postgres to get going again. May have to try the restart and mount a couple times.
 
 ## Archival, reference only
 
 If the website is down, the very first thing to check is the docker containers on the website server. There is an issue where every so often the containers break.
 
-To check and fix this in one fell swoop, ssh into the `demography-website` instance on Google Cloud.  Then, run `docker ps -a` to simultaneously check for containers and relod them.
+To check and fix this in one fell swoop, ssh into the `demography-website` instance on Google Cloud.  Then, run `docker ps -a` to simultaneously check for containers and reload them.
 
 This should show you container status' of less then a second or so of uptime.  This should have fixed it.  If not, remove and reload the website containers using the steps below.
 

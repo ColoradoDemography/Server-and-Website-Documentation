@@ -114,6 +114,9 @@ Application that we host for the Colorado Municipal League. Data is a geojson of
 
 Map showing the special districts in Colorado. Only those covered by Title 32 are included. All districts are maintained in postgres and updated using QGIS. We are limited by what the districts submit, so we do not have boundaries or current boundaries for all districts. New shapefiles for the different district types should also be created after major updates. The Special Districts API feeds the districts to the application.
 
+For the search by name function to work, the district has to be included in the geopts.json file. After new districts have been created, run the following command in the bounds schema of the postgres database, export the result and load it into the github repository.
+SELECT lgid, ST_AsGeoJSON(st_transform(ST_Centroid(geom),4326)) as centroid, ST_AsGeoJSON(st_transform(ST_Envelope(geom),4326)) as bbox FROM bounds.districts;
+
 ### Colorado Unemployment Map
 - [Github](https://github.com/ColoradoDemographyCO_BLS_Unemployment)
 - [Application Link](https://gis.dola.colorado.gov/CO_BLS_Unemployment)

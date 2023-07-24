@@ -1,0 +1,468 @@
+Special Districts API
+API to get a geojson of the special districts. 
+Parameters:
+•	Limit: limit search results, default is 5,000
+•	Active: 0 (default) for all, 1 for only active
+•	Filter: district type shown (see below), default is all
+•	Zoom: zoom level when displaying geojson in a program, features are more generalized the further out you zoom. Default is 17, best for downloading the geojson as no generalization
+
+Example: Basic use to get all districts
+https://gis.dola.colorado.gov/sd/districts?filter=0&active=1 
+
+Example: To get all Water & Sanitation districts
+https://gis.dola.colorado.gov/sd/districts?filter=10,11,12 to get all Water & Sanitation districts. 
+The primary district types by number are:
+•	Metropolitan - 6
+•	Park & Rec - 7
+•	Fire Protection - 8
+•	Hospital - 9
+•	Water & Sanitation - 10,11,12
+•	School - 99
+•	Soil Conservation - 29
+•	Cemetery - 15
+•	Library - 16
+
+Municipal API
+API to pull in county and municipal boundaries and associated annexations as a geojson
+Address: /munis?
+Pulls municipality and annexation boundaries
+Parameters:
+•	Bb: bounding box, 4 decimal degree locations for each corner of the box
+•	Zoom: zoom level when displaying geojson in a program, features are more generalized the further out you zoom. Default is 17, best for downloading the geojson as no generalization
+Example: To display all munis and annexations in the state in an application
+https://gis.dola.colorado.gov/munis/munis?bb=-119.3,32.87,-94.31,45.15&zoom=7
+
+Address: /county?
+Pulls county boundaries
+Parameters:
+•	Bb: bounding box, 4 decimal degree locations for each corner of the box
+•	Zoom: zoom level when displaying geojson in a program, features are more generalized the further out you zoom. Default is 17, best for downloading the geojson as no generalization
+Example: To display all counties in the state in an application
+https://gis.dola.colorado.gov/munis/counties?bb=-119.3,32.87,-94.31,45.15&zoom=7
+
+
+Census API
+Used primarily to enable the Census data user interface (https://gis.dola.colorado.gov/CensusAPI/)
+Address: /demog?
+Pulls census data in a json or csv format
+Parameters
+•	db: acs + 5 year version (acs1620 to access the 2016-2020 5 year acs) or c + decennial year (c2020). Default is the most current
+•	type: json, or csv (default is json)
+•	schema: no need to specify if using acs or 2010 census. specify sf1 or sf3 for 1980, 1990, and 2000 census. If you don't specify it will assume sf1.
+•	field: comma delimited list of fields. If you specify fields, table parameter will be ignored. 1980 census format ex: t01001,t11003,t38013 1990, 2000, 2010, 2020 census format ex: p1001,p20003,h17a001
+•	table: comma delimited list of tables. 1980 census format ex: t01,t11,t38 1990, 2000, 2010 census format ex: p1,p20,h17a
+•	sumlev: 40 is state, 50 is county, 140 is tract, 150 is block group, 160 is place
+•	state: any state (integer format, no leading zeros).
+•	county: any county (integer format, no leading zeros). would be smart to also specify state.
+•	geoid: comma delimited list. (no quotes, leading zeros are necessary) example: '08' is Colorado, '08031' is Denver County , '08031000701' is a Census Tract in Denver County, and '080010078011' is a block group in Adams County, and '0668154' is the city of San Luis Obispo, CA. (You can also use the integer format for geoid –geonum- by prefixing the geoid with ‘1’. San Luis Obispo would then be 10668154. There are good but technical reasons why I strongly favor the alternate format).
+•	limit: by default, limit is set to 100 records. you can override it by specifying a new limit (not required)
+•	moe: set moe=yes to add margin of error fields for acs databases (not required)
+
+example: (return csv of sex by age table from acs0812 for delaware)
+https://gis.dola.colorado.gov/capi/demog?db=acs0812&table=b01001&sumlev=140&state=10&type=csv
+
+example: (return json for median home value for 1980 census for places in vermont)
+https://gis.dola.colorado.gov/capi/demog?db=c1980&table=t38&sumlev=160&state=50
+
+example: (return json for median age for 2010 census for San Luis Obispo, CA)
+https://gis.dola.colorado.gov/capi/demog?db=c2010&table=p13&geonum=10668154
+
+Address: /geojson?
+Pulls data in a geojson (spatial) format
+Parameters
+•	db: acs + 5 year version (acs1620 to access the 2016-2020 5 year acs) or c + decennial year (c2020). Default is the most current
+•	schema: no need to specify if using acs or 2010 census. specify sf1 or sf3 for 1980, 1990, and 2000 census. If you don't specify it will assume sf1.
+•	field: comma delimited list of fields. If you specify fields, table parameter will be ignored. 1980 census format ex: t01001,t11003,t38013 1990, 2000, 2010 census format ex: p1001,p20003,h17a001
+•	table: comma delimited list of tables. 1980 census format ex: t01,t11,t38 1990, 2000, 2010 census format ex: p1,p20,h17a
+•	sumlev: 40 is state, 50 is county, 140 is tract, 150 is block group, 160 is place (required)
+•	state: any state (integer format, no leading zeros).
+•	county: any county (integer format, no leading zeros). would be smart to also specify state.
+•	geoid: comma delimited list. (no quotes, leading zeros are necessary) example: '08' is Colorado, '08031' is Denver County , '08031000701' is a Census Tract in Denver County, and '080010078011' is a block group in Adams County, and '0668154' is the city of San Luis Obispo, CA.
+•	limit: by default, limit is set to 100 records. you can override it by specifying a new limit (not required)
+•	moe: set moe=yes to add margin of error fields for acs databases (not required)
+•	zoom: specify the zoom level of the map (from 3 to 16) to return geometry appropriate to that zoom level. Currently required - will fix this to default to no simplification.
+•	bb: bounding box coordinates of geojson search ex: bb=-105,40,-104,39 (not required)
+•	example query: (counties in colorado that intersect a specific bounding box, plus data from table p1 of 1990 census)
+
+Example to pull a geojson file
+https://gis.dola.colorado.gov/capi/geojson?table=p1&sumlev=50&db=c1990&state=8&bb=-105,40,-104,39&zoom=10
+
+Address: /meta?
+Pulls metadata for the census tables
+Parameters:
+•	db: acs + 5 year version (acs1620 to access the 2016-2020 5 year acs) or c + decennial year (c2020).  Required - no default
+•	schema: specify 'sf1' or 'sf3' for c1980, c1990, and c2000. Specify 'data' for c2010, acs0913, acs0812. Required - no default
+example query: (table metadata for 1990 Census Summary File 1)
+
+https://gis.dola.colorado.gov/capi/meta?db=c1990&schema=sf1
+
+
+
+Demog Lookups APIs
+
+Base Analysis
+Address: /base-analysis?
+NodeJS microservice to deliver Colorado State Demography Office Industry Base Analysis Data
+
+Parameters
+•	county: (comma separated integers)  Mandatory.  
+
+Special Cases:
+ - Denver Metro Region counties are grouped into County Code: 500
+ - Statewide code is 0
+  
+Example for one county:
+https://gis.dola.colorado.gov/lookups/base-analysis?county=3
+
+For all data:
+https://gis.dola.colorado.gov/lookups/base-analysis?all=yes
+
+List of counties:
+https://gis.dola.colorado.gov/lookups/base-analysis_county
+
+List of regions:
+https://gis.dola.colorado.gov/lookups/base-analysis_region
+
+Components of Change
+Address: /components?
+
+API for pulling information on population, population change, births, deaths and net migration 
+Parameters
+
+•	county: (comma separated integers). Either county or region is required.
+•	regions (reg_num): Colorado = 0 Planning regions 1-14 = 1-14 (See https://demography.dola.colorado.gov/housing-and-households/planning-and-management-regions/ for a map and further info) Central Mountains = 15 ( Eastern Plains = 16 Front Range = 17 San Luis Valley = 18 Western Slope = 19 Denver PMSA = 20 Denver Boulder Metro Area = 21 Denver Boulder Greeley CMSA = 22 10 County Denver Metro = 23
+•	year: (comma separated integers) 1970-2050. Mandatory.
+•	group: (optional) Default is no grouping
+
+o	opt1 = Group by Year
+o	opt2 = Group by County
+
+Example to get all components for Adams County in 2010, 2011 and 2012
+https://gis.dola.colorado.gov/lookups/components?county=1&year=2010,2011,2012
+
+Example to get a list of valid years: 
+https://gis.dola.colorado.gov/lookups/componentYRS
+
+Example to get a list of counties: 
+https://gis.dola.colorado.gov/lookups/component_county
+
+Example to obtain regional data: https://gis.dola.colorado.gov/lookups/components_region?reg_num=1&year=1990
+
+Example to get a list of regions: 
+https://gis.dola.colorado.gov/lookups/component_region
+
+County Muni Timeseries
+Address: /countymuni?
+API to pull total population for counties and munis back to 1980
+
+Parameters
+•	countyfips: (comma separated integers) placefips: (comma separated integers) countyfips or placefips is required. Use 99990 for placefips to get the unincorporated portion of a county.
+•	year: (comma separated integers) 1980-2019. Mandatory.
+•	compressed: yes or no. Mandatory
+Example to get the population of the Adams County portion of Aurora from 2010
+https://gis.dola.colorado.gov/lookups/countymuni?countyfips=1&placefips=4000&year=2010&compressed=no
+
+County Profiles
+Address: /profile?
+API to pull various county and muni demographic data
+
+Parameters
+•	county: (comma separated integers) Mandatory.
+•	year: (comma separated integers) 1985-current. Mandatory.
+•	vars: (comma separated) Default is all. Optional
+o	births
+o	deaths
+o	naturalincrease
+o	netmigration
+o	censusbuildingpermits
+o	groupquarterspopulation
+o	householdpopulation
+o	households
+o	householdsize
+o	totalhousingunits
+o	vacancyrate
+o	vacanthousingunits
+o	totalpopulation
+•	group: (optional) Default is no grouping
+o	opt1 = Group by Year
+o	opt2 = Group by County
+
+Example to get the births and deaths from Adams County in 2011 and 2012
+https://gis.dola.colorado.gov/lookups/profile?county=1&year=2011,2012&vars=births,deaths
+
+Example to get a list of all counties
+https://gis.dola.colorado.gov/lookups/component_county
+
+Example to get data from region 1 for 1990
+https://gis.dola.colorado.gov/lookups/profile_regions?reg_num=1&year=1990
+
+Unincorporated areas in counties are accessed with a placefips of 99990
+
+Regions (reg_num): Colorado = 0 Planning regions 1-14 = 1-14 (See https://demography.dola.colorado.gov/housing-and-households/planning-and-management-regions/ for a map and further info) Central Mountains = 15 ( Eastern Plains = 16 Front Range = 17 San Luis Valley = 18 Western Slope = 19 Denver PMSA = 20 Denver Boulder Metro Area = 21 Denver Boulder Greeley CMSA = 22 10 County Denver Metro = 23
+Example to get a list of available years
+https://gis.dola.colorado.gov/lookups/profileYRS
+
+County Race by Age Forecast
+Address: /sya-race-forecast?
+API to pull forecasts by race through 2050
+Parameters
+•	county: (comma separated integers) Mandatory. Integer equivalents of all Colorado County FIPS Codes
+•	year: (comma separated integers) Mandatory. 2010-2050
+•	age: (comma separated integers) 0-100. Mandatory.
+o	0: Age 0-17
+o	18: Age 18-64
+o	65: Age 65+
+•	race: (comma separated integers) Mandatory.
+o	1: Hispanic
+o	2: White non Hispanic
+o	3: Asian non Hispanic
+o	4: American Indian non Hispanic
+o	5: Black non Hispanic
+o	6: Total
+•	group: (optional) Default is no grouping
+o	opt1: year
+o	opt2: county_fips
+o	opt3: age
+o	opt4: race
+o	opt5: year, county_fips
+o	opt6: year, age
+o	opt7: year, race
+o	opt8: county_fips, age
+o	opt9: county_fips, race
+o	opt10: age, race
+o	opt11: year, county_fips, age
+o	opt12: year, county_fips, race
+o	opt13: year, age, race
+o	opt14: county_fips, age, race
+Example to get 0-17 and 18-64 Hispanic and White Non-Hispanic population for Adams, Alamosa, Arapahoe and Archuleta Counties in 2010, grouped by county and race
+https://gis.dola.colorado.gov/lookups/sya-race-forecast?age=0,18&county=1,3,5,7&year=2010&race=1,2&group=opt9
+County Single Year of Age
+Address: /sya?
+API for Colorado County Single Year of Age Data (Estimates and Forecasts)
+Parameters
+•	county: (comma separated integers) Mandatory.
+•	year: (comma separated integers) 1990-2050. Mandatory.
+•	age: (comma separated integers) 0-100. Mandatory.
+•	group: (optional) Default is no grouping
+o	opt1 = Group by Year
+o	opt2 = Group by County and Year
+o	opt3 = Group by Age and Year
+•	choice: Mandatory.
+o	Single = single years of age
+o	5yr = 5 year age intervals
+o	Census = census defined age intervals
+o	Custom = up to 5 custom age ranges
+Example to get ages 15 and 16 for Adams and Alamosa Counties in 1990 and 2025
+https://gis.dola.colorado.gov/lookups/sya?age=15,16&county=1,3&year=1990,2025&choice=single
+
+County SYA Race Estimates
+Address: /sya-race-estimates?
+API to get county single year of race and gender estimates
+Parameters
+•	county: (comma separated integers) Mandatory. Integer equivalents of all Colorado County FIPS Codes
+•	year: (comma separated integers) Mandatory.  2011 to current
+•	age: (comma separated integers) 0-90. Mandatory. Valid range is 0 to 90.
+•	race: (comma separated integers) Mandatory.
+o	1: White
+o	2: Asian
+o	3: American Indian
+o	4: Black
+•	ethnicity: Mandatory. 
+o	1: Hispanic 
+o	2: Non Hispanic
+•	group: (optional) Default is no grouping
+o	opt1: year
+o	opt2: county_fips
+o	opt3: age
+o	opt4: race
+o	opt5: year, county_fips
+o	opt6: year, age
+o	opt7: year, race
+o	opt8: county_fips, age
+o	opt9: county_fips, race
+o	opt10: age, race
+o	opt11: year, county_fips, age
+o	opt12: year, county_fips, race
+o	opt13: year, age, race
+o	opt14: county_fips, age, race
+•	sex: (optional) Default is sum of male and female
+o	m or M: male only
+o	f or F: female only
+o	b or B: both genders listed (rather than summed)
+Example to get age 0 White Hispanics of both genders from Adams County in 2012
+https://gis.dola.colorado.gov/lookups/sya-race-estimates?age=0&county=1&year=2012&race=1&ethnicity=1&sex=b
+
+Household Projections
+Address: /household?
+API to get household level data and projections
+Parameters
+•	county: (comma separated integers) Mandatory. Integer equivalents of all Colorado County FIPS Codes
+•	year: (comma separated integers) Mandatory. 2010-2050
+•	age: (comma separated) Mandatory.
+o	0: Total
+o	1: 18-24
+o	2: 25-44
+o	3: 45-64
+o	4: 65 & Over
+•	household: (comma separated) Mandatory.
+o	0: All Households
+o	1: One adult with no children
+o	2: One adult with children
+o	3: More than one adult with no children
+o	4: More than one adult with children
+•	group: (optional) Default is no grouping
+o	opt0: = none or all = base query
+o	opt1: year
+o	opt2: area_code
+o	opt3: age_group_id
+o	opt4: household_type_id
+o	opt5: year, area_code
+o	opt6: year, age_group_id
+o	opt7: year, household_type_id
+o	opt8: area_code, age_group_id
+o	opt9: area_code, household_type_id
+o	opt10: age_group_id, household_type_id
+o	opt11: year, area_code, age_group_id
+o	opt12: year, area_code, household_type_id
+o	opt13: area_code, age_group_id, household_type_id
+
+Example to get data on households aged 18-24 and 25-44 with one adult and no children or children, grouped by county and age group, for Adams and Alamosa Counties in 2010 https://gis.dola.colorado.gov/lookups/household?county=1,3&year=2010&age=1,2&household=1,2&group=opt8
+Jobs by Sector
+Parameters
+•	county: (comma separated integers) Mandatory. Integer equivalents of all Colorado County FIPS Codes (0 for Statewide)
+•	year: (comma separated integers) Mandatory. 2001-current year
+•	sector: (comma separated with leading zeros as necessary) Optional. (Default is All)
+•	00000 Estimated Total Jobs
+•	01000 Agriculture
+o	01010   Crops and livestock production
+o	01020   Farm services
+•	02000 Mining
+o	02010   Oil and gas extraction
+o	02020   Mining (except oil and gas)
+o	02030   Support Activities for mining
+•	03000 Utilities
+o	03030   Utilities
+•	04000 Construction
+o	04010   Construction of buildings
+o	04020   Heavy and civil engineering construction
+o	04030   Special trade contractors
+•	05000 Manufacturing
+o	05010   Wood product and furniture manufacturing
+o	05020   Nonmetallic mineral product manufacturing
+o	05030   Primary and fabricated metal manufacturing
+o	05040   Machinery manufacturing
+o	05050   Computer and electrical equipment manufacturing
+o	05060   Motor vehicle and transportation manufacturing
+o	05070   Miscellaneous manufacturing
+o	05080   Food and beverage product manufacturing
+o	05090   Textile mills and product, apparel and similar manufacturing
+o	05100   Paper and printing manufacturing
+o	05110   Chemical manufacturing
+o	05120   Plastics and rubber products manufacturing
+•	06000 Wholesale trade
+o	06010   Wholesale
+•	07000 Retail Trade
+o	07010   Motor vehicle and parts dealers
+o	07020   Furniture electronics appliances and home furnishings
+o	07030   Food and beverage stores
+o	07040   Health and personal care stores
+o	07050   Gasoline stations
+o	07060   Clothing and clothing accessories stores
+o	07070   Sporting goods, hobby, book and music stores
+o	07080   General merchandise stores
+o	07090   Miscellaneous store retailers
+o	07100   Nonstore retailers
+•	08000 Transportation and warehousing
+o	08010   Air transportation
+o	08020   Rail transportation
+o	08030   Truck transportation
+o	08040   Support for transportation
+o	08050   Transit and ground passenger transport
+o	08060   Pipeline transportation
+o	08070   Scenic sightseeing and water transportation
+o	08080   Couriers and messengers and postal services
+o	08090   Warehousing and storage
+•	09000 Information
+o	09010   Publishing industries
+o	09030   Motion picture and broadcasting except internet
+o	09050   ISPs, search portals and data process
+•	10000 Finance activities
+o	10010   Monetary authorities and credit intermediation
+o	10020   Securities  commodity contracts and other financial investments
+o	10100   Insurance carriers  funds  trusts  and other financial vehiclees
+•	10150 Real estate
+o	10200   Real estate
+•	11000 Professional and business services
+o	11020   Professional and technical services
+o	11025   Management of companies and enterprises
+o	11030   Management of companies and enterprises
+o	11050   Admin and waste
+o	11090   Administrative and support services
+o	11100   Waste management and remediation services
+•	12000 Education
+o	12010   Private Educational services
+•	12015 Health Services
+o	12020   Ambulatory health care services
+o	12030   Hospitals
+o	12040   Nursing and residential care facilities
+o	12050   Social assistance
+•	13000 Arts
+o	13010   Arts  entertainment  and recreation
+o	13015   Accommodation and food
+o	13020   Accommodation
+o	13030   Food services and drinking places
+•	14000 Other services  except public administration
+o	14010   Automotive and other repair and maintenance
+o	14020   Personal and laundry services
+o	14030   Membership associations and organizations
+o	14040   Private households
+•	15000 Government
+o	15010   Federal government  civilian
+o	15014   Military
+o	15020   State government
+o	15030   Local government
+Example to pull jobs data for Adams and Alamosa Counties in 2012, 2013 and 2014 for construction and crops and livestock production https://gis.dola.colorado.gov/lookups/jobs?county=1,3&year=2014,2013,2012&sector=04000,01010
+
+Labor Force Participation
+Address: /labor-force?
+Parameters
+•	county: (comma separated integers) Mandatory.  Integer equivalents of all Colorado County FIPS Codes
+•	year: (comma separated integers) Mandatory. 2010-2040
+•	age: (comma separated letters) Mandatory.
+o	a: 16 to 19
+o	b: 20 to 24
+o	c: 25 to 34
+o	d: 35 to 44
+o	e: 45 to 54
+o	f: 55 to 64
+o	g: 65+
+•	group: (optional) Default is no grouping
+o	opt1: year
+o	opt2: county_fips
+o	opt3: age
+o	opt4: year, county_fips
+o	opt5: year, age
+o	opt6: county_fips, age
+•	sex: (optional) Default is sum of male and female
+o	m or M: male only
+o	f or F: female only
+o	b or B: both genders listed (rather than summed)
+Example to pull labor force data for Boulder and Broomfield Counties in 2010, 2011 and 2012, ages 55 to 64 and 65+, bother genders, grouped by year and county.
+https://gis.dola.colorado.gov/lookups/labor-force?year=2010,2011,2012&county=13,14&age=f,g&gender=b&group=opt4
+Muni Pop Housing
+Address: /munipophousing?
+API to pull data on population and housing by municipality
+Parameters
+•	countyfips: (comma separated integers)
+•	placefips: (comma separated integers)
+•	year: (comma separated integers) possible: 2010,2011,2012,2013,2014. Mandatory.
+•	compressed: yes or no (no is assumed if you entered a countyfips and placefips)
+•	stats: comma separated list (none defaults to totalpopulation)
+o	totalpopulation
+o	householdpopulation
+o	groupquarterspopulation
+o	totalhousingunits
+o	occupiedhousingunits
+o	vacanthousingunits
+Example to pull population and housing data from 2014 in Aurora
+https://gis.dola.colorado.gov/lookups/munipophousing?year=2014&placefips=4000&compressed=yes

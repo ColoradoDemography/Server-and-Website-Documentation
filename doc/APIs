@@ -123,6 +123,39 @@ https://gis.dola.colorado.gov/lookups/base-analysis_county
 List of regions:
 https://gis.dola.colorado.gov/lookups/base-analysis_region
 
+Employment fields:
+•	Employment = Total All Industries
+o	Total_basic_emp = Total Direct Basic
+	Direct_basic_emp = Total Direct Basic
+•	Agri_emp = Traditional – Agribusiness
+o	Ag_proc_emp = Ag - Processing
+o	Ag_inputs_emp = Ag - Inputs
+o	Ag_prod_emp =  Ag - Production
+o	Ag_proc_trade_emp = Ag – Processing Trade
+•	Mining_emp = Traditional – Mining
+•	Manufacturing_emp = Traditional – Manufacturing
+•	Govt_emp = Traditional – Government
+	Ib_emp = Indirect Basic
+o	Tourism_emp = Tourism
+	Resorts_emp = Tourism: Resort
+	Second_home_emp =  Tourism: Second Home
+	Tour_serv_emp =  Tourism: Other
+	Trans_emp = Transportation Employment
+o	Total_lrs_emp = Total Local Resident Services
+	Commuter_emp = Commuters
+	Other_hhd_emp = Other Households, Unearned income from Dividends, Interest & Rent
+	Retiree_emp = Retirees
+	Other_inc_emp = Transfer Payments
+	Wrkr_lrs_emp = Worker Local Res. Services (Non Basic)
+o	Regl_serv_emp = Regional Center/National Services – All Totals, Regional Service
+	Natl_comm_emp =National Communications
+	Natl_const_emp = National Construction
+	Natl_fire_emp = National Fire (Finance, insurance, real estate)
+	Natl_trade_emp = National Trade
+	Natl_bus_emp = National Business
+	Natl_ed_emp =National Education and Health
+
+
 Components of Change
 Address: /components?
 

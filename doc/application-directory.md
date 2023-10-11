@@ -29,6 +29,8 @@ The data is drawn from the data schema in the ACS database through the SDO Censu
 - [Github](https://github.com/ColoradoDemography/Age-Animation-Bars)
 - [Application Link](https://gis.dola.colorado.gov/Age-Animation-Bars)
 
+D3 chart showing single year of age from 1990 to 2050 for Colorado and every county, updated annually. Runs from a json file that has to be updated through an R script.
+
 ### Age Distribution by County
 - [Application Link](https://dola-online.maps.arcgis.com/apps/dashboards/713f5b5ecc4c4a7d85c6c266bba9131d)
 

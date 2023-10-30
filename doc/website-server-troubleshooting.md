@@ -6,6 +6,7 @@ If the front page stats are not populating, the coreas server is probably down. 
 
 ```
 docker ps -a
+(give it a few minutes, if the stats on the front of the website still don't show up, continue below)
 docker restart postgres2
 sudo -i
 mount /dev/sdb /giant/

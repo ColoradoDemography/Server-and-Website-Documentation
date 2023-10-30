@@ -10,6 +10,7 @@ docker ps -a
 docker restart postgres2
 sudo -i
 mount /dev/sdb /giant/
+docker restart postgres2
 
 ```
 Give it a few minutes for postgres to get going again. May have to try the restart and mount a couple times.

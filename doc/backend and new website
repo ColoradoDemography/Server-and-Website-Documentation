@@ -21,3 +21,4 @@ into the dlg-coreos VM instance, use docker exec -it website2 bash to get into t
 cd coloradodemography.github.io
 cd _site
 the github repository you are pulling from will have a directory of the same name here. cd into it and then git pull
+To add an application, simply get into the _site directory and then git clone *repository name*

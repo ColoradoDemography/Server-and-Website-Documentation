@@ -42,7 +42,7 @@ docker stop demogproxy
 docker rm demogproxy
 docker pull codemog/demog-proxy 
 docker run -it --rm -p 443:443 -p 80:80 --name certbot -v "/etc/letsencrypt:/etc/letsencrypt" -v "/var/lib/letsencrypt:/var/lib/letsencrypt" certbot/certbot renew
-docker run --restart unless-stopped  --name demogproxy -v /etc/letsencrypt/archive/demography.dola.colorado.gov:/ssl/docker --link website:website --link website2:website2 --link shiny-server:shiny-server -p 443:443 -p 80:80 -d codemog/demog-proxy
+docker run --restart unless-stopped  --name demogproxy -v /etc/letsencrypt/archive/demography.dola.colorado.gov:/ssl/docker --link website:website --link website2:website2 -p 443:443 -p 80:80 -d codemog/demog-proxy
 ```
 
 You should be up and running.

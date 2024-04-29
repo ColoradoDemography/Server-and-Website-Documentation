@@ -6,9 +6,9 @@ If the front page stats are not populating, the coreas server is probably down. 
 
 ```
 docker ps -a
-docker restart postgres2
 sudo -i
 mount /dev/sdb /giant/
+exit
 docker restart postgres2
 
 ```
